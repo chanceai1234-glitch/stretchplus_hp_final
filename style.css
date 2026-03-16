@@ -337,112 +337,212 @@ h6 {
 }
 
 /* ==========================================================================
-   Hero Section
+   Hero Section (Split Layout with Mask)
    ========================================================================== */
 #hero.hero-split {
-    padding: 60px 4%;
+    padding-top: 80px; /* ヘッダー分確保 */
+    padding-bottom: 0;
     background-color: var(--bg-clean); /* [修正A-v2] 感情カテゴリ: --bg-clean（清潔・信頼） */
     margin-top: 70px;
-}
-
-@media (min-width: 992px) {
-    #hero.hero-split {
-        padding: 80px 4% 80px; /* moderate horizontal padding */
-    }
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 }
 
 .hero-inner {
-    max-width: 1360px; /* Increased from 1120px for a wider, more expansive feel */
+    max-width: 1300px;
+    width: 100%;
     margin: 0 auto;
-    width: 96%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
+    padding: 0 5%;
+    display: flex;
     align-items: center;
-}
-
-@media (min-width: 992px) {
-    .hero-inner {
-        grid-template-columns: 7fr 5fr;
-        column-gap: 48px; /* Strict spacing as requested */
-    }
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    z-index: 10;
 }
 
 .hero-content {
-    max-width: 720px; /* Scaled up in proportion */
-    width: 100%;
-    margin: 0 auto;
-    text-align: left;
-}
-
-@media (min-width: 992px) {
-    .hero-content {
-        margin: 0;
-    }
-}
-
-.hero-image-col {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.hero-image-col img {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    object-fit: cover;
+    flex: 1;
+    max-width: 550px;
+    padding-top: 40px;
 }
 
 .hero-content .main-message {
-    font-size: 34px;
-    color: var(--text-body);
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    color: var(--text-heading);
     margin-bottom: 24px;
-    line-height: 1.35;
+    line-height: 1.3;
     letter-spacing: 0.05em;
+    font-weight: 700;
 }
 
-@media (min-width: 768px) {
-    .hero-content .main-message {
-        font-size: clamp(36px, 4vw, 44px); /* Scaled up for the wider container */
-    }
+.highlight-blue {
+    background: linear-gradient(transparent 60%, rgba(169, 209, 222, 0.8) 40%);
+    display: inline-block;
 }
 
 .hero-content .sub-message {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: var(--text-body);
     margin-bottom: 40px;
     line-height: 1.8;
 }
 
-.hero-actions-wrapper {
-    text-align: left;
-    margin-bottom: 30px;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: stretch; /* Forces children (price-tag) to stretch to match the width of .hero-actions */
+.hero-content .sub-message strong {
+    font-size: 1.4rem;
 }
 
-.price-tag {
-    display: block;
+.hero-actions-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-lead-text {
+    color: #e53e70; /* Safie参考のピンク寄り赤 */
+    font-weight: bold;
+    font-size: 1rem;
     text-align: center;
-    padding: 16px 20px; /* Taller */
-    border-radius: 8px; /* 角だけ丸い長方形 */
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    background-color: #ffffff;
-    font-weight: 700;
-    font-size: 1.35rem; /* Larger text */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    letter-spacing: 0.05em;
+    max-width: 450px;
 }
 
 .hero-actions {
     display: flex;
     gap: 15px;
-    justify-content: flex-start;
+    width: 100%;
+    max-width: 450px;
+}
+
+.hero-actions .btn {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 1rem;
+    justify-content: space-between;
+}
+
+.hero-actions .btn-web {
+    background-color: #5fb4d4; /* 水色（ライトブルー） */
+    color: white;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-actions .btn-web:hover {
+    background-color: #4AA0C0;
+}
+
+.hero-actions .btn-line {
+    background-color: #06C755;
+    border: 2px solid #06C755;
+    color: white;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-actions .btn-line:hover {
+    background-color: #05b34c;
+    border-color: #05b34c;
+    color: white;
+    box-shadow: 0 4px 10px rgba(6, 199, 85, 0.3);
+}
+
+.hero-note {
+    font-size: 0.95rem; /* 価格を目立たせる */
+    color: var(--text-body);
+    margin-top: 10px;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 450px;
+}
+.hero-note strong {
+    font-size: 1.25rem;
+    color: #e53e70;
+}
+
+/* Image Masking Area */
+.hero-image-col {
+    flex: 1.2;
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 650px;
+    height: 600px;
+    right: -5%; /* 半分見切れる位の調整 */
+}
+
+.hero-image-bg-circle {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 650px;
+    background-color: #A9D1DE; /* より参考画像に近い柔らかなライトブルー */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.hero-masked-image {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    z-index: 2;
+    /* D字型の切り抜き（右側は円弧、左側は直線気味） */
+    clip-path: circle(50% at 50% 50%); 
+}
+
+@supports (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)) {
+    .hero-masked-image {
+        /* 右半分はきれいな半円、左側は少し残してスッと切る形 */
+        clip-path: polygon(0% 0%, 50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 0% 100%);
+        border-radius: 50%; /* ポリゴンと併用して角を丸めるトリック */
+    }
+}
+
+@media (max-width: 991px) {
+    #hero.hero-split {
+        padding-top: 100px;
+        min-height: auto;
+    }
+    .hero-inner {
+        flex-direction: column;
+    }
+    .hero-image-col {
+        order: -1;
+        width: 100%;
+        height: 400px;
+        justify-content: center;
+    }
+    .hero-image-wrapper {
+        width: 100%;
+        right: 0;
+    }
+    .hero-image-bg-circle {
+        width: 400px;
+        height: 400px;
+        left: 50%;
+    }
+    .hero-masked-image {
+        width: 400px;
+        height: 400px;
+    }
+    .hero-content {
+        padding-top: 0;
+        padding-bottom: 40px;
+        max-width: 100%;
+    }
 }
 
 /* ==========================================================================
@@ -1421,7 +1521,7 @@ details p::before {
 /* ==========================================================================
    Shop Info & Access Section
    ========================================================================== */
-#shop-access {
+#info, #access {
     background-color: var(--bg-trust); /* [修正依頼] ④Steadyから②Trustに戻す */
     padding: 80px 20px;
     max-width: 100%;
@@ -1598,7 +1698,7 @@ details p::before {
 /* ==========================================================================
    Final CTA
    ========================================================================== */
-#final-cta {
+#cta-1, #cta-2 {
     text-align: center;
     padding: 70px 20px;
     background: var(--primary-color);
@@ -1606,7 +1706,7 @@ details p::before {
     max-width: 100%;
 }
 
-#final-cta h2 {
+#cta-1 h2, #cta-2 h2 {
     font-size: 2.2rem;
     margin-bottom: 10px;
 }
