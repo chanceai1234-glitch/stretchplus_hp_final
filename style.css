@@ -710,8 +710,9 @@ h6 {
 }
 
 .speech-bubble li i {
-    color: #ffffff; /* 白いチェックマーク */
-    background-color: #5fb4d4; /* 水色の四角 */
+    color: #5fb4d4; /* 水色のチェックマーク */
+    background-color: #ffffff; /* 白背景 */
+    border: 2px solid #5fb4d4; /* 水色の縁 */
     width: 20px;
     height: 20px;
     display: flex;
