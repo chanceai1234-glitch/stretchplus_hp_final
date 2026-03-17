@@ -247,6 +247,10 @@
             <button id="review-next" class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
         </div>
         
+        <div class="review-progress-container">
+            <div class="review-progress-bar" id="review-progress"></div>
+        </div>
+        
         <div class="review-badge-text">
             このほかにも、たくさんの口コミをいただいております。
         </div>
@@ -766,6 +770,7 @@
             const reviewGrid = document.getElementById('review-grid');
             const prevReviewBtn = document.getElementById('review-prev');
             const nextReviewBtn = document.getElementById('review-next');
+            const reviewProgress = document.getElementById('review-progress');
             if (reviewGrid && prevReviewBtn && nextReviewBtn) {
                 let currentSlide = 0;
                 // Determine items per view based on window width
@@ -783,6 +788,26 @@
                     const gap = 30; // 30px gap
                     const offset = currentSlide * (cardWidth + gap);
                     reviewGrid.style.transform = `translateX(-${offset}px)`;
+
+                    // Update Progress Bar
+                    if (reviewProgress) {
+                        if (maxSlide === 0) {
+                            reviewProgress.style.width = '100%';
+                            reviewProgress.style.transform = 'translateX(0)';
+                        } else {
+                            // Calculate percentage based on current index vs max index
+                            const percentage = (currentSlide / maxSlide) * 100;
+                            // Width is proportion of visible items to total items
+                            const widthPercent = (itemsPerView / cards.length) * 100;
+                            reviewProgress.style.width = `${widthPercent}%`;
+                            // Translate by remaining percentage
+                            const translatePercent = percentage * (100 - widthPercent) / 100;
+                            reviewProgress.style.transform = `translateX(${percentage * (100 - widthPercent) / 100}%)`;
+                            // Quick alternative for absolute positioning of progress bar:
+                            reviewProgress.style.left = `${translatePercent}%`;
+                            reviewProgress.style.transform = 'none';
+                        }
+                    }
                 };
 
                 prevReviewBtn.addEventListener('click', () => {
