@@ -556,16 +556,16 @@ h6 {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 24px;
 }
 
 .about-row.card {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
+    gap: 40px;
     align-items: center;
     background-color: #ffffff; /* カードの白背景 */
-    padding: 40px;
+    padding: 24px 32px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* 浮かせるシャドウ */
     margin-bottom: 0;
@@ -596,16 +596,21 @@ h6 {
 }
 
 .about-content p {
-    color: var(--text-body); /* 本文は濃いグレー */
-    font-size: 0.95rem; /* 課題G: 統一 */
+    color: var(--text-heading); /* より濃い黒にする */
+    font-size: 1.1rem; /* フォントサイズを大きく */
     line-height: 1.8;
     margin-bottom: 16px;
+}
+
+.about-content p strong {
+    font-weight: 700;
+    color: #000; /* 黒字の太字で強調 */
 }
 
 .about-image img {
     width: 100%;
     height: 100%;
-    max-height: 400px;
+    max-height: 280px; /* カード高さ圧縮のため縮小 */
     object-fit: cover;
     border-radius: 8px; /* 内側の画像は少し丸みを抑える */
 }
