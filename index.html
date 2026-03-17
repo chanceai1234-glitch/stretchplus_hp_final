@@ -166,10 +166,12 @@
     </section>
 
     <!-- Section 4: お客様の声 -->
-    <section id="reviews">
+    <section id="reviews" class="reveal">
         <h2>お客様の声</h2>
         <div class="review-slider-container">
-            <button id="review-prev" class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button id="review-prev" class="slider-btn prev-btn" aria-label="前へ">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 6L11 12L17 18M11 6L5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
             <div class="review-grid-wrapper">
                 <div class="review-grid" id="review-grid">
                     <!-- Card 1 -->
@@ -242,9 +244,80 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Card 4 (Placeholder) -->
+                    <div class="review-card">
+                        <div class="review-bubble">
+                            <p class="review-quote"><span class="highlight-text">「追加の口コミサンプルです」</span><br><span class="review-user">（30代女性）</span></p>
+                        </div>
+                        <div class="review-episode">
+                            <div class="review-details">
+                                <div class="review-detail-row">
+                                    <div class="review-detail-label">メニュー</div>
+                                    <div class="review-detail-value">---</div>
+                                </div>
+                                <div class="review-detail-row">
+                                    <div class="review-detail-label">お悩み</div>
+                                    <div class="review-detail-value check-list">
+                                        <span>サンプル</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-feedback">
+                                <p class="comment">スライダーの動作確認用に追加した4枚目の口コミサンプルです。後ほどテキストを差し替えます。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 (Placeholder) -->
+                    <div class="review-card">
+                        <div class="review-bubble">
+                            <p class="review-quote"><span class="highlight-text">「スライダー動作確認用」</span><br><span class="review-user">（40代男性）</span></p>
+                        </div>
+                        <div class="review-episode">
+                            <div class="review-details">
+                                <div class="review-detail-row">
+                                    <div class="review-detail-label">メニュー</div>
+                                    <div class="review-detail-value">---</div>
+                                </div>
+                                <div class="review-detail-row">
+                                    <div class="review-detail-label">お悩み</div>
+                                    <div class="review-detail-value check-list">
+                                        <span>サンプル</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-feedback">
+                                <p class="comment">スライダーの動作確認用に追加した5枚目の口コミサンプルです。後ほどテキストを差し替えます。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 (Placeholder) -->
+                    <div class="review-card">
+                        <div class="review-bubble">
+                            <p class="review-quote"><span class="highlight-text">「テスト用カードです」</span><br><span class="review-user">（20代女性）</span></p>
+                        </div>
+                        <div class="review-episode">
+                            <div class="review-details">
+                                <div class="review-detail-row">
+                                    <div class="review-detail-label">メニュー</div>
+                                    <div class="review-detail-value">---</div>
+                                </div>
+                                <div class="review-detail-row">
+                                    <div class="review-detail-label">お悩み</div>
+                                    <div class="review-detail-value check-list">
+                                        <span>サンプル</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-feedback">
+                                <p class="comment">スライダーの動作確認用に追加した6枚目の口コミサンプルです。後ほどテキストを差し替えます。</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button id="review-next" class="slider-btn prev-btn"><i class="fas fa-chevron-right"></i></button>
+            <button id="review-next" class="slider-btn next-btn" aria-label="次へ">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 6L13 12L7 18M13 6L19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
         </div>
         
         <div class="review-progress-container">

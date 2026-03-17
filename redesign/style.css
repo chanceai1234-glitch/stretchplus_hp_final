@@ -1408,8 +1408,8 @@ h6 {
 }
 
 .step-details p {
-    color: #444444;
     font-size: 0.95rem;
+    color: #444444;
     line-height: 1.7;
     margin-bottom: 0;
 }
@@ -1504,28 +1504,35 @@ h6 {
 }
 
 .slider-btn {
-    background-color: #5fb4d4; /* 背景水色 */
+    background: transparent;
     border: none;
-    border-radius: 50%;
     width: 60px;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    color: #ffffff; /* 白文字(<>) */
-    font-size: 1.8rem;
+    color: #4a4a4a; /* ダークグレーのシンプルな色 */
+    padding: 0;
     transition: all 0.3s ease;
 }
 
+.slider-btn svg {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
 .slider-btn:hover {
-    background-color: #4da3bf; /* ホバーで少し濃い水色 */
-    transform: translateY(-50%) scale(1.05); /* ホバーで少し大きく */
+    color: #5fb4d4; /* ホバーでテーマカラーの水色に */
+}
+
+.slider-btn:hover svg {
+    transform: scale(1.1);
 }
 
 .prev-btn {
@@ -1550,16 +1557,16 @@ h6 {
 }
 
 .review-card {
-    background: transparent;
-    padding: 0;
-    border: none;
-    box-shadow: none;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 影を控えめに */
+    padding: 30px;
     width: calc(33.333% - 20px);
-    flex: 0 0 auto;
-    text-align: left;
-    white-space: normal;
+    flex-shrink: 0; 
+    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
+    height: 100%; /* Allow stretching */
 }
 
 @media (max-width: 900px) {
@@ -1655,19 +1662,22 @@ h6 {
 }
 
 .review-episode {
-    background-color: #fcfaf5; /* 参照画像のような温かみのあるオフホワイト */
-    padding: 30px 25px 25px;
+    background-color: #fcfaf5; /* とても薄い黄色/ベージュ系（和紙風の色味） */
     border-radius: 12px;
+    padding: 25px;
     position: relative;
-    flex-grow: 1; /* 高さを揃える */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.02); /* 内側にわずかな影でくぼみを表現 */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Delete episode-title */
-
+/* Review Details Layout */
 .review-details {
     margin-bottom: 20px;
-    border-bottom: 1px solid #e0dfd5;
+    border-bottom: 1px dotted #ccc;
     padding-bottom: 15px;
+    flex-grow: 1;
 }
 
 .review-detail-row {
@@ -1677,16 +1687,17 @@ h6 {
 }
 
 .review-detail-label {
-    width: 70px;
-    font-size: 0.85rem;
-    color: #aaa;
+    width: 80px;
+    font-weight: bold;
+    color: #5fb4d4;
+    font-size: 0.95rem;
     flex-shrink: 0;
 }
 
 .review-detail-value {
+    flex-grow: 1;
     font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--text-heading);
+    color: #2c2c2c;
 }
 
 .review-detail-value.check-list {
@@ -1696,17 +1707,29 @@ h6 {
 }
 
 .review-detail-value.check-list span::before {
-    content: '✓';
-    color: #5fb4d4;
-    font-weight: bold;
-    margin-right: 6px;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235fb4d4' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='18' height='18' rx='2' ry='2'></rect><polyline points='7 12 11 16 19 6'></polyline></svg>");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.review-feedback {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .review-episode .comment {
-    color: var(--text-body);
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.8;
-    font-weight: 500;
+    color: #2c2c2c; /* ダークグレー */
+    margin: 0;
 }
 
 /* ==========================================================================
@@ -2430,7 +2453,7 @@ details p::before {
 
 .concern-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px (0, 0, 0, 0.08);
 }
 
 .concern-card h3 {
