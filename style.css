@@ -1456,27 +1456,27 @@ h6 {
 
 .slider-btn {
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 2px solid #5fb4d4; /* 水色の太めの枠線 */
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
+    width: 60px; /* 少し大きめに */
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    color: var(--primary-color);
-    font-size: 1.2rem;
+    color: #5fb4d4; /* 矢印を水色に */
+    font-size: 1.8rem; /* 矢印を大きく */
     transition: all 0.3s ease;
 }
 
 .slider-btn:hover {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: #5fb4d4; /* ホバーで水色背景 */
+    color: #fff; /* ホバーで白抜き矢印 */
 }
 
 .prev-btn {
@@ -1585,21 +1585,50 @@ h6 {
 
 .review-episode {
     background-color: #fcfaf5; /* 参照画像のような温かみのあるオフホワイト */
-    padding: 35px 25px 25px;
+    padding: 30px 25px 25px;
     border-radius: 12px;
     position: relative;
     flex-grow: 1; /* 高さを揃える */
 }
 
-.episode-title {
-    font-family: 'Brush Script MT', 'cursive', sans-serif; /* 筆記体風のフォント指定 */
-    font-size: 2.2rem;
-    color: #63b3ce;
-    position: absolute;
-    top: -20px;
-    left: 20px;
-    margin: 0;
-    font-weight: normal;
+/* Delete episode-title */
+
+.review-details {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0dfd5;
+    padding-bottom: 15px;
+}
+
+.review-detail-row {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: flex-start;
+}
+
+.review-detail-label {
+    width: 70px;
+    font-size: 0.85rem;
+    color: #aaa;
+    flex-shrink: 0;
+}
+
+.review-detail-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-heading);
+}
+
+.review-detail-value.check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.review-detail-value.check-list span::before {
+    content: '✓';
+    color: #5fb4d4;
+    font-weight: bold;
+    margin-right: 6px;
 }
 
 .review-episode .comment {
