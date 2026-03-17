@@ -698,30 +698,23 @@ h6 {
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--text-heading);
-    margin-bottom: 12px;
-    line-height: 1.4;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 32px; /* SVGアイコン分の余白 */
 }
 
-.speech-bubble li:last-child {
-    margin-bottom: 0;
-}
-
-.speech-bubble li i {
-    color: #5fb4d4; /* 水色のチェックマーク */
-    background-color: #ffffff; /* 白背景 */
-    border: 2px solid #5fb4d4; /* 水色の縁 */
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px; /* 少し角を丸める */
-    font-size: 0.7rem; /* チェックマークのサイズ */
-    margin-top: 2px;
-    flex-shrink: 0; /* 折り返し時にボックスが潰れないように */
+.speech-bubble li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 22px;
+    height: 22px;
+    background-image: url('../images/checklist_icon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 /* Persona Image & Label */
