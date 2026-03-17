@@ -1,0 +1,115 @@
+--- Typography Audit ---
+body                                     | Size: var(--font-size-base)     | Family: var(--font-family-base)
+.btn                                     | Size: 1rem                      | Family: N/A
+.btn-outline-primary                     | Size: 1rem                      | Family: N/A
+.btn-hotpepper                           | Size: 1.15rem                   | Family: N/A
+.btn-google                              | Size: 1.15rem                   | Family: N/A
+.header-nav a                            | Size: 0.9rem                    | Family: N/A
+.header-actions .btn                     | Size: 0.9rem                    | Family: N/A
+.hero-content .main-message              | Size: clamp(2rem, 3.5vw, 3.2rem) | Family: N/A
+.hero-content .sub-message               | Size: 1.1rem                    | Family: N/A
+.hero-content .sub-message strong        | Size: 1.4rem                    | Family: N/A
+.hero-lead-text                          | Size: 1rem                      | Family: N/A
+.hero-actions .btn                       | Size: 1rem                      | Family: N/A
+.hero-note                               | Size: 0.95rem                   | Family: N/A
+.hero-note strong                        | Size: 1.6rem                    | Family: N/A
+.about-content h2,
+.about-content h3     | Size: 1.45rem                   | Family: N/A
+.about-content p                         | Size: 1.10rem                   | Family: N/A
+.worries-title                           | Size: clamp(1.8rem, 3vw, 2.4rem) | Family: N/A
+.speech-bubble li                        | Size: 0.95rem                   | Family: N/A
+.persona-label                           | Size: 0.9rem                    | Family: N/A
+.catchy-message                          | Size: clamp(1.4rem, 2.5vw, 1.8rem) | Family: N/A
+.action-lead                             | Size: 1rem                      | Family: N/A
+.closing-action .btn-web                 | Size: 1.2rem                    | Family: N/A
+#policy h2                               | Size: 1.8rem                    | Family: N/A
+#policy h2                               | Size: 1.9rem                    | Family: N/A
+.policy-lead                             | Size: 1rem                      | Family: N/A
+.policy-icon                             | Size: 1.15rem                   | Family: N/A
+.policy-card h3                          | Size: 1.15rem                   | Family: N/A
+.policy-strong                           | Size: 1.05rem                   | Family: N/A
+.worries-title                           | Size: 2rem                      | Family: N/A
+.worries-lead                            | Size: 1.05rem                   | Family: N/A
+}
+
+.worries-list-large li                | Size: 1.1rem                    | Family: N/A
+.worries-list-large li::before           | Size: 1.35rem                   | Family: N/A
+.worries-card-sub                        | Size: 0.95rem                   | Family: N/A
+.pricing-card h3                         | Size: 1.1rem                    | Family: N/A
+.price-highlight-small                   | Size: 0.95rem                   | Family: N/A
+.price-highlight-main                    | Size: 2rem                      | Family: N/A
+.price-highlight-main-sub                | Size: 2rem                      | Family: N/A
+.price-normal                            | Size: 0.85rem                   | Family: N/A
+.badge                                   | Size: 0.9rem                    | Family: N/A
+.step-label                              | Size: 1.05rem                   | Family: N/A
+.step-badge                              | Size: 0.95rem                   | Family: N/A
+.step-badge i                            | Size: 1.1rem                    | Family: N/A
+.step-details h3                         | Size: 1.25rem                   | Family: N/A
+.step-details p                          | Size: 0.95rem                   | Family: N/A
+.step-details strong                     | Size: 1.05rem                   | Family: N/A
+.trainer-card h3                         | Size: 1.2rem                    | Family: N/A
+.trainer-card p                          | Size: 0.95rem                   | Family: N/A
+.review-quote                            | Size: 1rem                      | Family: N/A
+.review-user                             | Size: 0.85rem                   | Family: N/A
+.review-detail-label                     | Size: 1rem                      | Family: N/A
+.review-detail-value                     | Size: 0.95rem                   | Family: N/A
+.feedback-heading                        | Size: 1rem                      | Family: N/A
+.review-episode .comment                 | Size: 1rem                      | Family: N/A
+.faq-category h3                         | Size: 1.3rem                    | Family: N/A
+summary::before                          | Size: 0.95rem                   | Family: N/A
+summary::after                           | Size: 1.5rem                    | Family: N/A
+details p::before                        | Size: 1.3rem                    | Family: N/A
+.shop-info-block h2,
+.shop-access-block h2 | Size: 2rem                      | Family: N/A
+.btn-copy-address                        | Size: 0.8rem                    | Family: N/A
+.access-card-text h3                     | Size: 1.05rem                   | Family: N/A
+.access-card-text p                      | Size: 0.95rem                   | Family: N/A
+#cta-1 h2, #cta-2 h2                     | Size: 2.2rem                    | Family: N/A
+.final-cta-sub                           | Size: 1.1rem                    | Family: N/A
+.btn-final-web                           | Size: 1.25rem                   | Family: N/A
+.btn-final-line                          | Size: 1.05rem                   | Family: N/A
+.footer-left .footer-nap p               | Size: 0.95rem                   | Family: N/A
+.footer-left .footer-tel                 | Size: 1.15rem                   | Family: N/A
+.sns-label                               | Size: 1rem                      | Family: N/A
+.footer-bottom                           | Size: 0.8rem                    | Family: N/A
+#floating-qr>p.qr-title                  | Size: 1.15rem                   | Family: N/A
+#floating-qr .qr-text                    | Size: 0.8rem                    | Family: N/A
+.hero-content .main-message              | Size: 2rem                      | Family: N/A
+.hero-content .sub-message               | Size: 1rem                      | Family: N/A
+.intent-bridge-inner h2                  | Size: 1.5rem                    | Family: N/A
+.intent-bridge-inner p                   | Size: 0.95rem                   | Family: N/A
+.intent-bridge-highlight p               | Size: 0.95rem                   | Family: N/A
+.concern-card h3                         | Size: 1.15rem                   | Family: N/A
+.concern-card p                          | Size: 0.95rem                   | Family: N/A
+.access-step-body h3                     | Size: 1rem                      | Family: N/A
+.access-step-body p                      | Size: 0.9rem                    | Family: N/A
+.story-tag                               | Size: 0.85rem                   | Family: N/A
+.story-card p                            | Size: 0.95rem                   | Family: N/A
+.pricing-card h3                         | Size: 1.15rem                   | Family: N/A
+.price-label                             | Size: 0.9rem                    | Family: N/A
+.price-main                              | Size: 2.1rem                    | Family: N/A
+.price-normal                            | Size: 0.85rem                   | Family: N/A
+.pricing-badge                           | Size: 0.85rem                   | Family: N/A
+}
+
+#floating-qr .qr-title                | Size: 1.05rem                   | Family: N/A
+.mobile-sticky-cta .btn                  | Size: 0.9rem                    | Family: N/A
+.amenities-container h2                  | Size: 2.2rem                    | Family: N/A
+.amenity-content h3                      | Size: 1.3rem                    | Family: N/A
+.amenity-number                          | Size: 0.85rem                   | Family: N/A
+.amenity-content p                       | Size: 0.95rem                   | Family: N/A
+.amenities-container h2                  | Size: 1.8rem                    | Family: N/A
+.step-badge-blue                         | Size: 1.1rem                    | Family: N/A
+.step-title-inline                       | Size: 1.3rem                    | Family: N/A
+.step-desc                               | Size: 1.15rem                   | Family: N/A
+}
+
+
+.trainer-info-list                   | Size: 0.9rem                    | Family: N/A
+.btn-google-map                          | Size: 0.95rem                   | Family: N/A
+.bottom-cta-banner                       | Size: N/A                       | Family: 'Noto Sans JP', sans-serif
+.bottom-cta-banner h3                    | Size: clamp(1.5rem, 4vw, 2.2rem) | Family: N/A
+.bottom-cta-banner .btn-web-outline      | Size: 1.1rem                    | Family: N/A
+.hero-highlight                          | Size: 1.25em                    | Family: N/A
+.bottom-cta-banner .btn-line-outline     | Size: 1.1rem                    | Family: N/A
+.btn-copy-icon                           | Size: 1.1rem                    | Family: N/A
