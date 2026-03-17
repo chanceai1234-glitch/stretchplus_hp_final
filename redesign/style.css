@@ -640,12 +640,13 @@ h6 {
 .about-content h2,
 .about-content h3 {
     color: var(--primary-color); /* 見出しはブランドの青 */
+    font-size: 1.45rem; /* 見出しサイズ拡大 */
     margin-bottom: 24px;
 }
 
 .about-content p {
     color: var(--text-heading); /* より濃い黒にする */
-    font-size: 1.1rem; /* フォントサイズを大きく */
+    font-size: 1.18rem; /* フォントサイズをさらに大きく */
     line-height: 1.8;
     margin-bottom: 16px;
 }
