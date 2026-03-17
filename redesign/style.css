@@ -789,8 +789,17 @@ h6 {
 }
 
 .speech-bubble li i {
-    color: #e53e70; /* Checkmark color */
+    color: #ffffff; /* 白いチェックマーク */
+    background-color: #5fb4d4; /* 水色の四角 */
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px; /* 少し角を丸める */
+    font-size: 0.7rem; /* チェックマークのサイズ */
     margin-top: 2px;
+    flex-shrink: 0; /* 折り返し時にボックスが潰れないように */
 }
 
 /* Persona Image & Label */
