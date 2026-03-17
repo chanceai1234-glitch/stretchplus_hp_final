@@ -22,12 +22,16 @@
     --bg-color: #FFFFFF;
     /* 背景色 — リメイク用（ブランドカラーの極薄面を基本の交互レイアウトに使用） */
     --bg-alt: rgba(35, 173, 198, 0.03); /* プライマリカラーの3%透過 */
+    
+    --bg-white: #FFFFFF;
+    --bg-light-grey: #F8F9FA;
+    --bg-light-beige: #FAF8F5;
     --border-color: #E2E8F0;
 
     /* Typography */
     --font-family-base: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-family-en: 'Montserrat', sans-serif; /* 英語用フォント */
-    --font-size-base: 16px;
+    --font-size-base: 17px; /* ベースサイズを1pxアップして全体を拡大 */
     --line-height-base: 1.8;
 
     /* Spacing & Layout (Premium White-space Rule) */
@@ -45,6 +49,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-size: var(--font-size-base);
 }
 
 body {
@@ -396,26 +404,26 @@ h6 {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-color: var(--bg-color);
+    background-color: var(--bg-white);
     padding-top: 80px; /* ヘッダーの高さ分 */
 }
 
 .hero-inner {
-    max-width: 1300px;
+    max-width: 1200px; /* Reduced to pull content closer and remove right-shifted illusion */
     width: 100%;
     margin: 0 auto;
     padding: 0 5%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    justify-content: center; /* Changed from space-between to center the block */
+    gap: 60px; /* Increased gap to maintain breathing room */
     position: relative;
     z-index: 10;
 }
 
 .hero-content {
     flex: 1;
-    max-width: 550px;
+    max-width: 530px; /* Increased slightly so "体が不調になる前に" fits on one line */
     padding-top: 40px;
 }
 
@@ -429,9 +437,11 @@ h6 {
 }
 
 .highlight-blue {
-    background: linear-gradient(transparent 60%, rgba(169, 209, 222, 0.8) 40%);
     display: inline-block;
     white-space: nowrap;
+    position: relative;
+    padding: 0 5px; /* マーカーが少しはみ出るように */
+    background: linear-gradient(transparent 60%, #b2e0f0 0%);
 }
 
 .hero-content .sub-message {
@@ -591,7 +601,7 @@ h6 {
    About Section
    ========================================================================== */
 .section-bg-light {
-    background-color: var(--bg-alt); /* リメイク版: 交互背景パターン */
+    background-color: var(--bg-light-grey);
     padding: 80px 5%;
 }
 
@@ -608,8 +618,7 @@ h6 {
 }
 
 .about-row.card {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    display: flex;
     gap: 40px;
     align-items: center;
     background-color: #ffffff; /* カードの白背景 */
@@ -622,7 +631,7 @@ h6 {
 
 @media (max-width: 991px) {
     .about-row.card {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         padding: 30px 20px;
         gap: 30px;
     }
@@ -633,35 +642,49 @@ h6 {
 }
 
 .about-content {
-    max-width: 520px; /* テキストの最大幅を制限して読みやすく */
+    flex: 1; /* 残りの幅をテキストが取る */
+    max-width: 100%; /* テキストの最大幅を制限して読みやすく */
     margin: 0 auto;
 }
 
 .about-content h2,
 .about-content h3 {
     color: var(--primary-color); /* 見出しはブランドの青 */
-    font-size: 1.45rem; /* 見出しサイズ拡大 */
+    font-size: 1.3rem; /* 見出しサイズ拡大 */
     margin-bottom: 24px;
 }
 
 .about-content p {
     color: var(--text-heading); /* より濃い黒にする */
-    font-size: 1.18rem; /* フォントサイズをさらに大きく */
+    font-size: 1.05rem; /* フォントサイズを少しだけ調整して収まりやすく */
     line-height: 1.8;
     margin-bottom: 16px;
 }
 
 .about-content p strong {
+    font-size: 1.05rem;
     font-weight: 700;
     color: #000; /* 黒字の太字で強調 */
 }
 
+.about-image {
+    width: 45%; /* 画像の親要素の横幅を固定 */
+    max-width: 45%;
+    flex-basis: 45%;
+    flex-shrink: 0;
+}
+
 .about-image img {
     width: 100%;
-    height: 100%;
-    max-height: 280px; /* カード高さ圧縮のため縮小 */
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 8px; /* 内側の画像は少し丸みを抑える */
+}
+
+@media (max-width: 991px) {
+    .about-image {
+        width: 100%;
+    }
 }
 
 .about-recommend.card {
@@ -791,7 +814,7 @@ h6 {
     top: 2px;
     width: 22px;
     height: 22px;
-    background-image: url('../images/checklist_icon.svg');
+    background-image: url('../image_final/common_checklist_icon.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -806,8 +829,8 @@ h6 {
 }
 
 .persona-image img {
-    width: 100px;
-    height: 100px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: contain;
     background-color: #f5f5f5;
@@ -857,7 +880,7 @@ h6 {
 }
 
 .action-lead {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: bold;
     color: var(--text-body);
 }
@@ -899,6 +922,7 @@ h6 {
    ========================================================================== */
 
 #policy h2::after {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
     margin: 0 0 20px 0;
 }
 
@@ -913,19 +937,21 @@ h6 {
         flex: 0 0 420px;
         position: sticky;
         top: 100px;
-        background-color: var(--bg-color); /* リメイク版: 白背景 */
+        background-color: var(--bg-white);
         padding: 30px; /* 右カードのpadding(30px)と揃えて上端の縦位置を揃える */
         margin-bottom: 0;
     }
 
     #policy h2 {
-        font-size: 1.9rem;
-        margin-bottom: 20px;
+        font-size: clamp(1.4rem, 2vw, 1.8rem); /* Slightly smaller to fit 1 card height */
+        margin-bottom: 10px;
         letter-spacing: 0.02em;
+        line-height: 1.3;
     }
 }
 
 .policy-lead-box {
+    font-size: 1.05rem;
     border-left: 3px solid var(--primary-color);
     padding-left: 16px;
     margin-top: 24px;
@@ -934,7 +960,7 @@ h6 {
 .policy-lead {
     color: #555555;
     line-height: 1.8;
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 
 .policy-inner {
@@ -989,7 +1015,7 @@ h6 {
 .policy-card h3 {
     color: var(--primary-color);
     margin-bottom: 0;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 600;
     padding-bottom: 0;
     border-bottom: none;
@@ -1001,7 +1027,7 @@ h6 {
     font-weight: 700;
     color: #333333;
     margin-bottom: 10px;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
 }
 
 .policy-card p {
@@ -1014,7 +1040,7 @@ h6 {
    ========================================================================== */
 #worries {
     text-align: center;
-    background-color: var(--bg-alt); /* リメイク版: 薄色背景 */
+    background-color: var(--bg-white);
     padding: 80px 20px 100px;
     max-width: 100%;
 }
@@ -1198,7 +1224,7 @@ h6 {
    ========================================================================== */
 #menu {
     text-align: center;
-    background-color: var(--bg-color); /* リメイク版: 白背景 */
+    background-color: var(--bg-white);
     border-top: 1px solid #E0E4E8; /* セクションのボトムに章が変わった感のラインを追加 */
     padding: 100px 20px 80px; /* 余白をやや多めに空ける */
     max-width: 100%;
@@ -1207,7 +1233,10 @@ h6 {
 
 #menu h2 {
     color: var(--text-heading); /* 悩み見出しと同じトーンの黒寄りの濃グレー */
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
     margin-bottom: 20px;
+    word-break: keep-all; /* 長音符「ー」での不自然な改行を防ぐ */
+    overflow-wrap: break-word;
 }
 
 .pricing-cards {
@@ -1238,7 +1267,7 @@ h6 {
 
 .pricing-card h3 {
     color: var(--primary-color);
-    font-size: 1.25rem; /* 改行を防ぐために少し小さく */
+    font-size: 1.2rem; /* 改行を防ぐために少し小さく */
     margin-bottom: 25px;
     white-space: nowrap; /* 強制的に1行に収める */
     letter-spacing: -0.01em;
@@ -1302,11 +1331,17 @@ h6 {
    ========================================================================== */
 #flow {
     text-align: center;
-    background-color: var(--bg-alt); /* リメイク版: 薄色背景 */
+    background-color: var(--bg-light-grey);
     padding: 100px 20px;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
+}
+
+#flow h2 {
+    color: var(--text-heading);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 20px;
 }
 
 .flow-cards-container {
@@ -1402,7 +1437,7 @@ h6 {
 }
 
 .step-details h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin-bottom: 15px;
     color: #333333;
 }
@@ -1427,16 +1462,22 @@ h6 {
    ========================================================================== */
 #trainers {
     text-align: center;
-    background-color: var(--bg-color); /* リメイク版: 白背景 */
+    background-color: var(--bg-light-grey);
     max-width: 100%;
 }
 
 .trainer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr; /* スマホでは1列 */
     gap: 30px;
-    max-width: var(--container-width);
+    max-width: 1000px; /* 2列になったときにゆとりを持たせて文字改行を防ぐ */
     margin: 40px auto 0;
+}
+
+@media (min-width: 768px) {
+    .trainer-grid {
+        grid-template-columns: repeat(2, 1fr); /* PCやタブレットで2x2のマトリックス配置 */
+    }
 }
 
 .trainer-card {
@@ -1447,6 +1488,7 @@ h6 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .trainer-icon {
@@ -1465,6 +1507,7 @@ h6 {
 }
 
 .trainer-card p strong {
+    font-size: 0.95rem;
     color: var(--primary-color);
 }
 
@@ -1483,7 +1526,7 @@ h6 {
    Reviews Section
    ========================================================================== */
 #reviews {
-    background-color: var(--bg-alt); /* リメイク版: 薄色背景 */
+    background-color: var(--bg-light-grey);
     max-width: 100%;
     text-align: center;
     overflow: hidden;
@@ -1492,6 +1535,8 @@ h6 {
 
 #reviews h2 {
     color: var(--text-heading);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 20px; /* 他のセクションと余白を揃える */
 }
 
 .review-slider-container {
@@ -1500,7 +1545,7 @@ h6 {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 20px 70px;
 }
 
 .slider-btn {
@@ -1536,11 +1581,11 @@ h6 {
 }
 
 .prev-btn {
-    left: 0;
+    left: 5px;
 }
 
 .next-btn {
-    right: 0;
+    right: 5px;
 }
 
 .review-grid-wrapper {
@@ -1682,22 +1727,24 @@ h6 {
 
 .review-detail-row {
     display: flex;
-    margin-bottom: 8px;
-    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 15px;
 }
 
 .review-detail-label {
-    width: 80px;
     font-weight: bold;
     color: #5fb4d4;
-    font-size: 0.95rem;
-    flex-shrink: 0;
+    font-size: 1rem;
+    margin-bottom: 8px;
 }
 
 .review-detail-value {
-    flex-grow: 1;
+    width: 100%;
     font-size: 0.95rem;
     color: #2c2c2c;
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-height: 1.6;
 }
 
 .review-detail-value.check-list {
@@ -1706,17 +1753,12 @@ h6 {
     gap: 4px;
 }
 
+.review-detail-value.check-list span {
+    padding-left: 0 !important;
+}
+
 .review-detail-value.check-list span::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235fb4d4' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='3' width='18' height='18' rx='2' ry='2'></rect><polyline points='7 12 11 16 19 6'></polyline></svg>");
-    background-size: contain;
-    background-repeat: no-repeat;
+    display: none;
 }
 
 .review-feedback {
@@ -1725,18 +1767,27 @@ h6 {
     flex-direction: column;
 }
 
+.feedback-heading {
+    color: #5fb4d4;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
 .review-episode .comment {
     font-size: 1rem;
     line-height: 1.8;
     color: #2c2c2c; /* ダークグレー */
     margin: 0;
+    text-align: left;
 }
 
 /* ==========================================================================
    FAQ Section
    ========================================================================== */
 #faq {
-    background-color: var(--bg-color); /* リメイク版: 白背景 */
+    background-color: var(--bg-light-grey);
     padding: 48px 20px 60px;
     border-top: 1px solid #E5E9EC;
     max-width: 100%;
@@ -1747,6 +1798,8 @@ h6 {
 #faq h2 {
     text-align: center;
     color: var(--text-heading);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 20px;
 }
 
 .faq-lead {
@@ -1888,7 +1941,7 @@ details p::before {
    Shop Info & Access Section
    ========================================================================== */
 #info, #access {
-    background-color: var(--bg-alt); /* リメイク版: 薄色背景 */
+    background-color: var(--bg-white);
     padding: 80px 20px;
     max-width: 100%;
 }
@@ -1906,11 +1959,12 @@ details p::before {
     color: var(--text-heading); /* 統一のため黒に変更 */
     text-align: center; /* 統一のため中央揃えに変更 */
     margin-bottom: 30px;
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
 }
 
 .shop-info-block h2::after,
 .shop-access-block h2::after {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
     display: none; /* 中央揃えのため左線を削除 */
 }
 
@@ -2045,7 +2099,7 @@ details p::before {
 }
 
 .access-card-text h3 {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     color: var(--primary-color);
     margin-bottom: 12px;
     font-weight: bold;
@@ -2073,7 +2127,7 @@ details p::before {
 }
 
 #cta-1 h2, #cta-2 h2 {
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
     margin-bottom: 10px;
 }
 
@@ -2179,6 +2233,7 @@ details p::before {
 .footer-nav a {
     color: #CCCCCC;
     text-decoration: none;
+    font-size: 0.9rem; /* Added to fit without wrapping */
     transition: color 0.3s;
 }
 
@@ -2402,7 +2457,7 @@ details p::before {
 }
 
 .intent-bridge-inner h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
     color: var(--primary-color);
     margin-bottom: 28px;
     line-height: 1.5;
@@ -2457,7 +2512,7 @@ details p::before {
 }
 
 .concern-card h3 {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: var(--primary-color);
     margin-bottom: 16px;
     padding-bottom: 12px;
@@ -2600,7 +2655,7 @@ details p::before {
 
 .pricing-card h3 {
     color: var(--primary-color);
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     margin-bottom: 24px;
     white-space: nowrap;
 }
@@ -2680,7 +2735,7 @@ details p::before {
 
 #floating-qr .qr-title {
     font-weight: bold;
-    font-size: 1.05rem;
+    font-size: 1.05rem; /* Reduced to avoid wrapping after global font size increase */
     color: #FFFFFF;
     margin-bottom: 12px;
 }
@@ -2736,7 +2791,7 @@ details p::before {
 }
 .amenities-container h2 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
     margin-bottom: 50px;
     color: #2c2c2c;
     font-weight: 700;
@@ -2820,9 +2875,362 @@ details p::before {
         padding: 50px 5%;
     }
     .amenities-container h2 {
-        font-size: 1.8rem;
+        font-size: clamp(1.8rem, 3vw, 2.4rem);
     }
     .amenity-card {
         width: 100%;
     }
+}
+
+/* ==========================================================================
+   Flow Section - Horizontal Timeline (Reference Image Design)
+   ========================================================================== */
+.flow-horizontal-section {
+    padding: 60px 0 0;
+    width: 100%;
+}
+
+.flow-steps-wrapper {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.flow-step {
+    position: relative;
+    padding: 60px 0;
+    width: 100%;
+}
+
+
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.flow-step-inner {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.flow-step-image {
+    width: 40%;
+    flex-shrink: 0;
+}
+
+.flow-step-image img {
+    width: 100%;
+    border-radius: 4px; /* subtle rounding */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
+
+.flow-step-content {
+    width: 60%;
+    text-align: left;
+}
+
+.flow-step-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 10px;
+    gap: 15px;
+}
+
+.step-badge-blue {
+    background-color: #5fb4d4;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px 20px;
+    border-radius: 30px; /* pill shape */
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.step-title-inline {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.step-desc {
+    font-size: 0.95rem; /* テキストサイズを大きくして読みやすく */
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+/* Triangles */
+
+
+.flow-triangle-down-white {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 30px solid #ffffff;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .flow-step-inner {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    .flow-step-image {
+        width: 100%;
+    }
+    .flow-step-content {
+        width: 100%;
+    }
+    .flow-step-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* ==========================================================================
+   Trainer detailed info list
+   ========================================================================== */
+.trainer-info-list {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+.trainer-info-item {
+    display: flex;
+    margin-bottom: 8px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
+}
+.trainer-info-item:last-child {
+    border-bottom: none;
+}
+.ti-label {
+    flex: 0 0 85px; /* メッセージの5文字が改行しないように少し広げる */
+    font-weight: bold;
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+.ti-value {
+    flex: 1;
+    color: #4a4a4a;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Bottom Stick CTA / Google Map Btn
+   ========================================================================== */
+.btn-google-map {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5fb4d4; /* Matching the Web booking button */
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-top: 5px;
+    transition: background 0.3s;
+}
+.btn-google-map:hover {
+    background-color: #4AA0C0;
+    color: #fff;
+}
+.btn-google-map i {
+    margin-right: 8px;
+}
+
+
+
+
+
+
+
+.bg-blue {
+    background-color: #eaf5fa; /* light blue */
+}
+
+.flow-triangle-down-blue {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; 
+    height: 0; 
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 30px solid #eaf5fa;
+    z-index: 10;
+}
+
+/* ==========================================================================
+   Bottom Stick CTA / Google Map Btn
+   ========================================================================== */
+.bottom-cta-banner {
+    background-image: linear-gradient(rgba(95, 180, 212, 0.85), rgba(95, 180, 212, 0.9)), url('./image_final/cta_background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+    
+}
+.bottom-cta-banner h3 {
+    margin-bottom: 30px;
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.bottom-cta-banner .btn-web-outline {
+    display: inline-block;
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 250px;
+}
+.bottom-cta-banner .btn-web-outline:hover {
+    background: #fff;
+    color: var(--primary-color);
+}
+
+/* ==========================================================================
+   Store Info Refinements
+   ========================================================================== */
+.shop-table th {
+    padding-right: 30px; /* Increased separation between label and value */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.shop-table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 1.6;
+}
+
+.shop-address-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+.shop-address-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+/* Slideshow styles */
+.shop-info-slideshow {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.shop-info-slideshow img.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.shop-info-slideshow img.slide.active {
+    opacity: 1;
+}
+
+
+/* Hero sub-message highlight */
+.hero-highlight {
+    color: var(--primary-color);
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.bottom-cta-banner .btn-line-outline {
+    display: inline-block;
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 250px;
+}
+.bottom-cta-banner .btn-line-outline:hover {
+    background: #fff;
+    color: #06C755; /* LINE green */
+}
+
+
+/* Update Address Wrapper Layout */
+.shop-address-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+.shop-address-line1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.shop-address-line2 {
+    margin-top: 5px;
+}
+
+/* Copy Icon Button */
+.btn-copy-icon {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #555;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+.btn-copy-icon:hover {
+    background: #f0f0f0;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-copy-icon:active {
+    transform: scale(0.95);
 }
