@@ -381,6 +381,7 @@ h6 {
 .highlight-blue {
     background: linear-gradient(transparent 60%, rgba(169, 209, 222, 0.8) 40%);
     display: inline-block;
+    white-space: nowrap;
 }
 
 .hero-content .sub-message {
@@ -401,7 +402,7 @@ h6 {
 }
 
 .hero-lead-text {
-    color: #e53e70; /* Safie参考のピンク寄り赤 */
+    color: #5fb4d4; /* 青色に変更 */
     font-weight: bold;
     font-size: 1rem;
     text-align: center;
@@ -457,8 +458,8 @@ h6 {
     max-width: 450px;
 }
 .hero-note strong {
-    font-size: 1.25rem;
-    color: #e53e70;
+    font-size: 1.6rem;
+    color: #5fb4d4;
 }
 
 /* Image Masking Area */
