@@ -2122,6 +2122,7 @@ details p::before {
     line-height: 1.4;
     padding-bottom: 0;
     border-bottom: none;
+    min-height: 3.36rem; /* 1.2rem * 1.4 * 2 lines = exactly 2 lines height */
 }
 
 .access-card-text p {
@@ -2579,7 +2580,6 @@ details p::before {
     color: var(--primary-color);
     margin-bottom: 10px;
     line-height: 1.5;
-    min-height: 3rem; /* 1行見出しでも2行分の高さを確保し、下部のテキスト位置を完全に揃える */
 }
 
 .access-step-body p {
