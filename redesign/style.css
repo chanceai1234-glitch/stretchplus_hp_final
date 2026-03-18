@@ -423,12 +423,12 @@ h6 {
 
 .hero-content {
     flex: 1;
-    max-width: 530px; /* Increased slightly so "体が不調になる前に" fits on one line */
+    max-width: 650px; /* Increased to fit the longer new catchphrase on one line */
     padding-top: 40px;
 }
 
 .hero-content .main-message {
-    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-size: clamp(1.5rem, 3.2vw, 2.6rem);
     color: var(--text-heading);
     margin-bottom: 24px;
     line-height: 1.3;
@@ -2385,7 +2385,7 @@ details p::before {
     }
 
     .hero-content .main-message {
-        font-size: 2rem;
+        font-size: clamp(1rem, 5.5vw, 1.4rem);
     }
 
     .hero-content .sub-message {
