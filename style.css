@@ -3510,6 +3510,42 @@ html, body {
         padding-bottom: 5px !important;
     }
 
+    
+    /* PHASE 8: HEADER & FOOTER REFINEMENTS */
+    .header-actions {
+        display: none !important; /* Hide old PC header buttons */
+    }
+    
+    .sp-sticky-cta {
+        height: 65px !important;
+        align-items: stretch !important;
+    }
+    .sp-sticky-cta .btn {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+        border-radius: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .sp-sticky-cta .btn-web {
+        border-right: 1px solid rgba(255,255,255,0.3) !important;
+    }
+    .sp-sticky-cta .btn-line {
+        border-right: none !important;
+        border-left: none !important;
+    }
+    
+    .footer-nav {
+        display: none !important; /* Collapse redundant footer links on mobile */
+    }
+    
+    .hero-actions-wrapper {
+        display: none !important; /* Remove "First time try" block and buttons natively inside hero on mobile */
+    }
+
     /* HERO FIXES */
     .hero-split {
         padding-top: 80px; /* adjust top padding for mobile */

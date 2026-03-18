@@ -42,4 +42,26 @@
             <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank">WEBで予約する</a>
             <a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank">LINEで相談する</a>
         </div>
+
+        
+        <!-- Mobile Hamburger Button -->
+        <button class="sp-hamburger" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <!-- Mobile Navigation Overlay -->
+        <nav class="sp-nav-menu">
+            <ul>
+                <li><a href="#about" class="sp-nav-link">パーソナルストレッチとは</a></li>
+                <li><a href="#worries" class="sp-nav-link">お悩み解決</a></li>
+                <li><a href="#flow" class="sp-nav-link">ご利用の流れ</a></li>
+                <li><a href="#amenities" class="sp-nav-link">設備・アメニティ</a></li>
+                <li><a href="#trainers" class="sp-nav-link">トレーナー紹介</a></li>
+                <li><a href="#reviews" class="sp-nav-link">口コミ</a></li>
+                <li><a href="#faq" class="sp-nav-link">よくあるご質問</a></li>
+                <li><a href="#access" class="sp-nav-link">店舗情報・アクセス</a></li>
+            </ul>
+        </nav>
     </header>
