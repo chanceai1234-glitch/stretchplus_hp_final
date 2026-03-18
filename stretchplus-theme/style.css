@@ -684,7 +684,7 @@ h6 {
 
 .about-image img {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    height: 350px; /* 絶対値で高さを固定し上下カードの不一致を排除 */
     object-fit: cover;
     border-radius: 8px; /* 内側の画像は少し丸みを抑える */
 }
@@ -692,6 +692,9 @@ h6 {
 @media (max-width: 991px) {
     .about-image {
         width: 100%;
+    }
+    .about-image img {
+        height: 250px; /* スマホ時の固定高 */
     }
 }
 
