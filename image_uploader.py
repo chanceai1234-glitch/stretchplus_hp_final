@@ -8,6 +8,7 @@ import webbrowser
 PORT = 8000
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGE_FINAL_DIR = os.path.join(BASE_DIR, "image_final")
+WP_IMAGE_FINAL_DIR = os.path.join(BASE_DIR, "stretchplus-theme", "image_final")
 
 class UploaderHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
@@ -121,9 +122,16 @@ class UploaderHandler(http.server.SimpleHTTPRequestHandler):
                 
                 filepath = os.path.join(IMAGE_FINAL_DIR, filename)
                 
-                # Write file
+                # Write file to original static root
+                decoded_data = base64.b64decode(base64_data)
                 with open(filepath, 'wb') as f:
-                    f.write(base64.b64decode(base64_data))
+                    f.write(decoded_data)
+                
+                # Mirror to WordPress theme
+                if os.path.exists(WP_IMAGE_FINAL_DIR):
+                    wp_filepath = os.path.join(WP_IMAGE_FINAL_DIR, filename)
+                    with open(wp_filepath, 'wb') as wp_f:
+                        wp_f.write(decoded_data)
                 
                 response = {"success": True}
             except Exception as e:
