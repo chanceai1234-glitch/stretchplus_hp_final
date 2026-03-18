@@ -240,16 +240,9 @@ h6 {
     color: #fff;
 }
 
-.btn-web {
-    background-color: #23ADC6;
-    /* Light Blue / Brand Blue */
-    color: #fff;
-}
 
-.btn-web:hover {
-    background-color: #1a8a9e;
-    color: #fff;
-}
+
+
 
 .btn-hotpepper {
     background-color: #fff;
@@ -305,15 +298,9 @@ h6 {
     color: var(--primary-color);
 }
 
-.btn-line {
-    background-color: var(--line-color);
-    color: #fff;
-}
 
-.btn-line:hover {
-    background-color: var(--line-hover);
-    color: #fff;
-}
+
+
 
 .cta-group {
     display: flex;
@@ -491,31 +478,13 @@ h6 {
     justify-content: space-between;
 }
 
-.hero-actions .btn-web {
-    background-color: #5fb4d4; /* 水色（ライトブルー） */
-    color: white;
-    justify-content: center;
-    gap: 10px;
-}
+.hero-actions 
 
-.hero-actions .btn-web:hover {
-    background-color: #4AA0C0;
-}
+.hero-actions 
 
-.hero-actions .btn-line {
-    background-color: #06C755;
-    border: 2px solid #06C755;
-    color: white;
-    justify-content: center;
-    gap: 10px;
-}
+.hero-actions 
 
-.hero-actions .btn-line:hover {
-    background-color: #05b34c;
-    border-color: #05b34c;
-    color: white;
-    box-shadow: 0 4px 10px rgba(6, 199, 85, 0.3);
-}
+.hero-actions 
 
 .hero-note {
     font-size: 0.75rem;
@@ -896,24 +865,9 @@ h6 {
     color: var(--text-body);
 }
 
-.closing-action .btn-web {
-    width: 100%;
-    max-width: 350px;
-    padding: 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    background-color: #5fb4d4;
-    color: white;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 30px;
-}
+.closing-action 
 
-.closing-action .btn-web:hover {
-    background-color: #4AA0C0;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(95, 180, 212, 0.4);
-}
+.closing-action 
 
 .sp-only {
     display: none;
@@ -2167,21 +2121,29 @@ details p::before {
     letter-spacing: 0.05em;
 }
 
+
 .btn-final-web {
     background-color: var(--primary-color);
     color: #fff;
+    border: 2px solid var(--primary-color);
     font-size: 1.25rem;
     font-weight: bold;
     padding: 20px 50px;
     border-radius: 40px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
+
+
 .btn-final-web:hover {
-    background-color: #f1f5f9;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
+
 
 .btn-final-line {
     background-color: var(--line-color);
@@ -3154,25 +3116,8 @@ details p::before {
     font-weight: bold;
     letter-spacing: 2px;
 }
-.bottom-cta-banner .btn-web-outline {
-    display: inline-block;
-    border: 2px solid #fff;
-    color: #fff;
-    background: transparent;
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    border-radius: 40px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    min-width: 250px;
-}
-.bottom-cta-banner .btn-web-outline:hover {
-    background: transparent;
-    border-color: #fff;
-    color: #fff;
-    opacity: 0.75;
-    transform: translateY(-2px);
-}
+
+
 
 /* ==========================================================================
    Store Info Refinements
@@ -3234,25 +3179,8 @@ details p::before {
     font-weight: bold;
 }
 
-.bottom-cta-banner .btn-line-outline {
-    display: inline-block;
-    border: 2px solid #fff;
-    color: #fff;
-    background: transparent;
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    border-radius: 40px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    min-width: 250px;
-}
-.bottom-cta-banner .btn-line-outline:hover {
-    background: transparent;
-    border-color: #fff;
-    color: #fff;
-    opacity: 0.75;
-    transform: translateY(-2px);
-}
+
+
 
 
 /* Update Address Wrapper Layout */
@@ -3295,4 +3223,26 @@ details p::before {
 }
 .btn-copy-icon:active {
     transform: scale(0.95);
+}
+
+.btn-web {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-web:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+.btn-line {
+    background-color: var(--line-color);
+    color: #fff;
+    border: 2px solid var(--line-color);
+}
+
+.btn-line:hover {
+    background-color: #fff;
+    color: var(--line-color);
 }
