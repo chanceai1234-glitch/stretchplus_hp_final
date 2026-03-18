@@ -1,3 +1,11 @@
+/*
+Theme Name: STRETCH+ Final
+Theme URI: https://stretch-plus.com
+Author: AILABO Group
+Description: A custom premium theme for STRETCH+ 茅場町.
+Version: 1.0.0
+Text Domain: stretchplus
+*/
 @charset "UTF-8";
 
 /* ==========================================================================
@@ -14,31 +22,30 @@
     --line-color: #06C755;
     /* LINE Green */
     --line-hover: #05A546;
-    /* Text & Background Colors (Design Unification: 課題A/B) */
-    --text-heading: #111111;
-    --text-body: #444444;
+    /* Text & Background Colors (Redesign) */
+    --text-heading: #2B2B2B; /* 漆黒を回避、柔らかく締まるダークグレー */
+    --text-body: #333333;
     --text-muted: #888888;
     
     --bg-color: #FFFFFF;
-    /* 背景色 — 感情カテゴリ別 4種 */
+    /* 背景色 — リメイク用（ブランドカラーの極薄面を基本の交互レイアウトに使用） */
+    --bg-alt: rgba(35, 173, 198, 0.03); /* プライマリカラーの3%透過 */
+    
     --bg-white: #FFFFFF;
     --bg-light-grey: #F8F9FA;
     --bg-light-beige: #FAF8F5;
-
-    --bg-clean:  #FFFFFF;   /* 清潔・透明・誠実 — 飾らずそのまま見せるセクション用 */
-    --bg-trust:  #EEF5F8;   /* 信頼・専門性・知性 — ブランドブルーの極薄版 */
-    --bg-warm:   #F7F3EE;   /* 共感・寄り添い・温かみ — 唯一の暖色系 */
-    --bg-steady: #E0EFF3;   /* 確信・安心・ガイド — 穏やかなミントグリーン系 */
     --border-color: #E2E8F0;
 
     /* Typography */
     --font-family-base: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family-en: 'Montserrat', sans-serif; /* 英語用フォント */
     --font-size-base: 17px; /* ベースサイズを1pxアップして全体を拡大 */
     --line-height-base: 1.8;
 
-    /* Spacing & Layout */
-    --container-width: 1100px;
-    --section-padding: 80px 20px;
+    /* Spacing & Layout (Premium White-space Rule) */
+    --container-width: 1200px; /* 広げて高級感を出す */
+    --section-padding-m: 80px 5%; /* モバイル用余白 */
+    --section-padding-pc: 120px 5%; /* PC用極大余白 */
     --border-radius: 12px;
     --transition-speed: 0.3s;
 }
@@ -62,6 +69,7 @@ body {
     line-height: var(--line-height-base);
     color: var(--text-body);
     background-color: var(--bg-color);
+    letter-spacing: 0.04em; /* 日本語テキストの詰まりを防ぐ */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -83,6 +91,17 @@ img {
     border: none;
 }
 
+/* Image Color Grading (Brand Tone Unified) */
+.about-image img,
+.worry-img,
+.step-image img,
+.trainer-icon,
+.access-card-img img,
+.shop-info-image img {
+    filter: saturate(0.85) brightness(1.05) contrast(0.95);
+    transition: filter 0.5s ease;
+}
+
 a img {
     border: none;
     outline: none;
@@ -98,9 +117,11 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: var(--font-family-en), var(--font-family-base); /* 英数字はMontserrat優先 */
     line-height: 1.4;
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em; /* 見出しは広めに設定し高級感を演出 */
+    color: var(--text-heading);
 }
 
 /* ==========================================================================
@@ -125,7 +146,21 @@ h6 {
 #access {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: var(--section-padding);
+    padding: var(--section-padding-m);
+}
+
+@media (min-width: 992px) {
+    #policy,
+    #worries,
+    #menu,
+    #flow,
+    #trainers,
+    #reviews,
+    #faq,
+    #info,
+    #access {
+        padding: var(--section-padding-pc); /* 120pxの余白を適用 */
+    }
 }
 
 /* Specific Narrow Containers */
@@ -134,25 +169,28 @@ h6 {
     max-width: 800px;
 }
 
-/* Buttons */
+/* Buttons (Premium Redesign) */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 32px;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 18px 40px;
+    font-size: 1.05rem;
+    font-family: var(--font-family-base);
+    font-weight: 700;
     border-radius: 50px;
-    transition: all var(--transition-speed) ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* プレミアム感のある柔らかい影 */
     border: none;
+    letter-spacing: 0.05em;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px); /* 浮き上がり強化 */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); /* ホバー時の影を濃く広く */
+    opacity: 0.95;
 }
 
 .btn-web:hover,
@@ -164,22 +202,22 @@ h6 {
 
 .btn-outline-primary {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 16px 36px;
     font-size: 1rem;
     font-weight: bold;
     color: var(--primary-color);
     background-color: #fff;
     border: 2px solid var(--primary-color);
-    border-radius: 30px;
+    border-radius: 50px;
     text-align: center;
-    transition: all var(--transition-speed);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-outline-primary:hover {
     background-color: var(--primary-color);
     color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(35, 173, 198, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(35, 173, 198, 0.25);
 }
 
 .btn-primary {
@@ -282,7 +320,21 @@ h6 {
     gap: 16px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 32px;
+    margin-top: 40px; /* 余白を少し追加 */
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ==========================================================================
@@ -293,14 +345,20 @@ h6 {
     top: 0;
     left: 0;
     width: 100%;
-    background: #FFFFFF;
-    backdrop-filter: blur(10px);
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+}
+
+#header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    padding: 10px 40px; /* 少し縮める */
 }
 
 .header-logo a {
@@ -347,15 +405,15 @@ h6 {
 /* ==========================================================================
    Hero Section (Split Layout with Mask)
    ========================================================================== */
-#hero.hero-split {
-    padding-top: 80px; /* ヘッダー分確保 */
-    padding-bottom: 0;
-    background-color: var(--bg-white);
-    margin-top: 70px;
-    min-height: calc(100vh - 80px);
+.hero-split {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 80px); /* ヘッダー分を引く */
     display: flex;
     align-items: center;
     overflow: hidden;
+    background-color: var(--bg-white);
+    padding-top: 80px; /* ヘッダーの高さ分 */
 }
 
 .hero-inner {
@@ -460,13 +518,12 @@ h6 {
 }
 
 .hero-note {
-    font-size: 0.95rem; /* 価格を目立たせる */
-    color: var(--text-body);
-    margin-top: 10px;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 15px;
     line-height: 1.5;
-    text-align: center;
-    max-width: 450px;
 }
+
 .hero-note strong {
     font-size: 1.6rem;
     color: #5fb4d4;
@@ -516,9 +573,9 @@ h6 {
 }
 
 @media (max-width: 991px) {
-    #hero.hero-split {
+    .hero-split {
+        flex-direction: column;
         padding-top: 100px;
-        min-height: auto;
     }
     .hero-inner {
         flex-direction: column;
@@ -545,7 +602,6 @@ h6 {
     .hero-content {
         padding-top: 0;
         padding-bottom: 40px;
-        max-width: 100%;
     }
 }
 
@@ -639,12 +695,43 @@ h6 {
     }
 }
 
+.about-recommend.card {
+    background-color: #ffffff;
+    padding: 60px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about-recommend h3 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.about-recommend ul {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #444444;
+}
+
+/* Removed duplicate styles for about-content and about-recommend */
+
+.about-recommend ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
 /* ==========================================================================
    Worries Section (Personas)
    ========================================================================== */
 #worries {
     padding: 80px 5%;
-    background-color: var(--bg-white);
+    background-color: var(--bg-clean);
 }
 
 .worries-inner {
@@ -735,7 +822,7 @@ h6 {
     top: 2px;
     width: 22px;
     height: 22px;
-    background-image: url('./image_final/common_checklist_icon.svg');
+    background-image: url('../image_final/common_checklist_icon.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -842,39 +929,14 @@ h6 {
    Reviews Section
    ========================================================================== */
 
-/* ==========================================================================
-   Policy Section
-   ========================================================================== */
-#policy {
-    background-color: var(--bg-white);
-    max-width: 100%;
+#policy h2::after {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin: 0 0 20px 0;
 }
 
 .policy-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-}
-
-.policy-header {
-    background-color: var(--bg-white);
-    padding: 30px 20px;
-    border-radius: 16px;
-    margin-bottom: 10px;
-}
-
-#policy h2 {
-    text-align: left;
-    margin-bottom: 15px;
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    color: var(--text-heading);
-    line-height: 1.35;
-    letter-spacing: 0.05em;
-}
-
-#policy h2::after {
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    margin: 0 0 20px 0;
 }
 
 @media (min-width: 768px) {
@@ -1109,7 +1171,7 @@ h6 {
 .worries-list-large li {
     position: relative;
     padding: 18px 20px 18px 50px;
-    background-color: var(--bg-white);
+    background-color: var(--bg-warm); /* [修正依頼] 水色からwarm背景に変更 */
     border-radius: 40px; /* pill形 */
     font-size: 1.1rem; /* 少し小さめでバランスを取る */
     font-weight: bold;
@@ -1394,8 +1456,8 @@ h6 {
 }
 
 .step-details p {
-    color: #444444;
     font-size: 0.95rem;
+    color: #444444;
     line-height: 1.7;
     margin-bottom: 0;
 }
@@ -1562,6 +1624,7 @@ h6 {
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
+    height: 100%; /* Allow stretching */
 }
 
 @media (max-width: 900px) {
@@ -1890,13 +1953,7 @@ details p::before {
 /* ==========================================================================
    Shop Info & Access Section
    ========================================================================== */
-#info {
-    background-color: var(--bg-light-grey);
-    padding: 80px 20px;
-    max-width: 100%;
-}
-
-#access {
+#info, #access {
     background-color: var(--bg-white);
     padding: 80px 20px;
     max-width: 100%;
@@ -2130,10 +2187,10 @@ details p::before {
    Footer
    ========================================================================== */
 #footer {
-    background-color: #2D3748;
-    color: #fff;
-    padding: 40px 20px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #1A1A1A; /* リメイク仕様：漆黒ではない重厚な墨色 */
+    color: #FFFFFF;
+    padding: 60px 20px 30px;
+    border-top: 1px solid #333333;
 }
 
 .footer-content {
@@ -2159,7 +2216,7 @@ details p::before {
 }
 
 .footer-left .footer-nap p {
-    color: #cbd5e1;
+    color: #AAAAAA;
     font-size: 0.95rem;
     line-height: 1.6;
     margin-bottom: 5px;
@@ -2168,7 +2225,7 @@ details p::before {
 .footer-left .footer-tel {
     font-size: 1.15rem;
     font-weight: bold;
-    color: #fff;
+    color: #FFFFFF;
     margin-top: 10px;
     letter-spacing: 0.05em;
 }
@@ -2187,14 +2244,14 @@ details p::before {
 }
 
 .footer-nav a {
-    color: #cbd5e1;
+    color: #CCCCCC;
     text-decoration: none;
     font-size: 0.9rem; /* Added to fit without wrapping */
-    transition: color 0.2s;
+    transition: color 0.3s;
 }
 
 .footer-nav a:hover {
-    color: #fff;
+    color: #FFFFFF;
 }
 
 /* 右カラム */
@@ -2216,63 +2273,70 @@ details p::before {
 }
 
 .sns-label {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: var(--font-family-en);
+    text-transform: uppercase;
+    color: #888888;
     letter-spacing: 0.05em;
 }
 
 .footer-sns {
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .footer-sns a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    background-color: transparent; /* Changed from white to transparent */
-    border: none; /* Removed primary-color border */
+    width: 40px;
+    height: 40px;
+    background-color: #333333;
     border-radius: 50%;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .footer-sns a img {
-    width: 24px; /* Slightly larger since there's no border */
-    height: 24px;
-    filter: brightness(0) invert(1); /* Ensures the icon is white against the dark footer */
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Ensure white icon */
 }
 
 .footer-sns a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(35, 173, 198, 0.4);
 }
 
 .footer-bottom {
     max-width: var(--container-width);
     margin: 0 auto;
-    padding-top: 20px;
-    border-top: 1px solid #4A5568;
+    padding-top: 24px;
+    border-top: 1px solid #333333;
     display: flex;
+    flex-wrap: wrap; /* スマホ用に折り返し許可 */
+    gap: 15px;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.8rem;
-    color: #a0aec0;
+    font-size: 0.85rem;
+    color: #888888;
 }
 
 .footer-bottom ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
 .footer-bottom a {
-    color: #a0aec0;
+    color: #AAAAAA;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer-bottom a:hover {
-    color: #fff;
+    color: #FFFFFF;
 }
 
 /* ==========================================================================
@@ -2296,7 +2360,7 @@ details p::before {
 
 #floating-qr>p.qr-title {
     font-weight: bold;
-    font-size: 1.05rem; /* Reduced to avoid wrapping after global font size increase */
+    font-size: 1.15rem;
     letter-spacing: 0.05em;
     background-color: transparent;
     color: #FFFFFF;
@@ -2457,7 +2521,7 @@ details p::before {
 
 .concern-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px (0, 0, 0, 0.08);
 }
 
 .concern-card h3 {
@@ -2684,7 +2748,7 @@ details p::before {
 
 #floating-qr .qr-title {
     font-weight: bold;
-    font-size: 1.05rem;
+    font-size: 1.05rem; /* Reduced to avoid wrapping after global font size increase */
     color: #FFFFFF;
     margin-bottom: 12px;
 }
