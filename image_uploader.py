@@ -5,7 +5,7 @@ import base64
 import os
 import webbrowser
 
-PORT = 8000
+PORT = 8080
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGE_FINAL_DIR = os.path.join(BASE_DIR, "image_final")
 WP_IMAGE_FINAL_DIR = os.path.join(BASE_DIR, "stretchplus-theme", "image_final")
