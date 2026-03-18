@@ -1715,12 +1715,25 @@ h6 {
 }
 
 .review-user {
-    font-size: 0.85rem;
-    color: #888;
-    margin-top: 8px;
+    font-size: 0.9em;
+    color: #b0bdc8;
+    margin-top: 15px;
     display: block;
     font-weight: normal;
 }
+
+/* ==========================================================================
+   Global Section Background Rhythm (User Requested Pattern)
+   ========================================================================== */
+#about     { background-color: var(--bg-white) !important; }
+#worries   { background-color: var(--bg-light-grey) !important; }
+#policy    { background-color: var(--bg-white) !important; }
+#amenities { background-color: var(--bg-light-grey) !important; }
+/* #flow is excluded from rhythm */
+#trainers  { background-color: var(--bg-white) !important; }
+#reviews   { background-color: var(--bg-light-grey) !important; }
+#faq       { background-color: var(--bg-white) !important; }
+#access    { background-color: var(--bg-light-grey) !important; }
 
 .review-episode {
     background-color: #fcfaf5; /* とても薄い黄色/ベージュ系（和紙風の色味） */
