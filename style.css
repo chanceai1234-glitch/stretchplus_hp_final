@@ -2138,7 +2138,6 @@ details p::before {
 #cta-1, #cta-2 {
     text-align: center;
     padding: 70px 20px;
-    background: var(--primary-color);
     color: #fff;
     max-width: 100%;
 }
