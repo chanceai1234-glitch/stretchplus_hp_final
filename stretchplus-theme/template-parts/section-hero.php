@@ -9,7 +9,10 @@
                         <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank">WEBで予約する <i class="fas fa-chevron-right"></i></a>
                         <a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank">LINEで相談する <i class="fas fa-chevron-right"></i></a>
                     </div>
-                    <p class="hero-note">初回限定価格 60分：10,680円 → <strong>3,980円</strong></p>
+                    <div class="hero-note">
+                        <span class="sp-price-top">初回限定価格 60分：<span class="strike">10,680円</span></span><br class="sp-only">
+                        <strong class="sp-price-bottom"><span class="arrow">▶︎</span>3,980<span class="yen">円</span></strong>
+                    </div>
                 </div>
             </div>
             <div class="hero-image-col">
