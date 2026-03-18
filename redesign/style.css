@@ -294,15 +294,15 @@ h6 {
 }
 
 .btn-booking-outline {
-    background-color: #fff;
+    background-color: var(--primary-color);
     border: 2px solid var(--primary-color);
-    color: var(--primary-color);
+    color: #fff;
     font-weight: bold;
 }
 
 .btn-booking-outline:hover {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: #fff;
+    color: var(--primary-color);
 }
 
 .btn-line {
@@ -2168,8 +2168,8 @@ details p::before {
 }
 
 .btn-final-web {
-    background-color: #fff;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
     font-size: 1.25rem;
     font-weight: bold;
     padding: 20px 50px;
