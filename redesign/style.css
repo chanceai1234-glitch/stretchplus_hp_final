@@ -445,11 +445,11 @@ h6 {
 }
 
 .highlight-blue {
-    display: inline-block;
-    white-space: nowrap;
     position: relative;
     padding: 0 5px; /* マーカーが少しはみ出るように */
     background: linear-gradient(transparent 60%, #b2e0f0 0%);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 .hero-content .sub-message {
