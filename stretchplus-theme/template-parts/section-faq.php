@@ -97,8 +97,4 @@
             </div>
         </div>
         </div> <!-- End of .faq-grid -->
-
-        <div class="faq-btn-wrap">
-            <a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank">トレーナーに質問したい方はコチラ</a>
-        </div>
-    </section>
+</section>
