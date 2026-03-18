@@ -3131,8 +3131,9 @@ details p::before {
     min-width: 250px;
 }
 .bottom-cta-banner .btn-web-outline:hover {
-    background: #fff;
-    color: var(--primary-color);
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
 }
 
 /* ==========================================================================
@@ -3208,8 +3209,9 @@ details p::before {
     min-width: 250px;
 }
 .bottom-cta-banner .btn-line-outline:hover {
-    background: #fff;
-    color: #06C755; /* LINE green */
+    background: var(--line-color);
+    border-color: var(--line-color);
+    color: #fff;
 }
 
 

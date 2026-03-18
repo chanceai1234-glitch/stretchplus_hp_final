@@ -825,7 +825,7 @@ h6 {
     top: 2px;
     width: 22px;
     height: 22px;
-    background-image: url('../image_final/common_checklist_icon.svg');
+    background-image: url('./image_final/common_checklist_icon.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -3131,8 +3131,9 @@ details p::before {
     min-width: 250px;
 }
 .bottom-cta-banner .btn-web-outline:hover {
-    background: #fff;
-    color: var(--primary-color);
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
 }
 
 /* ==========================================================================
@@ -3208,8 +3209,9 @@ details p::before {
     min-width: 250px;
 }
 .bottom-cta-banner .btn-line-outline:hover {
-    background: #fff;
-    color: #06C755; /* LINE green */
+    background: var(--line-color);
+    border-color: var(--line-color);
+    color: #fff;
 }
 
 
