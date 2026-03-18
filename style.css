@@ -3004,7 +3004,7 @@ details p::before {
 }
 
 .step-desc {
-    font-size: 0.95rem; /* テキストサイズを大きくして読みやすく */
+    font-size: 1.05rem; /* テキストサイズを大きくして読みやすく */
     color: #4a4a4a;
     line-height: 1.8;
 }
