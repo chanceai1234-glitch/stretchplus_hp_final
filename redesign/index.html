@@ -1090,7 +1090,36 @@
             slides[currentSlide].classList.add('active');
         }, 4000); // Change image every 4 seconds
     }
-</script>
+
+        // Mobile Hamburger Logic
+        const hamburger = document.querySelector('.sp-hamburger');
+        const spMenu = document.querySelector('.sp-nav-menu');
+        const spNavLinks = document.querySelectorAll('.sp-nav-link');
+        
+        if(hamburger && spMenu) {
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('is-active');
+                spMenu.classList.toggle('is-active');
+                document.body.style.overflow = spMenu.classList.contains('is-active') ? 'hidden' : '';
+            });
+            
+            // Close menu when clicking a link
+            spNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('is-active');
+                    spMenu.classList.remove('is-active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    </script>
+
+    <!-- Mobile Sticky Footer CTA -->
+    <div class="sp-sticky-cta">
+        <a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank"><i class="fab fa-line" style="margin-right: 8px;"></i> LINE</a>
+        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank"><i class="far fa-file-alt" style="margin-right: 8px;"></i> WEB予約</a>
+    </div>
+    
 </body>
 
 
