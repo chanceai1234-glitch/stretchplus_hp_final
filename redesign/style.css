@@ -287,15 +287,15 @@ h6 {
 }
 
 .btn-booking-outline {
-    background-color: var(--primary-color);
+    background-color: #fff;
     border: 2px solid var(--primary-color);
-    color: #fff;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
 .btn-booking-outline:hover {
-    background-color: #fff;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 
@@ -2123,8 +2123,8 @@ details p::before {
 
 
 .btn-final-web {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: #fff;
+    color: var(--primary-color);
     border: 2px solid var(--primary-color);
     font-size: 1.25rem;
     font-weight: bold;
@@ -2138,8 +2138,8 @@ details p::before {
 
 
 .btn-final-web:hover {
-    background-color: #fff;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
@@ -3226,23 +3226,23 @@ details p::before {
 }
 
 .btn-web {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: #fff;
+    color: var(--primary-color);
     border: 2px solid var(--primary-color);
 }
 
 .btn-web:hover {
-    background-color: #fff;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 .btn-line {
-    background-color: var(--line-color);
-    color: #fff;
+    background-color: #fff;
+    color: var(--line-color);
     border: 2px solid var(--line-color);
 }
 
 .btn-line:hover {
-    background-color: #fff;
-    color: var(--line-color);
+    background-color: var(--line-color);
+    color: #fff;
 }
