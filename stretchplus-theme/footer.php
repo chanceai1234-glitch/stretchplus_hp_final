@@ -204,6 +204,29 @@
                 });
             });
         }
+    
+        // Inject Swipe Arrows for Carousels on Mobile
+        if(window.innerWidth <= 768) {
+            document.querySelectorAll('.sp-carousel-wrapper').forEach(wrapper => {
+                const parent = wrapper.parentElement;
+                parent.style.position = 'relative';
+                
+                const leftArrow = document.createElement('div');
+                leftArrow.className = 'sp-swipe-arrow left';
+                leftArrow.innerHTML = '&#10094;';
+                
+                const rightArrow = document.createElement('div');
+                rightArrow.className = 'sp-swipe-arrow right';
+                rightArrow.innerHTML = '&#10095;';
+                
+                parent.appendChild(leftArrow);
+                parent.appendChild(rightArrow);
+                
+                const scrollWidth = window.innerWidth * 0.9;
+                leftArrow.addEventListener('click', () => wrapper.scrollBy({left: -scrollWidth, behavior: 'smooth'}));
+                rightArrow.addEventListener('click', () => wrapper.scrollBy({left: scrollWidth, behavior: 'smooth'}));
+            });
+        }
     </script>
 <?php wp_footer(); ?>
 
