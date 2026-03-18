@@ -814,7 +814,7 @@ h6 {
     top: 2px;
     width: 22px;
     height: 22px;
-    background-image: url('../image_final/common_checklist_icon.svg');
+    background-image: url('.../image_final/common_checklist_icon.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -3083,7 +3083,7 @@ details p::before {
    Bottom Stick CTA / Google Map Btn
    ========================================================================== */
 .bottom-cta-banner {
-    background-image: linear-gradient(rgba(95, 180, 212, 0.85), rgba(95, 180, 212, 0.9)), url('./image_final/cta_background.png');
+    background-image: linear-gradient(rgba(95, 180, 212, 0.85), rgba(95, 180, 212, 0.9)), url('../image_final/cta_background.png');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
