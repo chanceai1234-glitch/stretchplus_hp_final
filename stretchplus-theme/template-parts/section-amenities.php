@@ -2,7 +2,7 @@
         <div class="amenities-container">
             <div class="speech-badge">手ぶらでOK！</div>
             <h2>豊富な設備・アメニティ</h2>
-            <div class="amenities-grid">
+            <div class="amenities-grid sp-carousel-wrapper">
                 <!-- Amenity 1 -->
                 <div class="amenity-card">
                     <div class="amenity-img-wrapper">

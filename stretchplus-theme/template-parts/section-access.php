@@ -2,7 +2,7 @@
         <!-- アクセスブロック -->
         <div class="shop-access-block">
             <h2>アクセス</h2>
-            <div class="access-cards-container">
+            <div class="access-cards-container sp-carousel-wrapper">
                 <div class="access-card">
                     <div class="access-card-img">
                         <img src="<?php echo get_template_directory_uri(); ?>/image_final/access_step_1.jpg" alt="茅場町駅3番出口">

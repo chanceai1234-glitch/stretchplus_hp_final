@@ -5,7 +5,7 @@
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 6L11 12L17 18M11 6L5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="review-grid-wrapper">
-                <div class="review-grid" id="review-grid">
+                <div class="review-grid sp-carousel-wrapper" id="review-grid">
                     <!-- Card 1 -->
                     <div class="review-card">
                         <div class="review-bubble">

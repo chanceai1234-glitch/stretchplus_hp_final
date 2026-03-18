@@ -3435,6 +3435,81 @@ html, body {
    SMARTPHONE HERO, ABOUT & WORRIES OVERRIDES
    ========================================================================== */
 @media (max-width: 768px) {
+    
+    /* APP-LIKE HORIZONTAL CAROUSELS */
+    .sp-carousel-wrapper {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 20px !important;
+        padding-bottom: 20px !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important; /* Hide standard scrollbar */
+        padding-left: 5vw !important; /* Start padding for the scroll */
+        padding-right: 5vw !important;
+        margin-left: -5vw !important; /* Break out of container padding */
+        margin-right: -5vw !important;
+    }
+    .sp-carousel-wrapper::-webkit-scrollbar {
+        display: none !important;
+    }
+    .sp-carousel-wrapper > * {
+        flex: 0 0 85% !important; /* Show 85% of screen width, peeking next card */
+        scroll-snap-align: center !important;
+        max-width: 85% !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* Flow specific fix because of triangles */
+    .flow-step .flow-triangle-down-blue, .flow-step .flow-triangle-down-white, .flow-step .flow-triangle-down-beige {
+        display: none !important; /* Hide arrows on horizontal scroll */
+    }
+    
+    /* Hide review slider buttons on mobile */
+    .slider-btn {
+        display: none !important;
+    }
+    
+    /* Remove chat bubbles from reviews on mobile */
+    .review-bubble::after, .review-bubble::before {
+        display: none !important;
+    }
+    .review-bubble {
+        border-radius: 8px !important;
+        padding: 20px !important;
+        background: #f8f8f8 !important;
+    }
+
+    /* STORE INFO TABLE FIX */
+    .shop-table {
+        display: block;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .shop-table tbody {
+        display: block;
+        width: 100%;
+    }
+    .shop-table tr {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+    }
+    .shop-table th, .shop-table td {
+        display: block;
+        width: 100%;
+        padding: 5px 0 !important;
+        border: none !important;
+    }
+    .shop-table th {
+        font-weight: bold;
+        color: var(--primary-color);
+        padding-bottom: 5px !important;
+    }
+
     /* HERO FIXES */
     .hero-split {
         padding-top: 80px; /* adjust top padding for mobile */

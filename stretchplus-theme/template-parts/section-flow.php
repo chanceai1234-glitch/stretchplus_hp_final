@@ -10,7 +10,7 @@
             </p>
         </div>
         
-        <div class="flow-steps-wrapper">
+        <div class="flow-steps-wrapper sp-carousel-wrapper">
             <!-- STEP 01 -->
             <div class="flow-step bg-blue">
                 <div class="flow-step-inner container">
