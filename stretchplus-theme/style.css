@@ -934,6 +934,11 @@ h6 {
     margin: 0 0 20px 0;
 }
 
+.policy-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (min-width: 768px) {
     .policy-wrapper {
         flex-direction: row;

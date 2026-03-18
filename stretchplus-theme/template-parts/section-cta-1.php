@@ -1,4 +1,4 @@
-<section id="cta-1" class="reveal">
+<section id="cta-1" class="bottom-cta-banner reveal">
         <h2>まずは1回、体感してみてください。</h2>
         <p class="final-cta-sub">初回限定価格 60分 3,980円（税込）</p>
         <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
