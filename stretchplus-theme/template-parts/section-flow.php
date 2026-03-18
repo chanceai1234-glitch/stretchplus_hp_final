@@ -1,5 +1,6 @@
 <section id="flow" class="flow-horizontal-section" style="background-color: #eaf5fa; padding: 60px 0;">
         <div class="container" style="max-width: 900px; text-align: center; margin: 0 auto 30px;">
+            <div class="speech-badge">初めてでも安心！</div>
             <h2 class="section-title">
                 ご利用の流れ
             </h2>
