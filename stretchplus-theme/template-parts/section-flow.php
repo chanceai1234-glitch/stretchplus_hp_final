@@ -56,7 +56,7 @@
                             <span class="step-badge-blue">STEP 03</span>
                             <h3 class="step-title-inline">施術室へご案内</h3>
                         </div>
-                        <p class="step-desc">ご来店いただきましたら、ご予約内容を確認させていただいたあと、シャワールームなどの設備のご説明とともに、完全個室の施術室へご案内いたします。</p>
+                        <p class="step-desc">ご来店いただきましたら、ご予約内容を確認させていただいた後、シャワールームなどの設備をご説明させていただいたうえで、施術室へご案内いたします。</p>
                     </div>
                 </div>
                 <div class="flow-triangle-down-beige"></div>
@@ -73,7 +73,7 @@
                             <span class="step-badge-blue">STEP 04</span>
                             <h3 class="step-title-inline">お着替え</h3>
                         </div>
-                        <p class="step-desc">M・L・2L・3L・4Lとお体のサイズに合わせた施術着をご用意しております。個室にてゆっくりお着替えください。</p>
+                        <p class="step-desc">M、L、2L、3L、4Lとお体のサイズに合わせた施術着をご用意しております。個室にてゆっくりお着替えください。<br><br>なお、ご要望に応じて靴下等もご用意ございますので、必要に応じてお申し付けください。</p>
                     </div>
                 </div>
                 <div class="flow-triangle-down-white"></div>
@@ -88,7 +88,7 @@
                     <div class="flow-step-content">
                         <div class="flow-step-header">
                             <span class="step-badge-blue">STEP 05</span>
-                            <h3 class="step-title-inline">ヒアリング・ご相談</h3>
+                            <h3 class="step-title-inline">ヒアリング</h3>
                         </div>
                         <p class="step-desc">お体のお悩みや、目指したい理想の状態、通いやすい頻度などについてじっくりお伺いいたします。<br>そのうえで、本日どの部位を優先的にケアするか、どこまでストレッチを深めていくかを一緒に相談しながら施術内容を決めていきます。</p>
                     </div>
@@ -141,7 +141,7 @@
                             <span class="step-badge-blue">STEP 08</span>
                             <h3 class="step-title-inline">お着替え</h3>
                         </div>
-                        <p class="step-desc">施術着からお着替えください。室内にウォーターサーバーをご用意しておりますので、水分補給もご自由にどうぞ。</p>
+                        <p class="step-desc">施術着からお着替えください。室内にウォーターサーバーもご用意しておりますので、必要に応じて、施術後の水分補給にご活用ください。</p>
                     </div>
                 </div>
                 <div class="flow-triangle-down-white"></div>
