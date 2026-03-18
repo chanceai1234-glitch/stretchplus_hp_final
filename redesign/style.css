@@ -2360,12 +2360,13 @@ details p::before {
 
 #floating-qr>p.qr-title {
     font-weight: bold;
-    font-size: 1.15rem;
+    font-size: 0.95rem;
     letter-spacing: 0.05em;
     background-color: transparent;
     color: #FFFFFF;
     padding: 0;
     margin-bottom: 12px;
+    white-space: nowrap;
 }
 
 #floating-qr img {
@@ -2748,9 +2749,10 @@ details p::before {
 
 #floating-qr .qr-title {
     font-weight: bold;
-    font-size: 1.05rem; /* Reduced to avoid wrapping after global font size increase */
+    font-size: 0.95rem; /* Reduced to strictly avoid wrapping */
     color: #FFFFFF;
     margin-bottom: 12px;
+    white-space: nowrap;
 }
 
 #floating-qr img {
@@ -3105,8 +3107,10 @@ details p::before {
     color: #fff;
     
 }
+.bottom-cta-banner h2,
 .bottom-cta-banner h3 {
     margin-bottom: 30px;
+    color: #ffffff;
     font-size: clamp(1.5rem, 4vw, 2.2rem);
     font-weight: bold;
     letter-spacing: 2px;
