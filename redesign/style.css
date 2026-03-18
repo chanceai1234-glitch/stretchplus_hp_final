@@ -3663,6 +3663,9 @@ html, body {
 }
 
 
+    
+@media (max-width: 768px) {
+
     /* PHASE 8 STEP 2: PREMIUM BANNERS & CAROUSEL UI */
     
     /* 1. Premium Hero Banner */
@@ -3757,3 +3760,5 @@ html, body {
     }
     .sp-swipe-arrow.left { left: 0px; }
     .sp-swipe-arrow.right { right: 0px; }
+
+}
