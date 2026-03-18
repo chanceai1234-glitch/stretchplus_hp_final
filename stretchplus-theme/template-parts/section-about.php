@@ -22,7 +22,7 @@
                     <strong><span class="highlight-blue">「ほぐしてもすぐ戻ってしまう」</span></strong>と感じている方ほど、ストレッチで体の動き方そのものを変えていくアプローチが合うかもしれません。</p>
                 </div>
                 <div class="about-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/image_final/about_sub_2.jpg" alt="マッサージやもみほぐしとの違い">
+                    <img src="<?php echo get_template_directory_uri(); ?>/image_final/about_sub_1.jpg" alt="マッサージやもみほぐしとの違い">
                 </div>
             </div>
 

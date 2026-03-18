@@ -4,8 +4,9 @@
  */
 
 function stretchplus_enqueue_assets() {
-    // Enqueue the main stylesheet
-    wp_enqueue_style('stretchplus-style', get_stylesheet_uri(), array(), '1.0.0');
+    // Enqueue the main stylesheet with dynamic cache busting based on file modification time
+    $theme_version = filemtime(get_stylesheet_directory() . '/style.css');
+    wp_enqueue_style('stretchplus-style', get_stylesheet_uri(), array(), $theme_version);
 
     // Remove WordPress default blocks CSS as we use entirely custom CSS
     wp_dequeue_style('wp-block-library');
