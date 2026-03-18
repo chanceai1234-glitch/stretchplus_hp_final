@@ -1,5 +1,6 @@
 <section id="amenities" class="section-bg-light" style="padding: 60px 0;">
         <div class="amenities-container">
+            <div class="speech-badge">手ぶらでOK！</div>
             <h2>豊富な設備・アメニティ</h2>
             <div class="amenities-grid">
                 <!-- Amenity 1 -->
