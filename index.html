@@ -1081,6 +1081,11 @@
             document.querySelectorAll('.flow-card').forEach(el => {
                 observer.observe(el);
             });
+            
+            // Animate standard reveal elements
+            document.querySelectorAll('.reveal').forEach(el => {
+                observer.observe(el);
+            });
         });
     
     // Store Info Slideshow
