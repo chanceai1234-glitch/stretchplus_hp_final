@@ -31,3 +31,17 @@
             </div>
         </div>
     </section>
+
+    <!-- Mobile-only promo banner between Hero and About -->
+    <div class="sp-hero-promo-banner sp-only">
+        <div class="sp-hero-promo-inner">
+            <span class="sp-promo-label">🎁 初回限定価格</span>
+            <div class="sp-promo-price-row">
+                <span class="sp-promo-course">60分</span>
+                <span class="sp-promo-original">10,680円</span>
+                <span class="sp-promo-arrow">→</span>
+                <span class="sp-promo-new">3,980<small>円</small></span>
+            </div>
+            <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="sp-promo-cta" target="_blank">いますぐ予約する ›</a>
+        </div>
+    </div>
