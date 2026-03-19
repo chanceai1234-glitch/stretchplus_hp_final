@@ -35,7 +35,7 @@
     <!-- Mobile-only promo banner between Hero and About -->
     <div class="sp-hero-promo-banner sp-only">
         <div class="sp-hero-promo-inner">
-            <span class="sp-promo-label">🎁 初回限定価格</span>
+            <span class="sp-promo-label">初回限定価格</span>
             <div class="sp-promo-price-row">
                 <span class="sp-promo-course">60分</span>
                 <span class="sp-promo-original">10,680円</span>
