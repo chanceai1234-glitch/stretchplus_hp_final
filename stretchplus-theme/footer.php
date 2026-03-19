@@ -7,13 +7,13 @@
                 <!-- Group 1: WEB & Hotpepper -->
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                     <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn-web-outline pulse-btn" target="_blank"><i class="far fa-file-alt"></i> WEBで予約する</a>
-                    <a href="https://beauty.hotpepper.jp/kr/slnH000671756/" target="_blank" style="color: #fff; text-decoration: underline; font-size: 0.9rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">HOT PEPPER Beautyの方はこちら</a>
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000671756/" target="_blank" class="btn-hotpepper pulse-btn">HOT PEPPERで予約する</a>
                 </div>
 
                 <!-- Group 2: LINE & Rakuten -->
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                     <a href="https://lin.ee/rboKm7N" class="btn-line-outline pulse-btn" target="_blank"><i class="fab fa-line"></i> LINEで相談する</a>
-                    <a href="https://beauty.rakuten.co.jp/s3000052366/" target="_blank" style="color: #fff; text-decoration: underline; font-size: 0.9rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Rakuten Beautyの方はコチラ</a>
+                    <a href="https://beauty.rakuten.co.jp/s3000052366/" target="_blank" class="btn-rakuten pulse-btn">Rakuten Beautyで予約</a>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
 
     <!-- Floating QR Code (PC Only) -->
     <div id="floating-qr">
-        <p class="qr-title">公式LINEはこちら</p>
+        <p class="qr-title">LINEで相談する</p>
         <img src="<?php echo get_template_directory_uri(); ?>/image_final/common_qr_line.png" alt="LINE友達追加QRコード"
             style="border: 1px solid #E2E8F0; border-radius: 8px; padding: 5px; background: #fff;">
     </div>
