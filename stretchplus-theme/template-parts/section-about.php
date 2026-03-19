@@ -14,12 +14,12 @@
             </div>
 
             <!-- Card 2: Difference from Massage -->
-            <div class="about-row card">
+            <div class="about-row card card-yellowgreen">
                 <div class="about-content">
-                    <h3><strong>マッサージやもみほぐしとの違いは？</strong></h3>
+                    <h3><strong class="title-yellowgreen">マッサージやもみほぐしとの違いは？</strong></h3>
                     <p>マッサージやもみほぐしは、固くなったところを"押したり揉んだりして"その場のコリや疲れを楽にするケアです。<br>
-                    パーソナルストレッチは、関節を"動かしながら筋肉を伸ばす"ことで、柔軟性アップや姿勢改善など、<strong><span class="highlight-blue">コリや疲れが起きにくい体づくりを支援するケア</span></strong>です。<br>
-                    <strong><span class="highlight-blue">「ほぐしてもすぐ戻ってしまう」</span></strong>と感じている方ほど、ストレッチで体の動き方そのものを変えていくアプローチが合うかもしれません。</p>
+                    パーソナルストレッチは、関節を"動かしながら筋肉を伸ばす"ことで、柔軟性アップや姿勢改善など、<strong><span class="highlight-yellowgreen">コリや疲れが起きにくい体づくりを支援するケア</span></strong>です。<br>
+                    <strong><span class="highlight-yellowgreen">「ほぐしてもすぐ戻ってしまう」</span></strong>と感じている方ほど、ストレッチで体の動き方そのものを変えていくアプローチが合うかもしれません。</p>
                 </div>
                 <div class="about-image">
                     <img src="<?php echo get_template_directory_uri(); ?>/image_final/about_sub_1.jpg" alt="マッサージやもみほぐしとの違い">

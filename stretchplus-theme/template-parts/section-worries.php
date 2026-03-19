@@ -50,7 +50,10 @@
                 <p class="catchy-message">そのお悩み、<br class="sp-only"><span class="highlight-blue">ストレッチplusが全部解決</span>します！</p>
                 <div class="closing-action">
                     <p class="action-lead">一つでも当てはまった方はこちら</p>
-                    <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web pulse-btn" target="_blank">WEB予約はこちら <i class="fas fa-chevron-right"></i></a>
+                    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web pulse-btn" target="_blank">WEB予約はこちら <i class="fas fa-chevron-right"></i></a>
+                        <a href="https://lin.ee/rboKm7N" class="btn btn-line pulse-btn" style="background-color: var(--line-color); color:#fff; border-radius:50px; padding:15px 30px; font-weight:bold; text-decoration:none;" target="_blank"><i class="fab fa-line"></i> LINEで相談する</a>
+                    </div>
                 </div>
             </div>
 

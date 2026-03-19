@@ -3289,3 +3289,38 @@ details p::before {
     color: #fff;
     box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
 }
+
+/* =========================================
+   PHASE 27: Red Aux CTAs and Yellow-Green Accents
+   ========================================= */
+.btn-aux-red {
+    display: inline-block;
+    width: 100%;
+    max-width: 350px;
+    background-color: #ffffff;
+    color: #e60000;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: 2px solid #e60000;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+.btn-aux-red:hover {
+    background-color: #e60000;
+    color: #ffffff;
+}
+
+.card-yellowgreen {
+    border-left: 5px solid #8cc63f !important;
+}
+.title-yellowgreen {
+    color: #8cc63f !important;
+}
+.highlight-yellowgreen {
+    background: linear-gradient(transparent 60%, rgba(140, 198, 63, 0.4) 60%);
+    font-weight: bold;
+}
