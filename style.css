@@ -4333,3 +4333,54 @@ details p::before {
         text-align: left !important;
     }
 }
+
+
+/* ==========================================================================
+   PHASE 17: HERO HOIST, FLOW CENTERING, AND CAROUSEL PURGE
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Hoist Hero text into upper quadrant */
+    .hero-content {
+        justify-content: center !important;
+        padding-top: 5vh !important;
+        padding-bottom: 25vh !important; /* Force the content box to sit physically higher */
+    }
+
+    /* Destroy legacy slider buttons on Flow */
+    #flow .slider-btn {
+        display: none !important;
+    }
+
+    /* Recenter Flow blocks natively instead of floating */
+    .flow-step-inner {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    
+    .flow-step-image-wrapper {
+        float: none !important; /* Kill the left alignment float */
+        width: 100% !important;
+        max-width: 300px !important; /* Keep image elegant */
+        margin: 0 auto 20px auto !important;
+    }
+    
+    .flow-step-text-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    .flow-step-header {
+        text-align: center !important; /* Center the title too */
+        width: 100% !important;
+    }
+    
+    .flow-step-desc {
+        text-align: left !important; /* Keep paragraph reading natively */
+        width: 100% !important;
+        padding-top: 15px !important;
+    }
+}

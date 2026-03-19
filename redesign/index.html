@@ -1089,13 +1089,15 @@
                     }
                 };
 
-                                prevReviewBtn.addEventListener('click', () => {
+                                // Mathematical Drift-Proof JS System
+                let spCurrentIndex = 0;
+                
+                prevReviewBtn.addEventListener('click', () => {
                     if (window.innerWidth <= 768) {
-                        const card = reviewGrid.querySelector('.review-card');
-                        if(card) {
-                            const style = window.getComputedStyle(card);
-                            const margin = parseInt(style.marginRight, 10) || 0;
-                            reviewGrid.scrollBy({ left: -(card.offsetWidth + margin), behavior: 'smooth' });
+                        const cards = reviewGrid.querySelectorAll('.review-card');
+                        if(spCurrentIndex > 0) {
+                            spCurrentIndex--;
+                            cards[spCurrentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
                         }
                     } else {
                         const itemsPerView = getItemsPerView();
@@ -1108,11 +1110,10 @@
 
                 nextReviewBtn.addEventListener('click', () => {
                     if (window.innerWidth <= 768) {
-                        const card = reviewGrid.querySelector('.review-card');
-                        if(card) {
-                            const style = window.getComputedStyle(card);
-                            const margin = parseInt(style.marginRight, 10) || 0;
-                            reviewGrid.scrollBy({ left: (card.offsetWidth + margin), behavior: 'smooth' });
+                        const cards = reviewGrid.querySelectorAll('.review-card');
+                        if(spCurrentIndex < cards.length - 1) {
+                            spCurrentIndex++;
+                            cards[spCurrentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
                         }
                     } else {
                         const cards = reviewGrid.querySelectorAll('.review-card');
@@ -1124,6 +1125,28 @@
                         }
                     }
                 });
+                
+                // Keep the manual swipe tracked
+                if(reviewGrid) {
+                    reviewGrid.addEventListener('scroll', () => {
+                        if (window.innerWidth <= 768) {
+                            const cards = reviewGrid.querySelectorAll('.review-card');
+                            if(!cards.length) return;
+                            const center = reviewGrid.scrollLeft + (reviewGrid.clientWidth / 2);
+                            let closest = 0;
+                            let minDistance = Infinity;
+                            cards.forEach((card, i) => {
+                                const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
+                                const dist = Math.abs(center - cardCenter);
+                                if(dist < minDistance) {
+                                    minDistance = dist;
+                                    closest = i;
+                                }
+                            });
+                            spCurrentIndex = closest;
+                        }
+                    });
+                }
 
                 window.addEventListener('resize', updateSliderPosition);
                 // Call initially
