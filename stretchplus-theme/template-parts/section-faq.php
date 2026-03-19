@@ -2,10 +2,18 @@
         <h2>よくあるご質問</h2>
         <p class="faq-lead">初めての方からよくいただくご質問をまとめました。<br>準備・予約・施術・プランごとにご覧いただけます。</p>
 
-        <div class="faq-grid">
+        <div class="faq-tabs-container">
+            <ul class="faq-tab-links">
+                <li class="active" data-tab="tab-junbi">準備</li>
+                <li data-tab="tab-yoyaku">予約</li>
+                <li data-tab="tab-sejutsu">施術</li>
+                <li data-tab="tab-plan">プラン</li>
+            </ul>
+        </div>
+
+        <div class="faq-grid faq-tab-contents">
             <!-- 準備 -->
-            <div class="faq-category">
-                <h3>準備</h3>
+            <div id="tab-junbi" class="faq-category faq-tab-pane active">
                 <div class="faq-accordion">
                     <details>
                         <summary>必要な持ち物や、服装の指定はありますか？</summary>
@@ -36,8 +44,7 @@
         </div>
 
         <!-- 予約 -->
-        <div class="faq-category">
-            <h3>予約</h3>
+        <div id="tab-yoyaku" class="faq-category faq-tab-pane">
             <div class="faq-accordion">
                 <details>
                     <summary>どこから予約できますか？</summary>
@@ -59,8 +66,7 @@
         </div>
 
         <!-- 施術 -->
-        <div class="faq-category">
-            <h3>施術</h3>
+        <div id="tab-sejutsu" class="faq-category faq-tab-pane">
             <div class="faq-accordion">
                 <details>
                     <summary>運動経験がないのですが大丈夫でしょうか？</summary>
@@ -79,8 +85,7 @@
         </div>
 
         <!-- プラン -->
-        <div class="faq-category">
-            <h3>プラン</h3>
+        <div id="tab-plan" class="faq-category faq-tab-pane">
             <div class="faq-accordion">
                 <details>
                     <summary>入会手続に必要なものはありますか？</summary>
@@ -94,7 +99,27 @@
                     <summary>法人用プランや出張プランはありますか？</summary>
                     <p>ご要望に合わせて柔軟に対応いたします。お電話か公式LINEよりご相談ください。</p>
                 </details>
-            </div>
         </div>
         </div> <!-- End of .faq-grid -->
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var tabLinks = document.querySelectorAll('.faq-tab-links li');
+            var tabPanes = document.querySelectorAll('.faq-tab-pane');
+            
+            tabLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    var targetId = this.getAttribute('data-tab');
+                    
+                    // Deactivate all
+                    tabLinks.forEach(function(l) { l.classList.remove('active'); });
+                    tabPanes.forEach(function(p) { p.classList.remove('active'); });
+                    
+                    // Activate selected
+                    this.classList.add('active');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+        </script>
 </section>

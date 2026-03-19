@@ -4790,3 +4790,68 @@ details p::before {
         justify-content: center !important;
     }
 }
+
+/* ==========================================================================
+   PHASE 24: FAQ TABS, FLOW CENTERING, STORE ADDRESS WRAP
+   ========================================================================== */
+/* 1. FAQ Tabs */
+.faq-tabs-container {
+    margin: 0 auto 30px;
+    max-width: 800px;
+}
+.faq-tab-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.faq-tab-links li {
+    background: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-size: 0.95rem;
+}
+.faq-tab-links li.active {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(35,173,198,0.3);
+}
+.faq-tab-pane {
+    display: none;
+    animation: spFadeIn 0.4s ease forwards;
+}
+.faq-tab-pane.active {
+    display: block;
+}
+@keyframes spFadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: none; }
+}
+
+/* 2. Store Info Address Wrap Fix */
+.shop-address-line1 {
+    white-space: normal !important;
+    word-break: break-all !important;
+}
+
+/* 3. Flow Centering Overrides (Defeat Slider Remnants) */
+@media (max-width: 768px) {
+    .flow-steps-wrapper {
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .flow-step {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        max-width: 500px !important;
+    }
+}

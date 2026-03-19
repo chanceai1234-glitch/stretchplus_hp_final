@@ -4707,22 +4707,37 @@ details p::before {
     }
     .sp-hero-top-img {
         width: 100% !important;
-        aspect-ratio: 1 / 1 !important;
+        aspect-ratio: 3 / 4 !important; /* Emphasized vertical aspect ratio */
         object-fit: cover !important;
         display: block !important;
     }
     .sp-hero-text-block {
-        padding: 30px 20px 20px !important;
+        padding: 35px 20px 30px !important;
         text-align: center !important;
         background: #ffffff !important;
     }
-    .sp-hero-new-title {
-        font-size: 1.4rem !important;
+    .sp-hero-new-main {
+        font-size: 1.5rem !important;
         font-weight: 800 !important;
         color: #111111 !important;
         line-height: 1.6 !important;
-        margin: 0 !important;
+        margin: 0 0 15px 0 !important;
         letter-spacing: 0.05em !important;
+    }
+    .sp-hero-new-sub {
+        font-size: 1.05rem !important;
+        font-weight: 700 !important;
+        color: #444444 !important;
+        line-height: 1.8 !important;
+        margin: 0 !important;
+    }
+    .highlight-blue {
+        color: var(--primary-color) !important;
+    }
+    .highlight-blue-bold {
+        color: var(--primary-color) !important;
+        font-weight: 800 !important;
+        font-size: 1.15em !important;
     }
 
     /* 2. Absolute Reveal Override (Fix for missing content sections on mobile) */
@@ -4773,5 +4788,70 @@ details p::before {
     }
     .footer-sns {
         justify-content: center !important;
+    }
+}
+
+/* ==========================================================================
+   PHASE 24: FAQ TABS, FLOW CENTERING, STORE ADDRESS WRAP
+   ========================================================================== */
+/* 1. FAQ Tabs */
+.faq-tabs-container {
+    margin: 0 auto 30px;
+    max-width: 800px;
+}
+.faq-tab-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.faq-tab-links li {
+    background: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-size: 0.95rem;
+}
+.faq-tab-links li.active {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(35,173,198,0.3);
+}
+.faq-tab-pane {
+    display: none;
+    animation: spFadeIn 0.4s ease forwards;
+}
+.faq-tab-pane.active {
+    display: block;
+}
+@keyframes spFadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: none; }
+}
+
+/* 2. Store Info Address Wrap Fix */
+.shop-address-line1 {
+    white-space: normal !important;
+    word-break: break-all !important;
+}
+
+/* 3. Flow Centering Overrides (Defeat Slider Remnants) */
+@media (max-width: 768px) {
+    .flow-steps-wrapper {
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .flow-step {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        max-width: 500px !important;
     }
 }
