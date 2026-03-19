@@ -3293,6 +3293,22 @@ details p::before {
 /* =========================================
    PHASE 27: Red Aux CTAs and Yellow-Green Accents
    ========================================= */
+.btn-hotpepper {
+    border-color: #e4007f !important;
+    color: #e4007f !important;
+}
+.btn-hotpepper:hover {
+    background-color: #e4007f !important;
+    color: #ffffff !important;
+}
+.btn-rakuten {
+    border-color: #bf0000 !important;
+    color: #bf0000 !important;
+}
+.btn-rakuten:hover {
+    background-color: #bf0000 !important;
+    color: #ffffff !important;
+}
 .btn-aux-red {
     display: inline-block;
     width: 100%;
@@ -3359,4 +3375,19 @@ details p::before {
 }
 @media(max-width: 768px) {
     .cta-grid-container { grid-template-columns: 1fr; }
+}
+
+/* Phase 29: Button Alignments and QR text */
+.btn-web, .btn-line, .btn-web-outline, .btn-line-outline {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+#floating-qr .qr-title, #floating-qr>p.qr-title {
+    font-size: 1.15rem !important;
+    text-align: center !important;
+    letter-spacing: 0 !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
 }
