@@ -324,6 +324,14 @@ h6 {
     transform: translateY(0);
 }
 
+/* Failsafe: force all .reveal sections visible after 2s in case JS observer fails */
+@keyframes revealFallback {
+    to { opacity: 1; transform: none; }
+}
+.reveal {
+    animation: revealFallback 0.1s ease-out 2s forwards;
+}
+
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -865,9 +873,6 @@ h6 {
     color: var(--text-body);
 }
 
-.closing-action 
-
-.closing-action 
 
 .sp-only {
     display: none;
@@ -4854,4 +4859,72 @@ details p::before {
         width: 100% !important;
         max-width: 500px !important;
     }
+}
+
+/* ==========================================================================
+   PHASE 25: Green Accents, Review Card Equalizer, Hotpepper/Rakuten Buttons
+   ========================================================================== */
+
+/* Accent Color Shift (Green instead of Blue for About section context) */
+.highlight-green {
+    color: #198754 !important;
+}
+.highlight-green-title strong {
+    color: #198754 !important;
+}
+
+/* Review Card Vertical Equalizer */
+.review-grid {
+    align-items: stretch !important;
+}
+.review-card {
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+.review-feedback {
+    flex-grow: 1 !important; /* Pushes bottom contents to align */
+}
+
+/* Auxiliary CTA Buttons (HotPepper & Rakuten) */
+.btn-hotpepper {
+    display: inline-block !important;
+    width: 100% !important;
+    max-width: 350px !important;
+    background-color: #e4007f !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    padding: 15px 20px !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(228,0,127,0.3) !important;
+    transition: all 0.3s ease !important;
+    margin-bottom: 10px !important;
+    box-sizing: border-box !important;
+}
+.btn-hotpepper:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(228,0,127,0.4) !important;
+}
+
+.btn-rakuten {
+    display: inline-block !important;
+    width: 100% !important;
+    max-width: 350px !important;
+    background-color: #BF0000 !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    padding: 15px 20px !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(191,0,0,0.3) !important;
+    transition: all 0.3s ease !important;
+    margin-bottom: 10px !important;
+    box-sizing: border-box !important;
+}
+.btn-rakuten:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(191,0,0,0.4) !important;
 }
