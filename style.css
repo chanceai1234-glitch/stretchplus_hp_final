@@ -3794,3 +3794,91 @@ html, body {
     .sp-swipe-arrow.right { right: 0px; }
 
 }
+
+
+/* ==========================================================================
+   PHASE 11: SAFE MOBILE UX POLISH (DESKTOP PRESERVED)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. HTML Extraction bypass: About Row Reordering via 'display: contents' */
+    .about-row.card {
+        display: flex !important;
+        flex-direction: column !important;
+        padding-top: 30px !important;
+    }
+    .about-content {
+        display: contents !important; /* Extremely useful for flattening DOM nodes */
+    }
+    .about-content h3 {
+        order: -2 !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
+        padding: 0 15px !important;
+    }
+    .about-image {
+        order: -1 !important;
+        margin-bottom: 20px !important;
+    }
+    .about-content p {
+        order: 0 !important;
+    }
+
+    /* 2. Hero Mobile Overlay */
+    .hero-split {
+        position: relative !important;
+        padding-bottom: 80px !important; /* Space for absolute elements if needed */
+    }
+    .main-message {
+        display: none !important;
+    }
+    /* We place sub-message over the image by positioning it absolutely to the base container */
+    .sub-message {
+        position: absolute !important;
+        bottom: 200px !important; /* Position roughly over the image's top bounds */
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90% !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        padding: 15px 10px !important;
+        border-radius: 8px !important;
+        font-weight: 800 !important;
+        font-size: 1.1rem !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
+        text-align: center !important;
+        z-index: 20 !important;
+    }
+
+    /* 3. Swiper Physics Fixing */
+    .sp-carousel-wrapper {
+        justify-content: flex-start !important;
+    }
+    .sp-carousel-wrapper > * {
+        scroll-snap-align: start !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* 4. Review Card Titles */
+    .sp-review-card-title {
+        display: block !important;
+        color: var(--primary-color) !important;
+        font-size: 1.15rem !important;
+        font-weight: bold !important;
+        margin-bottom: 15px !important;
+        text-align: center !important;
+        border-bottom: 2px solid var(--border-color) !important;
+        padding-bottom: 10px !important;
+    }
+
+    /* 5. Shop Info Alignment */
+    .shop-table th, .shop-table td {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        text-align: left !important;
+    }
+
+    /* 6. FAQ Cleanup */
+    .faq-lead {
+        display: none !important;
+    }
+}
