@@ -4707,22 +4707,37 @@ details p::before {
     }
     .sp-hero-top-img {
         width: 100% !important;
-        aspect-ratio: 1 / 1 !important;
+        aspect-ratio: 3 / 4 !important; /* Emphasized vertical aspect ratio */
         object-fit: cover !important;
         display: block !important;
     }
     .sp-hero-text-block {
-        padding: 30px 20px 20px !important;
+        padding: 35px 20px 30px !important;
         text-align: center !important;
         background: #ffffff !important;
     }
-    .sp-hero-new-title {
-        font-size: 1.4rem !important;
+    .sp-hero-new-main {
+        font-size: 1.5rem !important;
         font-weight: 800 !important;
         color: #111111 !important;
         line-height: 1.6 !important;
-        margin: 0 !important;
+        margin: 0 0 15px 0 !important;
         letter-spacing: 0.05em !important;
+    }
+    .sp-hero-new-sub {
+        font-size: 1.05rem !important;
+        font-weight: 700 !important;
+        color: #444444 !important;
+        line-height: 1.8 !important;
+        margin: 0 !important;
+    }
+    .highlight-blue {
+        color: var(--primary-color) !important;
+    }
+    .highlight-blue-bold {
+        color: var(--primary-color) !important;
+        font-weight: 800 !important;
+        font-size: 1.15em !important;
     }
 
     /* 2. Absolute Reveal Override (Fix for missing content sections on mobile) */

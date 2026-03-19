@@ -24,19 +24,11 @@
                     <div class="sp-hero-flat-stack sp-only">
                         <img src="<?php echo get_template_directory_uri(); ?>/image_final/hero_main.jpg" alt="パーソナルストレッチの様子" class="sp-hero-top-img">
                         <div class="sp-hero-text-block">
-                            <h2 class="sp-hero-new-title">茅場町徒歩1分、完全個室で整える。<br>パーソナルストレッチ</h2>
+                            <h2 class="sp-hero-new-main"><span style="display: inline-block; white-space: nowrap;">体が不調になる前に整えて</span><br><span class="highlight-blue" style="display: inline-block; white-space: nowrap;">元気が続く毎日へ。</span></h2>
+                            <p class="sp-hero-new-sub">茅場町徒歩<span class="highlight-blue-bold">1</span>分<br>あなたのための<span class="highlight-blue-bold">完全個室</span>で極上の施術体験を</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Mobile-only promo banner between Hero and About -->
-    <div class="sp-hero-promo-banner sp-only">
-        <div class="sp-hero-promo-inner">
-            <h2 class="sp-promo-headline" style="color: #ffffff;">まずは1回、体感してみてください。</h2>
-            <p class="sp-promo-price-text" style="color: #ffffff;">初回限定価格 60分 3,980円（税込）</p>
-            <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="sp-promo-cta" target="_blank">WEBで予約する ›</a>
-        </div>
-    </div>
