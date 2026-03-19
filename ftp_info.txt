@@ -1,0 +1,3 @@
+FTP;stretch-plus.co.jp
+FTPユーザID：gravity@stretch-plus.co.jp
+パスワード：gravitystretch_21314
