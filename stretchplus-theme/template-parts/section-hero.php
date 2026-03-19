@@ -17,8 +17,16 @@
             </div>
             <div class="hero-image-col">
                 <div class="hero-image-wrapper">
-                    <div class="hero-image-bg-circle"></div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/image_final/hero_main.jpg" alt="パーソナルストレッチの様子" class="hero-masked-image">
+                                        <div class="hero-image-bg-circle pc-only"></div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/image_final/hero_main.jpg" alt="パーソナルストレッチの様子" class="hero-masked-image pc-only">
+                    
+                    <!-- Safie Style Mobile Slideshow -->
+                    <div class="sp-hero-slideshow sp-only">
+                        <div class="sp-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/image_final/hero_main.jpg');"></div>
+                        <div class="sp-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/image_final/about_main.jpg');"></div>
+                        <div class="sp-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/image_final/flow_step_8.jpg');"></div>
+                        <div class="sp-hero-overlay"></div>
+                    </div>
                 </div>
             </div>
         </div>
