@@ -184,6 +184,16 @@
     }
 </script>
 <?php wp_footer(); ?>
+
+    <!-- Mobile Sticky Navigation -->
+    <div class="sp-sticky-nav sp-only">
+        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="sticky-nav-kirei pulse-btn" target="_blank">
+            <i class="far fa-file-alt"></i> WEB予約
+        </a>
+        <a href="https://lin.ee/rboKm7N" class="sticky-nav-line pulse-btn" target="_blank">
+            <i class="fab fa-line"></i> LINE相談
+        </a>
+    </div>
 </body>
 
 
