@@ -4492,3 +4492,137 @@ details p::before {
         color: #0075c2;
     }
 }
+
+
+/* ==========================================================================
+   PHASE 19: SAFIE-STYLE FULL HAMBURGER MENU OVERHAUL
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Force Hamburger to front and visible */
+    .sp-hamburger {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 25px !important;
+        height: 18px !important;
+        position: absolute !important;
+        right: 15px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 10005 !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        cursor: pointer !important;
+    }
+    
+    .sp-hamburger span {
+        width: 100% !important;
+        height: 2px !important;
+        background: var(--primary-color) !important;
+        transition: all 0.3s ease !important;
+        border-radius: 2px !important;
+    }
+    
+    .sp-hamburger.is-active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg) !important;
+    }
+    .sp-hamburger.is-active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+    .sp-hamburger.is-active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg) !important;
+    }
+
+    /* 2. Safie Overlay White Theme */
+    .sp-nav-menu {
+        position: fixed !important;
+        top: 60px !important; /* Launch strictly below sticky header */
+        left: 0 !important;
+        width: 100vw !important;
+        height: calc(100vh - 60px) !important;
+        background: #ffffff !important;
+        z-index: 10000 !important;
+        overflow-y: auto !important;
+        padding: 10px 20px 80px 20px !important;
+        transition: transform 0.3s ease, opacity 0.3s ease !important;
+        transform: translateX(100%) !important; /* Slide in from right */
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+    
+    .sp-nav-menu.is-active {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* 3. Link Architecture (List Borders + Plus Icon) */
+    .sp-nav-menu ul {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .sp-nav-menu > ul > li {
+        width: 100% !important;
+    }
+    
+    /* Hide top CTA */
+    li.sp-nav-cta {
+        display: none !important;
+    }
+
+    .sp-nav-link {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 22px 0 !important;
+        border-bottom: 2px solid #f0f0f0 !important; /* Clean gray line */
+        font-size: 1.05rem !important;
+        font-weight: 700 !important;
+        color: #111 !important;
+        text-decoration: none !important;
+    }
+    
+    .sp-nav-link::after {
+        content: '+' !important;
+        font-size: 1.5rem !important;
+        color: #888 !important;
+        font-weight: 300 !important;
+    }
+
+    /* 4. Split Safie Bottom Pill Buttons */
+    .sp-nav-menu > ul > li.sp-nav-bottom-cta {
+        width: 48% !important; /* Split width */
+        margin-top: 40px !important;
+    }
+    
+    .sp-nav-menu > ul > li.sp-nav-bottom-cta.web {
+        margin-right: 4% !important;
+    }
+    
+    .sp-nav-bottom-cta a.btn {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 12px 10px !important;
+        font-size: 0.85rem !important;
+        font-weight: bold !important;
+        border-radius: 50px !important;
+        text-decoration: none !important;
+        color: #ffffff !important;
+    }
+    
+    /* Keep brand colors but use Safie pill structure */
+    .sp-nav-bottom-cta.web a.btn {
+        background-color: #E6006E !important; /* Safie Pink to perfectly match the requested image reference */
+    }
+    .sp-nav-bottom-cta.line a.btn {
+        background-color: #000000 !important; /* Safie Black to perfectly match reference */
+    }
+}
