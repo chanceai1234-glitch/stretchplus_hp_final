@@ -4227,3 +4227,109 @@ details p::before {
         box-sizing: border-box !important;
     }
 }
+
+
+/* ==========================================================================
+   PHASE 16: FLOW SECTION VERTICAL TIMELINE MUTATION
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Explode the carousel wrapper specifically for flow */
+    #flow .sp-carousel-wrapper {
+        display: block !important;
+        overflow: visible !important;
+        padding: 0 !important;
+        white-space: normal !important;
+    }
+    
+    .flow-step {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        padding: 40px 15px 50px !important;
+        margin: 0 !important;
+        background: var(--bg-light) !important;
+        position: relative !important;
+        scroll-snap-align: none !important;
+        text-align: left !important;
+    }
+    .flow-step:nth-child(even) {
+        background: #ffffff !important;
+    }
+
+    /* Interlocking descending triangles */
+    .flow-step::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 50%;
+        transform: translate(-50%, -100%);
+        width: 0; height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #ffffff;
+        z-index: 5;
+    }
+    .flow-step:nth-child(odd)::before { border-top-color: #ffffff; }
+    .flow-step:nth-child(even)::before { border-top-color: var(--bg-light); }
+    .flow-step:first-child::before { display: none; }
+    
+    .flow-step-inner {
+        display: block !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+    
+    /* Decouple logic */
+    .flow-step-text-wrapper {
+        display: contents !important;
+    }
+    
+    /* Image floats left */
+    .flow-step-image-wrapper {
+        float: left !important;
+        width: 42% !important;
+        margin: 0 15px 10px 0 !important;
+    }
+    .flow-step-image-wrapper img {
+        border-radius: 6px !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+    }
+    
+    /* Title occupies right space */
+    .flow-step-header {
+        overflow: hidden !important; 
+        display: block !important;
+        text-align: left !important;
+        margin-top: 0 !important;
+    }
+    .flow-step-number {
+        display: inline-block !important;
+        background: var(--primary-color) !important;
+        color: #ffffff !important;
+        font-size: 0.8rem !important;
+        padding: 4px 12px !important;
+        border-radius: 20px !important;
+        margin-bottom: 10px !important;
+        font-weight: bold !important;
+    }
+    .flow-step-title {
+        display: block !important;
+        font-size: 1.05rem !important;
+        line-height: 1.4 !important;
+        border-bottom: 2px solid #333 !important;
+        padding-bottom: 6px !important;
+        margin-bottom: 0 !important;
+        color: #111 !important;
+    }
+    
+    /* Description wraps cleanly underneath everything */
+    .flow-step-desc {
+        clear: both !important;
+        display: block !important;
+        width: 100% !important;
+        padding-top: 20px !important;
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        color: #333 !important;
+        text-align: left !important;
+    }
+}

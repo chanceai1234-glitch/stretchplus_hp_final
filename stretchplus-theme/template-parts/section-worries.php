@@ -1,6 +1,6 @@
 <section id="worries" class="reveal">
         <div class="worries-inner">
-            <h2 class="worries-title">こんなお悩みで<br class="sp-only">ありませんか？</h2>
+            <h2 class="worries-title">こんなお悩み<br class="sp-only">ありませんか？</h2>
             
                         <div class="personas-wrapper">
                 <!-- サラリーマン -->

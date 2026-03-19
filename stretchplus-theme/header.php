@@ -62,7 +62,9 @@
                 <li><a href="#trainers" class="sp-nav-link">トレーナー紹介</a></li>
                 <li><a href="#reviews" class="sp-nav-link">口コミ</a></li>
                 <li><a href="#faq" class="sp-nav-link">よくあるご質問</a></li>
-                <li><a href="#access" class="sp-nav-link">店舗情報・アクセス</a></li>
+                                <li><a href="#access" class="sp-nav-link">店舗情報・アクセス</a></li>
+                <li class="sp-nav-bottom-cta web" style="margin-top: 30px;"><a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank" style="width: 100%; padding: 15px;">Web予約 <i class="fas fa-chevron-right"></i></a></li>
+                <li class="sp-nav-bottom-cta line" style="margin-top: 15px;"><a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank" style="width: 100%; padding: 15px; background-color: var(--line-color); color: #fff;">LINE相談 <i class="fas fa-chevron-right"></i></a></li>
             </ul>
         </nav>
     </header>

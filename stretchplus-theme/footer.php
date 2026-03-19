@@ -148,21 +148,39 @@
                     }
                 };
 
-                prevReviewBtn.addEventListener('click', () => {
-                    const itemsPerView = getItemsPerView();
-                    if (currentSlide > 0) {
-                        currentSlide = Math.max(0, currentSlide - itemsPerView);
-                        updateSliderPosition();
+                                prevReviewBtn.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        const card = reviewGrid.querySelector('.review-card');
+                        if(card) {
+                            const style = window.getComputedStyle(card);
+                            const margin = parseInt(style.marginRight, 10) || 0;
+                            reviewGrid.scrollBy({ left: -(card.offsetWidth + margin), behavior: 'smooth' });
+                        }
+                    } else {
+                        const itemsPerView = getItemsPerView();
+                        if (currentSlide > 0) {
+                            currentSlide = Math.max(0, currentSlide - itemsPerView);
+                            updateSliderPosition();
+                        }
                     }
                 });
 
                 nextReviewBtn.addEventListener('click', () => {
-                    const cards = reviewGrid.querySelectorAll('.review-card');
-                    const itemsPerView = getItemsPerView();
-                    const maxSlide = Math.max(0, cards.length - itemsPerView);
-                    if (currentSlide < maxSlide) {
-                        currentSlide = Math.min(maxSlide, currentSlide + itemsPerView);
-                        updateSliderPosition();
+                    if (window.innerWidth <= 768) {
+                        const card = reviewGrid.querySelector('.review-card');
+                        if(card) {
+                            const style = window.getComputedStyle(card);
+                            const margin = parseInt(style.marginRight, 10) || 0;
+                            reviewGrid.scrollBy({ left: (card.offsetWidth + margin), behavior: 'smooth' });
+                        }
+                    } else {
+                        const cards = reviewGrid.querySelectorAll('.review-card');
+                        const itemsPerView = getItemsPerView();
+                        const maxSlide = Math.max(0, cards.length - itemsPerView);
+                        if (currentSlide < maxSlide) {
+                            currentSlide = Math.min(maxSlide, currentSlide + itemsPerView);
+                            updateSliderPosition();
+                        }
                     }
                 });
 
