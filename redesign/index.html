@@ -13,7 +13,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?cb=1773901146611">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -40,31 +40,6 @@
             <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank">WEBで予約する</a>
             <a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank">LINEで相談する</a>
         </div>
-
-        
-        <!-- Mobile Hamburger Button -->
-        <button class="sp-hamburger" aria-label="メニュー">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        
-        <!-- Mobile Navigation Overlay -->
-        <nav class="sp-nav-menu">
-            <ul>
-                <li class="sp-nav-cta"><a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank">まずはWEBで予約する <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#about" class="sp-nav-link">パーソナルストレッチとは</a></li>
-                <li><a href="#worries" class="sp-nav-link">お悩み解決</a></li>
-                <li><a href="#flow" class="sp-nav-link">ご利用の流れ</a></li>
-                <li><a href="#amenities" class="sp-nav-link">設備・アメニティ</a></li>
-                <li><a href="#trainers" class="sp-nav-link">トレーナー紹介</a></li>
-                <li><a href="#reviews" class="sp-nav-link">口コミ</a></li>
-                <li><a href="#faq" class="sp-nav-link">よくあるご質問</a></li>
-                <li><a href="#access" class="sp-nav-link">店舗情報・アクセス</a></li>
-                <li class="sp-nav-bottom-cta web" style="margin-top: 30px;"><a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank" style="width: 100%; padding: 15px;">Web予約 <i class="fas fa-chevron-right"></i></a></li>
-                <li class="sp-nav-bottom-cta line" style="margin-top: 15px;"><a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank" style="width: 100%; padding: 15px; background-color: var(--line-color); color: #fff;">LINE相談 <i class="fas fa-chevron-right"></i></a></li>
-            </ul>
-        </nav>
     </header>
 
     <section id="hero" class="hero-split">
@@ -78,10 +53,7 @@
                         <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank">WEBで予約する <i class="fas fa-chevron-right"></i></a>
                         <a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank">LINEで相談する <i class="fas fa-chevron-right"></i></a>
                     </div>
-                    <div class="hero-note">
-                        <span class="sp-price-top">初回限定価格 60分：<span class="strike">10,680円</span></span><br class="sp-only">
-                        <strong class="sp-price-bottom"><span class="arrow">▶︎</span>3,980<span class="yen">円</span></strong>
-                    </div>
+                    <p class="hero-note">初回限定価格 60分：10,680円 → <strong>3,980円</strong></p>
                 </div>
             </div>
             <div class="hero-image-col">
@@ -128,7 +100,7 @@
     <!-- Section 3: よくあるお悩み -->
     <section id="worries" class="reveal">
         <div class="worries-inner">
-            <h2 class="worries-title">こんなお悩み<br class="sp-only">ありませんか？</h2>
+            <h2 class="worries-title">こんなお悩み、ありませんか？</h2>
             
                         <div class="personas-wrapper">
                 <!-- サラリーマン -->
@@ -175,7 +147,7 @@
             </div>
 
             <div class="worries-closing">
-                <p class="catchy-message">そのお悩み<br>ストレッチplusが<br><span class="highlight-blue">全部解決します！</span></p>
+                <p class="catchy-message">そのお悩み、<br class="sp-only"><span class="highlight-blue">ストレッチplusが全部解決</span>します！</p>
                 <div class="closing-action">
                     <p class="action-lead">一つでも当てはまった方はこちら</p>
                     <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn-web-outline pulse-btn" target="_blank">WEB予約はこちら <i class="fas fa-chevron-right"></i></a>
@@ -193,10 +165,9 @@
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 6L11 12L17 18M11 6L5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="review-grid-wrapper">
-                <div class="review-grid sp-carousel-wrapper" id="review-grid">
+                <div class="review-grid" id="review-grid">
                     <!-- Card 1 -->
                     <div class="review-card">
-                        <h4 class="sp-review-card-title sp-only" style="display:none;">お客様の声</h4>
                         <div class="review-bubble">
                             <p class="review-quote"><span class="highlight-text">清潔感のある空間で安心して受けられました</span><br><span class="review-user">（30代男性）</span></p>
                         </div>
@@ -217,7 +188,6 @@
                     </div>
                     <!-- Card 2 -->
                     <div class="review-card">
-                        <h4 class="sp-review-card-title sp-only" style="display:none;">お客様の声</h4>
                         <div class="review-bubble">
                             <p class="review-quote"><span class="highlight-text">将来を見据えたケアまで提案してくれます</span><br><span class="review-user">（50代女性）</span></p>
                         </div>
@@ -238,7 +208,6 @@
                     </div>
                     <!-- Card 3 -->
                     <div class="review-card">
-                        <h4 class="sp-review-card-title sp-only" style="display:none;">お客様の声</h4>
                         <div class="review-bubble">
                             <p class="review-quote"><span class="highlight-text">整体やマッサージよりも効果を実感！</span><br><span class="review-user">（40代女性）</span></p>
                         </div>
@@ -259,7 +228,6 @@
                     </div>
                     <!-- Card 4 -->
                     <div class="review-card">
-                        <h4 class="sp-review-card-title sp-only" style="display:none;">お客様の声</h4>
                         <div class="review-bubble">
                             <p class="review-quote"><span class="highlight-text">気になっていた腰まわりがスッキリしました</span><br><span class="review-user">（20代男性）</span></p>
                         </div>
@@ -280,7 +248,6 @@
                     </div>
                     <!-- Card 5 -->
                     <div class="review-card">
-                        <h4 class="sp-review-card-title sp-only" style="display:none;">お客様の声</h4>
                         <div class="review-bubble">
                             <p class="review-quote"><span class="highlight-text">トレーニングとの相性抜群、可動域が大きく向上</span><br><span class="review-user">（20代男性）</span></p>
                         </div>
@@ -347,8 +314,8 @@
     <section id="amenities" class="section-bg-light" style="padding: 60px 0;">
         <div class="amenities-container">
             <div class="speech-badge">手ぶらでOK！</div>
-            <h2>設備・アメニティ</h2>
-            <div class="amenities-grid sp-carousel-wrapper">
+            <h2>豊富な設備・アメニティ</h2>
+            <div class="amenities-grid">
                 <!-- Amenity 1 -->
                 <div class="amenity-card">
                     <div class="amenity-img-wrapper">
@@ -416,7 +383,7 @@
             </p>
         </div>
         
-        <div class="flow-steps-wrapper sp-carousel-wrapper">
+        <div class="flow-steps-wrapper">
             <!-- STEP 01 -->
             <div class="flow-step bg-blue">
                 <div class="flow-step-inner container">
@@ -803,7 +770,7 @@
         <!-- アクセスブロック -->
         <div class="shop-access-block">
             <h2>アクセス</h2>
-            <div class="access-cards-container sp-carousel-wrapper">
+            <div class="access-cards-container">
                 <div class="access-card">
                     <div class="access-card-img">
                         <img src="../image_final/access_step_1.jpg" alt="茅場町駅3番出口">
@@ -1089,100 +1056,23 @@
                     }
                 };
 
-                                // Mathematical Drift-Proof JS System
-                let spCurrentIndex = 0;
-                
-                                // Mathematical Drift-Proof JS System
-                let spCurrentIndex = 0;
-                
                 prevReviewBtn.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) {
-                        const cards = reviewGrid.querySelectorAll('.review-card');
-                        if(spCurrentIndex > 0) {
-                            spCurrentIndex--;
-                            cards[spCurrentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                        }
-                    } else {
-                        const itemsPerView = getItemsPerView();
-                        if (currentSlide > 0) {
-                            currentSlide = Math.max(0, currentSlide - itemsPerView);
-                            updateSliderPosition();
-                        }
+                    const itemsPerView = getItemsPerView();
+                    if (currentSlide > 0) {
+                        currentSlide = Math.max(0, currentSlide - itemsPerView);
+                        updateSliderPosition();
                     }
                 });
 
                 nextReviewBtn.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) {
-                        const cards = reviewGrid.querySelectorAll('.review-card');
-                        if(spCurrentIndex < cards.length - 1) {
-                            spCurrentIndex++;
-                            cards[spCurrentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                        }
-                    } else {
-                        const cards = reviewGrid.querySelectorAll('.review-card');
-                        const itemsPerView = getItemsPerView();
-                        const maxSlide = Math.max(0, cards.length - itemsPerView);
-                        if (currentSlide < maxSlide) {
-                            currentSlide = Math.min(maxSlide, currentSlide + itemsPerView);
-                            updateSliderPosition();
-                        }
+                    const cards = reviewGrid.querySelectorAll('.review-card');
+                    const itemsPerView = getItemsPerView();
+                    const maxSlide = Math.max(0, cards.length - itemsPerView);
+                    if (currentSlide < maxSlide) {
+                        currentSlide = Math.min(maxSlide, currentSlide + itemsPerView);
+                        updateSliderPosition();
                     }
                 });
-                
-                // Keep the manual swipe tracked
-                if(reviewGrid) {
-                    reviewGrid.addEventListener('scroll', () => {
-                        if (window.innerWidth <= 768) {
-                            const cards = reviewGrid.querySelectorAll('.review-card');
-                            if(!cards.length) return;
-                            const center = reviewGrid.scrollLeft + (reviewGrid.clientWidth / 2);
-                            let closest = 0;
-                            let minDistance = Infinity;
-                            cards.forEach((card, i) => {
-                                const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
-                                const dist = Math.abs(center - cardCenter);
-                                if(dist < minDistance) {
-                                    minDistance = dist;
-                                    closest = i;
-                                }
-                            });
-                            spCurrentIndex = closest;
-                        }
-                    });
-                }
-                        }
-                    } else {
-                        const cards = reviewGrid.querySelectorAll('.review-card');
-                        const itemsPerView = getItemsPerView();
-                        const maxSlide = Math.max(0, cards.length - itemsPerView);
-                        if (currentSlide < maxSlide) {
-                            currentSlide = Math.min(maxSlide, currentSlide + itemsPerView);
-                            updateSliderPosition();
-                        }
-                    }
-                });
-                
-                // Keep the manual swipe tracked
-                if(reviewGrid) {
-                    reviewGrid.addEventListener('scroll', () => {
-                        if (window.innerWidth <= 768) {
-                            const cards = reviewGrid.querySelectorAll('.review-card');
-                            if(!cards.length) return;
-                            const center = reviewGrid.scrollLeft + (reviewGrid.clientWidth / 2);
-                            let closest = 0;
-                            let minDistance = Infinity;
-                            cards.forEach((card, i) => {
-                                const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
-                                const dist = Math.abs(center - cardCenter);
-                                if(dist < minDistance) {
-                                    minDistance = dist;
-                                    closest = i;
-                                }
-                            });
-                            spCurrentIndex = closest;
-                        }
-                    });
-                }
 
                 window.addEventListener('resize', updateSliderPosition);
                 // Call initially
@@ -1200,59 +1090,7 @@
             slides[currentSlide].classList.add('active');
         }, 4000); // Change image every 4 seconds
     }
-
-        // Mobile Hamburger Logic
-        const hamburger = document.querySelector('.sp-hamburger');
-        const spMenu = document.querySelector('.sp-nav-menu');
-        const spNavLinks = document.querySelectorAll('.sp-nav-link');
-        
-        if(hamburger && spMenu) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('is-active');
-                spMenu.classList.toggle('is-active');
-                document.body.style.overflow = spMenu.classList.contains('is-active') ? 'hidden' : '';
-            });
-            
-            // Close menu when clicking a link
-            spNavLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('is-active');
-                    spMenu.classList.remove('is-active');
-                    document.body.style.overflow = '';
-                });
-            });
-        }
-    
-        // Inject Swipe Arrows for Carousels on Mobile
-        if(window.innerWidth <= 768) {
-            document.querySelectorAll('.sp-carousel-wrapper').forEach(wrapper => {
-                const parent = wrapper.parentElement;
-                parent.style.position = 'relative';
-                
-                const leftArrow = document.createElement('div');
-                leftArrow.className = 'sp-swipe-arrow left';
-                leftArrow.innerHTML = '&#10094;';
-                
-                const rightArrow = document.createElement('div');
-                rightArrow.className = 'sp-swipe-arrow right';
-                rightArrow.innerHTML = '&#10095;';
-                
-                parent.appendChild(leftArrow);
-                parent.appendChild(rightArrow);
-                
-                const scrollWidth = window.innerWidth * 0.9;
-                leftArrow.addEventListener('click', () => wrapper.scrollBy({left: -scrollWidth, behavior: 'smooth'}));
-                rightArrow.addEventListener('click', () => wrapper.scrollBy({left: scrollWidth, behavior: 'smooth'}));
-            });
-        }
-    </script>
-
-    <!-- Mobile Sticky Footer CTA -->
-    <div class="sp-sticky-cta">
-        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank"><i class="far fa-file-alt" style="margin-right: 8px;"></i> WEB予約</a>
-        <a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank"><i class="fab fa-line" style="margin-right: 8px;"></i> LINE相談</a>
-    </div>
-    
+</script>
 </body>
 
 

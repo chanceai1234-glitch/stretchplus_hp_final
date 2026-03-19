@@ -1,6 +1,6 @@
 <section id="worries" class="reveal">
         <div class="worries-inner">
-            <h2 class="worries-title">こんなお悩み<br class="sp-only">ありませんか？</h2>
+            <h2 class="worries-title">こんなお悩み、ありませんか？</h2>
             
                         <div class="personas-wrapper">
                 <!-- サラリーマン -->
@@ -47,7 +47,7 @@
             </div>
 
             <div class="worries-closing">
-                <p class="catchy-message">そのお悩み<br>ストレッチplusが<br><span class="highlight-blue">全部解決します！</span></p>
+                <p class="catchy-message">そのお悩み、<br class="sp-only"><span class="highlight-blue">ストレッチplusが全部解決</span>します！</p>
                 <div class="closing-action">
                     <p class="action-lead">一つでも当てはまった方はこちら</p>
                     <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web pulse-btn" target="_blank">WEB予約はこちら <i class="fas fa-chevron-right"></i></a>

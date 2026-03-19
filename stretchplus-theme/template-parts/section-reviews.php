@@ -5,10 +5,9 @@
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 6L11 12L17 18M11 6L5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="review-grid-wrapper">
-                <div class="review-grid sp-carousel-wrapper" id="review-grid">
+                <div class="review-grid" id="review-grid">
                     <!-- Card 1 -->
                     <div class="review-card">
-                        <h4 class="sp-review-card-title sp-only" style="display:none;">お客様の声</h4>
                         <div class="review-bubble">
                             <p class="review-quote"><span class="highlight-text">清潔感のある空間で安心して受けられました</span><br><span class="review-user">（30代男性）</span></p>
                         </div>
@@ -29,7 +28,6 @@
                     </div>
                     <!-- Card 2 -->
                     <div class="review-card">
-                        <h4 class="sp-review-card-title sp-only" style="display:none;">お客様の声</h4>
                         <div class="review-bubble">
                             <p class="review-quote"><span class="highlight-text">将来を見据えたケアまで提案してくれます</span><br><span class="review-user">（50代女性）</span></p>
                         </div>
@@ -50,7 +48,6 @@
                     </div>
                     <!-- Card 3 -->
                     <div class="review-card">
-                        <h4 class="sp-review-card-title sp-only" style="display:none;">お客様の声</h4>
                         <div class="review-bubble">
                             <p class="review-quote"><span class="highlight-text">整体やマッサージよりも効果を実感！</span><br><span class="review-user">（40代女性）</span></p>
                         </div>
@@ -71,7 +68,6 @@
                     </div>
                     <!-- Card 4 -->
                     <div class="review-card">
-                        <h4 class="sp-review-card-title sp-only" style="display:none;">お客様の声</h4>
                         <div class="review-bubble">
                             <p class="review-quote"><span class="highlight-text">気になっていた腰まわりがスッキリしました</span><br><span class="review-user">（20代男性）</span></p>
                         </div>
@@ -92,7 +88,6 @@
                     </div>
                     <!-- Card 5 -->
                     <div class="review-card">
-                        <h4 class="sp-review-card-title sp-only" style="display:none;">お客様の声</h4>
                         <div class="review-bubble">
                             <p class="review-quote"><span class="highlight-text">トレーニングとの相性抜群、可動域が大きく向上</span><br><span class="review-user">（20代男性）</span></p>
                         </div>

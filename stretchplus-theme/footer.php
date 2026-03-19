@@ -7,13 +7,13 @@
                 <!-- Group 1: WEB & Hotpepper -->
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                     <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn-web-outline pulse-btn" target="_blank"><i class="far fa-file-alt"></i> WEBで予約する</a>
-                    <a href="https://beauty.hotpepper.jp/kr/slnH000671756/" target="_blank" class="btn-hotpepper pulse-btn">HOT PEPPERで予約する</a>
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000671756/" target="_blank" style="color: #fff; text-decoration: underline; font-size: 0.9rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">HOT PEPPER Beautyの方はこちら</a>
                 </div>
 
                 <!-- Group 2: LINE & Rakuten -->
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                     <a href="https://lin.ee/rboKm7N" class="btn-line-outline pulse-btn" target="_blank"><i class="fab fa-line"></i> LINEで相談する</a>
-                    <a href="https://beauty.rakuten.co.jp/s3000052366/" target="_blank" class="btn-rakuten pulse-btn">Rakuten Beautyで予約</a>
+                    <a href="https://beauty.rakuten.co.jp/s3000052366/" target="_blank" style="color: #fff; text-decoration: underline; font-size: 0.9rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Rakuten Beautyの方はコチラ</a>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
 
     <!-- Floating QR Code (PC Only) -->
     <div id="floating-qr">
-        <p class="qr-title">LINEで相談する</p>
+        <p class="qr-title">公式LINEはこちら</p>
         <img src="<?php echo get_template_directory_uri(); ?>/image_final/common_qr_line.png" alt="LINE友達追加QRコード"
             style="border: 1px solid #E2E8F0; border-radius: 8px; padding: 5px; background: #fff;">
     </div>
@@ -148,100 +148,23 @@
                     }
                 };
 
-                                // Mathematical Drift-Proof JS System
-                let spCurrentIndex = 0;
-                
-                                // Mathematical Drift-Proof JS System
-                let spCurrentIndex = 0;
-                
                 prevReviewBtn.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) {
-                        const cards = reviewGrid.querySelectorAll('.review-card');
-                        if(spCurrentIndex > 0) {
-                            spCurrentIndex--;
-                            cards[spCurrentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                        }
-                    } else {
-                        const itemsPerView = getItemsPerView();
-                        if (currentSlide > 0) {
-                            currentSlide = Math.max(0, currentSlide - itemsPerView);
-                            updateSliderPosition();
-                        }
+                    const itemsPerView = getItemsPerView();
+                    if (currentSlide > 0) {
+                        currentSlide = Math.max(0, currentSlide - itemsPerView);
+                        updateSliderPosition();
                     }
                 });
 
                 nextReviewBtn.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) {
-                        const cards = reviewGrid.querySelectorAll('.review-card');
-                        if(spCurrentIndex < cards.length - 1) {
-                            spCurrentIndex++;
-                            cards[spCurrentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                        }
-                    } else {
-                        const cards = reviewGrid.querySelectorAll('.review-card');
-                        const itemsPerView = getItemsPerView();
-                        const maxSlide = Math.max(0, cards.length - itemsPerView);
-                        if (currentSlide < maxSlide) {
-                            currentSlide = Math.min(maxSlide, currentSlide + itemsPerView);
-                            updateSliderPosition();
-                        }
+                    const cards = reviewGrid.querySelectorAll('.review-card');
+                    const itemsPerView = getItemsPerView();
+                    const maxSlide = Math.max(0, cards.length - itemsPerView);
+                    if (currentSlide < maxSlide) {
+                        currentSlide = Math.min(maxSlide, currentSlide + itemsPerView);
+                        updateSliderPosition();
                     }
                 });
-                
-                // Keep the manual swipe tracked
-                if(reviewGrid) {
-                    reviewGrid.addEventListener('scroll', () => {
-                        if (window.innerWidth <= 768) {
-                            const cards = reviewGrid.querySelectorAll('.review-card');
-                            if(!cards.length) return;
-                            const center = reviewGrid.scrollLeft + (reviewGrid.clientWidth / 2);
-                            let closest = 0;
-                            let minDistance = Infinity;
-                            cards.forEach((card, i) => {
-                                const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
-                                const dist = Math.abs(center - cardCenter);
-                                if(dist < minDistance) {
-                                    minDistance = dist;
-                                    closest = i;
-                                }
-                            });
-                            spCurrentIndex = closest;
-                        }
-                    });
-                }
-                        }
-                    } else {
-                        const cards = reviewGrid.querySelectorAll('.review-card');
-                        const itemsPerView = getItemsPerView();
-                        const maxSlide = Math.max(0, cards.length - itemsPerView);
-                        if (currentSlide < maxSlide) {
-                            currentSlide = Math.min(maxSlide, currentSlide + itemsPerView);
-                            updateSliderPosition();
-                        }
-                    }
-                });
-                
-                // Keep the manual swipe tracked
-                if(reviewGrid) {
-                    reviewGrid.addEventListener('scroll', () => {
-                        if (window.innerWidth <= 768) {
-                            const cards = reviewGrid.querySelectorAll('.review-card');
-                            if(!cards.length) return;
-                            const center = reviewGrid.scrollLeft + (reviewGrid.clientWidth / 2);
-                            let closest = 0;
-                            let minDistance = Infinity;
-                            cards.forEach((card, i) => {
-                                const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
-                                const dist = Math.abs(center - cardCenter);
-                                if(dist < minDistance) {
-                                    minDistance = dist;
-                                    closest = i;
-                                }
-                            });
-                            spCurrentIndex = closest;
-                        }
-                    });
-                }
 
                 window.addEventListener('resize', updateSliderPosition);
                 // Call initially
@@ -259,60 +182,8 @@
             slides[currentSlide].classList.add('active');
         }, 4000); // Change image every 4 seconds
     }
-
-        // Mobile Hamburger Logic
-        const hamburger = document.querySelector('.sp-hamburger');
-        const spMenu = document.querySelector('.sp-nav-menu');
-        const spNavLinks = document.querySelectorAll('.sp-nav-link');
-        
-        if(hamburger && spMenu) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('is-active');
-                spMenu.classList.toggle('is-active');
-                document.body.style.overflow = spMenu.classList.contains('is-active') ? 'hidden' : '';
-            });
-            
-            // Close menu when clicking a link
-            spNavLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('is-active');
-                    spMenu.classList.remove('is-active');
-                    document.body.style.overflow = '';
-                });
-            });
-        }
-    
-        // Inject Swipe Arrows for Carousels on Mobile
-        if(window.innerWidth <= 768) {
-            document.querySelectorAll('.sp-carousel-wrapper').forEach(wrapper => {
-                const parent = wrapper.parentElement;
-                parent.style.position = 'relative';
-                
-                const leftArrow = document.createElement('div');
-                leftArrow.className = 'sp-swipe-arrow left';
-                leftArrow.innerHTML = '&#10094;';
-                
-                const rightArrow = document.createElement('div');
-                rightArrow.className = 'sp-swipe-arrow right';
-                rightArrow.innerHTML = '&#10095;';
-                
-                parent.appendChild(leftArrow);
-                parent.appendChild(rightArrow);
-                
-                const scrollWidth = window.innerWidth * 0.9;
-                leftArrow.addEventListener('click', () => wrapper.scrollBy({left: -scrollWidth, behavior: 'smooth'}));
-                rightArrow.addEventListener('click', () => wrapper.scrollBy({left: scrollWidth, behavior: 'smooth'}));
-            });
-        }
-    </script>
+</script>
 <?php wp_footer(); ?>
-
-    <!-- Mobile Sticky Footer CTA -->
-    <div class="sp-sticky-cta">
-        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank"><i class="far fa-file-alt" style="margin-right: 8px;"></i> WEB予約</a>
-        <a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank"><i class="fab fa-line" style="margin-right: 8px;"></i> LINE相談</a>
-    </div>
-    
 </body>
 
 

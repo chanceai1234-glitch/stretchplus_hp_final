@@ -13,7 +13,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css?cb=1773901146611">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <?php wp_head(); ?>
 </head>
 
@@ -42,29 +42,4 @@
             <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank">WEBで予約する</a>
             <a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank">LINEで相談する</a>
         </div>
-
-        
-        <!-- Mobile Hamburger Button -->
-        <button class="sp-hamburger" aria-label="メニュー">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        
-        <!-- Mobile Navigation Overlay -->
-        <nav class="sp-nav-menu">
-            <ul>
-                <li class="sp-nav-cta"><a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank">まずはWEBで予約する <i class="fas fa-chevron-right"></i></a></li>
-                <li><a href="#about" class="sp-nav-link">パーソナルストレッチとは</a></li>
-                <li><a href="#worries" class="sp-nav-link">お悩み解決</a></li>
-                <li><a href="#flow" class="sp-nav-link">ご利用の流れ</a></li>
-                <li><a href="#amenities" class="sp-nav-link">設備・アメニティ</a></li>
-                <li><a href="#trainers" class="sp-nav-link">トレーナー紹介</a></li>
-                <li><a href="#reviews" class="sp-nav-link">口コミ</a></li>
-                <li><a href="#faq" class="sp-nav-link">よくあるご質問</a></li>
-                                <li><a href="#access" class="sp-nav-link">店舗情報・アクセス</a></li>
-                <li class="sp-nav-bottom-cta web" style="margin-top: 30px;"><a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web" target="_blank" style="width: 100%; padding: 15px;">Web予約 <i class="fas fa-chevron-right"></i></a></li>
-                <li class="sp-nav-bottom-cta line" style="margin-top: 15px;"><a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank" style="width: 100%; padding: 15px; background-color: var(--line-color); color: #fff;">LINE相談 <i class="fas fa-chevron-right"></i></a></li>
-            </ul>
-        </nav>
     </header>
