@@ -1,6 +1,6 @@
 <section id="hero" class="hero-split">
         <div class="hero-inner">
-            <div class="hero-content">
+            <div class="hero-content pc-only">
                 <h1 class="main-message"><span style="display: inline-block; white-space: nowrap;">体が不調になる前に整えて</span><br><span class="highlight-blue" style="display: inline-block; white-space: nowrap;">元気が続く毎日へ。</span></h1>
                 <p class="sub-message">茅場町徒歩<span class="hero-highlight">1</span>分<br>あなたのための<span class="hero-highlight">完全個室</span>で極上の施術体験を</p>
                 <div class="hero-actions-wrapper">
