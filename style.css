@@ -4685,3 +4685,93 @@ details p::before {
         box-sizing: border-box !important;
     }
 }
+
+/* ==========================================================================
+   PHASE 22: MOBILE FLAT HERO, REVEAL BUGFIX, & ALIGNMENT
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Flat Square Hero Rebuild */
+    .hero-split {
+        height: auto !important;
+        padding-bottom: 0 !important;
+    }
+    .hero-inner {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+    .sp-hero-flat-stack {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100vw !important;
+        background: #ffffff !important;
+    }
+    .sp-hero-top-img {
+        width: 100% !important;
+        aspect-ratio: 1 / 1 !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+    .sp-hero-text-block {
+        padding: 30px 20px 20px !important;
+        text-align: center !important;
+        background: #ffffff !important;
+    }
+    .sp-hero-new-title {
+        font-size: 1.4rem !important;
+        font-weight: 800 !important;
+        color: #111111 !important;
+        line-height: 1.6 !important;
+        margin: 0 !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    /* 2. Absolute Reveal Override (Fix for missing content sections on mobile) */
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+
+    /* 3. Flow Container Centering */
+    #flow .container {
+        margin: 0 auto !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .flow-step-inner {
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    
+    /* 4. Footer Logo & SNS Centering (Accurate Class Targeting) */
+    .footer-left {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .footer-logo-img {
+        margin: 0 auto 15px !important;
+        display: block !important;
+    }
+    .footer-nap {
+        text-align: center !important;
+    }
+    .footer-right {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    .footer-sns-wrap {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
+    }
+    .footer-sns {
+        justify-content: center !important;
+    }
+}

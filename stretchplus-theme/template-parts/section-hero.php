@@ -20,12 +20,12 @@
                                         <div class="hero-image-bg-circle pc-only"></div>
                     <img src="<?php echo get_template_directory_uri(); ?>/image_final/hero_main.jpg" alt="パーソナルストレッチの様子" class="hero-masked-image pc-only">
                     
-                    <!-- Safie Style Mobile Slideshow -->
-                    <div class="sp-hero-slideshow sp-only">
-                        <div class="sp-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/image_final/hero_main.jpg');"></div>
-                        <div class="sp-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/image_final/about_main.jpg');"></div>
-                        <div class="sp-slide" style="background-image: url('<?php echo get_template_directory_uri(); ?>/image_final/flow_step_8.jpg');"></div>
-                        <div class="sp-hero-overlay"></div>
+                    <!-- Safie Style Mobile Slideshow is purged. Going straightforward flat stack per UX request -->
+                    <div class="sp-hero-flat-stack sp-only">
+                        <img src="<?php echo get_template_directory_uri(); ?>/image_final/hero_main.jpg" alt="パーソナルストレッチの様子" class="sp-hero-top-img">
+                        <div class="sp-hero-text-block">
+                            <h2 class="sp-hero-new-title">茅場町徒歩1分、完全個室で整える。<br>パーソナルストレッチ</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -35,8 +35,8 @@
     <!-- Mobile-only promo banner between Hero and About -->
     <div class="sp-hero-promo-banner sp-only">
         <div class="sp-hero-promo-inner">
-            <h2 class="sp-promo-headline">まずは1回、体感してみてください。</h2>
-            <p class="sp-promo-price-text">初回限定価格 60分 3,980円（税込）</p>
+            <h2 class="sp-promo-headline" style="color: #ffffff;">まずは1回、体感してみてください。</h2>
+            <p class="sp-promo-price-text" style="color: #ffffff;">初回限定価格 60分 3,980円（税込）</p>
             <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="sp-promo-cta" target="_blank">WEBで予約する ›</a>
         </div>
     </div>
