@@ -3326,11 +3326,13 @@ details p::before {
 /* ==========================================================================
    SMARTPHONE GLOBAL UI OVERRIDES & FIXES
    ========================================================================== */
-html, body {
-    overflow-x: hidden; /* Fix horizontal shake */
-    width: 100%;
-    max-width: 100vw;
-    position: relative;
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden; /* Fix horizontal shake without destroying PC sticky */
+        width: 100%;
+        max-width: 100vw;
+        position: relative;
+    }
 }
 
 @media (max-width: 768px) {
