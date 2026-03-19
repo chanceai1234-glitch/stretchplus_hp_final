@@ -151,6 +151,9 @@
                                 // Mathematical Drift-Proof JS System
                 let spCurrentIndex = 0;
                 
+                                // Mathematical Drift-Proof JS System
+                let spCurrentIndex = 0;
+                
                 prevReviewBtn.addEventListener('click', () => {
                     if (window.innerWidth <= 768) {
                         const cards = reviewGrid.querySelectorAll('.review-card');
@@ -173,6 +176,39 @@
                         if(spCurrentIndex < cards.length - 1) {
                             spCurrentIndex++;
                             cards[spCurrentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                        }
+                    } else {
+                        const cards = reviewGrid.querySelectorAll('.review-card');
+                        const itemsPerView = getItemsPerView();
+                        const maxSlide = Math.max(0, cards.length - itemsPerView);
+                        if (currentSlide < maxSlide) {
+                            currentSlide = Math.min(maxSlide, currentSlide + itemsPerView);
+                            updateSliderPosition();
+                        }
+                    }
+                });
+                
+                // Keep the manual swipe tracked
+                if(reviewGrid) {
+                    reviewGrid.addEventListener('scroll', () => {
+                        if (window.innerWidth <= 768) {
+                            const cards = reviewGrid.querySelectorAll('.review-card');
+                            if(!cards.length) return;
+                            const center = reviewGrid.scrollLeft + (reviewGrid.clientWidth / 2);
+                            let closest = 0;
+                            let minDistance = Infinity;
+                            cards.forEach((card, i) => {
+                                const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
+                                const dist = Math.abs(center - cardCenter);
+                                if(dist < minDistance) {
+                                    minDistance = dist;
+                                    closest = i;
+                                }
+                            });
+                            spCurrentIndex = closest;
+                        }
+                    });
+                }
                         }
                     } else {
                         const cards = reviewGrid.querySelectorAll('.review-card');

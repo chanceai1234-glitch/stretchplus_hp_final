@@ -440,19 +440,11 @@ h6 {
 }
 
 .hero-content .sub-message {
-        position: static !important;
-        background: none !important;
-        color: #ffffff !important;
-        font-size: 6.5vw !important; /* Promoted size */
-        width: 100% !important;
-        transform: none !important;
-        box-shadow: none !important;
-        text-shadow: 0 2px 15px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6) !important;
-        margin: 0 0 35px 0 !important;
-        padding: 0 !important;
-        font-weight: 800 !important;
-        line-height: 1.5 !important;
-    }
+    font-size: 1.1rem;
+    color: var(--text-body);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
 
 .hero-content .sub-message strong {
     font-size: 1.4rem;
@@ -2389,18 +2381,7 @@ details p::before {
     }
 
     .hero-content .sub-message {
-        position: static !important;
-        background: none !important;
-        color: #ffffff !important;
-        font-size: 6.5vw !important; /* Promoted size */
-        width: 100% !important;
-        transform: none !important;
-        box-shadow: none !important;
-        text-shadow: 0 2px 15px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6) !important;
-        margin: 0 0 35px 0 !important;
-        padding: 0 !important;
-        font-weight: 800 !important;
-        line-height: 1.5 !important;
+        font-size: 1rem;
     }
 
     /* Consider a hamburger menu for actual production */
@@ -3763,18 +3744,7 @@ details p::before {
         color: #D4AF37 !important; /* Gold Arrow */
     }
     .hero-message .sub-message {
-        position: static !important;
-        background: none !important;
-        color: #ffffff !important;
-        font-size: 6.5vw !important; /* Promoted size */
-        width: 100% !important;
-        transform: none !important;
-        box-shadow: none !important;
-        text-shadow: 0 2px 15px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6) !important;
-        margin: 0 0 35px 0 !important;
-        padding: 0 !important;
-        font-weight: 800 !important;
-        line-height: 1.5 !important;
+        font-size: 3.5vw !important; /* Prevent orphan wrapping dynamically */
     }
 
     /* 2. Hide Redundant Mobile Elements */
@@ -3865,18 +3835,19 @@ details p::before {
     }
     /* We place sub-message over the image by positioning it absolutely to the base container */
     .sub-message {
-        position: static !important;
-        background: none !important;
-        color: #ffffff !important;
-        font-size: 6.5vw !important; /* Promoted size */
-        width: 100% !important;
-        transform: none !important;
-        box-shadow: none !important;
-        text-shadow: 0 2px 15px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6) !important;
-        margin: 0 0 35px 0 !important;
-        padding: 0 !important;
+        position: absolute !important;
+        bottom: 200px !important; /* Position roughly over the image's top bounds */
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 90% !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        padding: 15px 10px !important;
+        border-radius: 8px !important;
         font-weight: 800 !important;
-        line-height: 1.5 !important;
+        font-size: 1.1rem !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
+        text-align: center !important;
+        z-index: 20 !important;
     }
 
     /* 3. Swiper Physics Fixing */
@@ -3980,7 +3951,7 @@ details p::before {
     .sp-hero-overlay {
         position: absolute !important;
         top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
-        background: linear-gradient(180deg, rgba(15,35,55,0.3) 0%, rgba(10,25,45,0.85) 100%) !important; /* Premium Blue Tint */
+        background: linear-gradient(180deg, rgba(15,35,55,0.3) 0%, rgba(10,25,45,0.85) 100%) !important;
         z-index: 2 !important;
         opacity: 1 !important;
         pointer-events: none !important;
@@ -4001,7 +3972,7 @@ details p::before {
     
     /* Safie High-Contrast Aesthetics */
     .main-message {
-        display: none !important; /* Removed as per user request */
+        display: none !important;
     }
     .main-message .highlight-blue {
         color: #ffffff !important;
@@ -4014,7 +3985,7 @@ details p::before {
         position: static !important;
         background: none !important;
         color: #ffffff !important;
-        font-size: 6.5vw !important; /* Promoted size */
+        font-size: 6.5vw !important;
         width: 100% !important;
         transform: none !important;
         box-shadow: none !important;
@@ -4382,5 +4353,44 @@ details p::before {
         text-align: left !important; /* Keep paragraph reading natively */
         width: 100% !important;
         padding-top: 15px !important;
+    }
+}
+
+
+/* ==========================================================================
+   PHASE 18: UNIVERSAL SLIDER PURGE (CENTRAL VERTICAL STACK FOR ALL DEVICES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Annihilate horizontal native scroll across Amenities, Reviews, Trainers, Flow */
+    .sp-carousel-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        overflow: visible !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 5vw !important; /* Standard edge constraint */
+        scroll-snap-type: none !important;
+    }
+    
+    /* Expand all inner cards to rigidly fill the viewport width */
+    .sp-carousel-wrapper > * {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 40px 0 !important; /* Vertical gap replaces horizontal margin */
+        scroll-snap-align: none !important;
+        flex: 0 0 auto !important;
+    }
+
+    /* Target specific components that had horizontal specifics */
+    .review-card, .amenity-card {
+        margin-right: 0 !important; /* Wipe old slider margins */
+        margin-left: 0 !important;
+    }
+
+    /* Hide ALL horizontal arrow buttons and scroll progressions globally on mobile */
+    .slider-btn, .review-progress-container, .swiper-button-next, .swiper-button-prev { 
+        display: none !important; 
     }
 }
