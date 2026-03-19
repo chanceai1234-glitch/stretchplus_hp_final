@@ -14,19 +14,18 @@ target_url = "https://stretch-plus.co.jp/v2/?nocache=" + str(time.time())
 data = {
     "url": target_url,
     "browsers": [
-        {"os": "ios", "os_version": "16.0", "browser": "iphone", "device": "iPhone 14"}
+        {"os": "android", "os_version": "4.2", "browser": "Android Browser", "device": "Google Nexus 4", "browser_version": null, "real_mobile": false}
     ],
     "quality": "original",
     "orientation": "portrait"
 }
 
-print(f"Requesting Screenshot for: {target_url}")
 req = urllib.request.Request("https://api.browserstack.com/screenshots", data=json.dumps(data).encode("utf-8"), headers=headers)
 try:
     response = urllib.request.urlopen(req)
     job = json.loads(response.read().decode("utf-8"))
     job_id = job.get("job_id")
-    print("✅ BrowserStack Job Started:", job_id)
+    print("✅ BrowserStack Job Started (Android):", job_id)
 except Exception as e:
     print("❌ Failed to start job:", e)
     sys.exit(1)
@@ -43,9 +42,9 @@ while True:
             if images:
                 img_url = images[0].get("image_url")
                 print("Downloading:", img_url)
-                save_path = os.path.join(ART_DIR, "bs_iphone_14_v1.png")
+                save_path = os.path.join(ART_DIR, "bs_android.png")
                 urllib.request.urlretrieve(img_url, save_path)
-                print("✅ Successfully saved screenshot to", save_path)
+                print("✅ Successfully saved screenshot to:", save_path)
                 break
             else:
                 print("❌ No images returned.")
