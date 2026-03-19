@@ -440,11 +440,19 @@ h6 {
 }
 
 .hero-content .sub-message {
-    font-size: 1.1rem;
-    color: var(--text-body);
-    margin-bottom: 40px;
-    line-height: 1.8;
-}
+        position: static !important;
+        background: none !important;
+        color: #ffffff !important;
+        font-size: 6.5vw !important; /* Promoted size */
+        width: 100% !important;
+        transform: none !important;
+        box-shadow: none !important;
+        text-shadow: 0 2px 15px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6) !important;
+        margin: 0 0 35px 0 !important;
+        padding: 0 !important;
+        font-weight: 800 !important;
+        line-height: 1.5 !important;
+    }
 
 .hero-content .sub-message strong {
     font-size: 1.4rem;
@@ -2381,7 +2389,18 @@ details p::before {
     }
 
     .hero-content .sub-message {
-        font-size: 1rem;
+        position: static !important;
+        background: none !important;
+        color: #ffffff !important;
+        font-size: 6.5vw !important; /* Promoted size */
+        width: 100% !important;
+        transform: none !important;
+        box-shadow: none !important;
+        text-shadow: 0 2px 15px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6) !important;
+        margin: 0 0 35px 0 !important;
+        padding: 0 !important;
+        font-weight: 800 !important;
+        line-height: 1.5 !important;
     }
 
     /* Consider a hamburger menu for actual production */
@@ -3744,7 +3763,18 @@ details p::before {
         color: #D4AF37 !important; /* Gold Arrow */
     }
     .hero-message .sub-message {
-        font-size: 3.5vw !important; /* Prevent orphan wrapping dynamically */
+        position: static !important;
+        background: none !important;
+        color: #ffffff !important;
+        font-size: 6.5vw !important; /* Promoted size */
+        width: 100% !important;
+        transform: none !important;
+        box-shadow: none !important;
+        text-shadow: 0 2px 15px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6) !important;
+        margin: 0 0 35px 0 !important;
+        padding: 0 !important;
+        font-weight: 800 !important;
+        line-height: 1.5 !important;
     }
 
     /* 2. Hide Redundant Mobile Elements */
@@ -3835,19 +3865,18 @@ details p::before {
     }
     /* We place sub-message over the image by positioning it absolutely to the base container */
     .sub-message {
-        position: absolute !important;
-        bottom: 200px !important; /* Position roughly over the image's top bounds */
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        width: 90% !important;
-        background: rgba(255, 255, 255, 0.95) !important;
-        padding: 15px 10px !important;
-        border-radius: 8px !important;
+        position: static !important;
+        background: none !important;
+        color: #ffffff !important;
+        font-size: 6.5vw !important; /* Promoted size */
+        width: 100% !important;
+        transform: none !important;
+        box-shadow: none !important;
+        text-shadow: 0 2px 15px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6) !important;
+        margin: 0 0 35px 0 !important;
+        padding: 0 !important;
         font-weight: 800 !important;
-        font-size: 1.1rem !important;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
-        text-align: center !important;
-        z-index: 20 !important;
+        line-height: 1.5 !important;
     }
 
     /* 3. Swiper Physics Fixing */
@@ -3951,7 +3980,7 @@ details p::before {
     .sp-hero-overlay {
         position: absolute !important;
         top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important;
-        background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%) !important;
+        background: linear-gradient(180deg, rgba(15,35,55,0.3) 0%, rgba(10,25,45,0.85) 100%) !important; /* Premium Blue Tint */
         z-index: 2 !important;
         opacity: 1 !important;
         pointer-events: none !important;
@@ -3972,13 +4001,7 @@ details p::before {
     
     /* Safie High-Contrast Aesthetics */
     .main-message {
-        display: block !important;
-        color: #ffffff !important;
-        font-size: 7.5vw !important;
-        text-shadow: 0 2px 15px rgba(0,0,0,0.8), 0 0 10px rgba(0,0,0,0.5) !important;
-        margin-bottom: 25px !important;
-        line-height: 1.4 !important;
-        font-weight: 800 !important;
+        display: none !important; /* Removed as per user request */
     }
     .main-message .highlight-blue {
         color: #ffffff !important;
@@ -3991,14 +4014,15 @@ details p::before {
         position: static !important;
         background: none !important;
         color: #ffffff !important;
-        font-size: 4.5vw !important;
+        font-size: 6.5vw !important; /* Promoted size */
         width: 100% !important;
         transform: none !important;
         box-shadow: none !important;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.8) !important;
-        margin: 0 0 30px 0 !important;
+        text-shadow: 0 2px 15px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6) !important;
+        margin: 0 0 35px 0 !important;
         padding: 0 !important;
-        font-weight: bold !important;
+        font-weight: 800 !important;
+        line-height: 1.5 !important;
     }
     .sub-message .hero-highlight {
         color: #FFCC00 !important; /* Safie Yellow */
