@@ -3315,7 +3315,7 @@ details p::before {
 }
 
 .card-yellowgreen {
-    border-left: 5px solid #8cc63f !important;
+    border-left: 8px solid #8cc63f !important;
 }
 .title-yellowgreen {
     color: #8cc63f !important;
@@ -3323,4 +3323,40 @@ details p::before {
 .highlight-yellowgreen {
     background: linear-gradient(transparent 60%, rgba(140, 198, 63, 0.4) 60%);
     font-weight: bold;
+}
+
+/* Phase 28: Universal CTA Button Matrix Lock */
+.cta-universal-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 350px !important;
+    height: 65px !important;
+    font-size: 1.05rem !important;
+    line-height: 1.2 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+.worries-universal-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    height: 60px !important;
+    font-size: 1.05rem !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+.cta-grid-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    justify-content: center;
+    max-width: 730px;
+    margin: 0 auto;
+}
+@media(max-width: 768px) {
+    .cta-grid-container { grid-template-columns: 1fr; }
 }

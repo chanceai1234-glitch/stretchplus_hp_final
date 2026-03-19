@@ -51,8 +51,8 @@
                 <div class="closing-action">
                     <p class="action-lead">一つでも当てはまった方はこちら</p>
                     <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web pulse-btn" target="_blank">WEB予約はこちら <i class="fas fa-chevron-right"></i></a>
-                        <a href="https://lin.ee/rboKm7N" class="btn btn-line pulse-btn" style="background-color: var(--line-color); color:#fff; border-radius:50px; padding:15px 30px; font-weight:bold; text-decoration:none;" target="_blank"><i class="fab fa-line"></i> LINEで相談する</a>
+                        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web pulse-btn worries-universal-btn" target="_blank">WEB予約はこちら</a>
+                        <a href="https://lin.ee/rboKm7N" class="btn btn-line pulse-btn worries-universal-btn" style="background-color: var(--line-color); color:#fff; border-radius:50px; font-weight:bold; text-decoration:none;" target="_blank"><i class="fab fa-line" style="margin-right:8px;"></i> LINEで相談する</a>
                     </div>
                 </div>
             </div>
