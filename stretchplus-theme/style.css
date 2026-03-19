@@ -4626,3 +4626,41 @@ details p::before {
         background-color: #000000 !important; /* Safie Black to perfectly match reference */
     }
 }
+
+/* ==========================================================================
+   SAFARI HOTFIX & UPDATED PROMO BANNER TEXT
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Safari Rendering Crash Fallbacks */
+    .sp-hero-slideshow {
+        background-color: #111111 !important;
+    }
+    .sp-slide {
+        -webkit-animation: spFadeInOut 12s infinite !important;
+        will-change: opacity, transform !important;
+    }
+    .hero-split {
+        height: 85vh !important;
+    }
+    .sp-hero-overlay {
+        pointer-events: none !important;
+    }
+
+    /* Updated CTA Banner Typography */
+    .sp-promo-headline {
+        font-size: 1.15rem !important;
+        font-weight: 800 !important;
+        margin-bottom: 5px !important;
+        color: #ffffff !important;
+        letter-spacing: 0.05em !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+    }
+    
+    .sp-promo-price-text {
+        font-size: 1.25rem !important;
+        font-weight: bold !important;
+        color: #ffffff !important;
+        margin: 0 0 10px 0 !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+    }
+}
