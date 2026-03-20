@@ -179,12 +179,39 @@ html, body {
     }
     .about-image {
         width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
         margin-top: 15px !important;
     }
-    .about-image img {
+    .about-image img, .persona-image img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        border-radius: 8px !important;
+        object-fit: cover !important;
+    }
+    .persona-image {
         width: 100% !important;
         max-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-top: 15px !important;
+        text-align: center;
+    }
+    
+    /* Sticky bottom nav 2x2 override */
+    .sp-sticky-nav {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2px !important;
         height: auto !important;
+        padding: 0 !important;
+    }
+    .sp-sticky-nav a {
+        padding: 15px 0 !important;
+        height: auto !important;
+    }
+    body {
+        padding-bottom: 120px !important; /* clear 2 rows of sticky nav */
     }
     .review-slider-container {
         padding: 0 !important;
