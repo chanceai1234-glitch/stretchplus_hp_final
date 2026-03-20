@@ -108,6 +108,14 @@ html, body {
     width: 100% !important;
 }
 @media (max-width: 991px) {
+    /* --- PC / SP VISIBILITY --- */
+    .pc-only {
+        display: none !important;
+    }
+    .sp-only {
+        display: block !important;
+    }
+    
     #header {
         padding: 15px 5% !important;
         background: rgba(255, 255, 255, 0.95); /* Ensure readability */
@@ -306,6 +314,29 @@ html, body {
         gap: 15px !important;
         align-items: stretch !important;
         display: flex !important;
+    }
+    /* Dynamic Mobile Review Restructuring */
+    .review-bubble {
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+    .review-bubble::after, .review-quote .highlight-text, .review-quote br {
+        display: none !important;
+    }
+    .review-user {
+        display: block !important;
+        font-weight: bold !important;
+        font-size: 1.1rem !important;
+        border-bottom: 2px solid var(--primary-color) !important;
+        padding-bottom: 10px !important;
+        margin-bottom: 15px !important;
+        text-align: center !important;
+        color: var(--primary-color) !important;
+    }
+    .feedback-heading {
+        display: none !important;
     }
     .review-header {
         font-weight: bold !important;
