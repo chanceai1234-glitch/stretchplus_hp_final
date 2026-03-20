@@ -23,7 +23,7 @@
                             <h3 class="step-title-inline">コースを選んでご予約</h3>
                         </div>
                         <p class="step-desc">ご予約は、WEB予約（HP・HOT PEPPER Beauty・Rakuten Beautyなど）、LINE、お電話にてお受けしております。<br>お電話の場合は「お名前・ご希望のコース・ご希望の時間帯・ご連絡先」をお伺いいたします。担当トレーナーの指名も可能ですので、お気軽にお申しつけください。</p>
-                        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-final-web pulse-btn" style="margin-top: 15px; display: inline-block; width: auto; font-weight: bold; text-decoration: none;" target="_blank">予約メニューを<br class="sp-only">一覧から探す</a>
+                        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-final-web pulse-btn" style="margin-top: 15px; display: inline-block; width: auto; font-weight: bold; text-decoration: none;" target="_blank">予約メニューを一覧から探す <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="flow-triangle-down-blue"></div>

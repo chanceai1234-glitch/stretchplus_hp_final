@@ -7,14 +7,17 @@ try:
         
     # Append safe header overrides at the bottom
     appended_css = """
-
-/* --- GLOBAL HOTFIXES --- */
-html, body {
-    overflow-x: hidden !important;
-    max-width: 100vw;
-    position: relative;
-    width: 100%;
-}
+/* =========================================
+   MOBILE LAYOUT EXCLUSIVE OVERRIDES
+   ========================================= */
+@media (max-width: 991px) {
+    
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw;
+        position: relative;
+        width: 100%;
+    }
 .bg-beige {
     background-color: #FAF4E8 !important; /* Gentle beige/sand color */
 }
@@ -99,15 +102,15 @@ html, body {
    MOBILE LAYOUT HOTFIXES
    ========================================= */
    
-#hero {
-    padding-top: 140px !important; /* increased to prevent header overlap */
-    padding-bottom: 30px !important;
-}
-.hero-split {
-    overflow: hidden !important;
-    width: 100% !important;
-}
-@media (max-width: 991px) {
+    #hero {
+        padding-top: 140px !important; /* increased to prevent header overlap */
+        padding-bottom: 30px !important;
+    }
+    .hero-split {
+        overflow: hidden !important;
+        width: 100% !important;
+    }
+    
     /* --- PC / SP VISIBILITY --- */
     .pc-only {
         display: none !important;
