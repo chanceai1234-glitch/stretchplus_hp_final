@@ -14,7 +14,7 @@ target_url = "https://stretch-plus.co.jp/v2/?nocache=" + str(time.time())
 data = {
     "url": target_url,
     "browsers": [
-        {"os": "ios", "os_version": "8.3", "browser": "Mobile Safari", "device": "iPhone 6 Plus", "browser_version": None, "real_mobile": False}
+        {"os": "ios", "os_version": "8.3", "browser": "Mobile Safari", "device": "iPhone 6 Plus"}
     ],
     "quality": "original",
     "orientation": "portrait"
@@ -26,12 +26,17 @@ try:
     job = json.loads(response.read().decode("utf-8"))
     job_id = job.get("job_id")
     print("✅ BrowserStack Job Started (iPhone):", job_id)
+except urllib.error.HTTPError as e:
+    print("❌ Failed to start job. Error msg:")
+    print(e.read().decode('utf-8'))
+    sys.exit(1)
 except Exception as e:
-    print("❌ Failed to start job:", e)
+    print("❌ Failed:", e)
     sys.exit(1)
 
 while True:
     time.sleep(5)
+    print("Polling job status...")
     r2 = urllib.request.Request(f"https://www.browserstack.com/screenshots/{job_id}.json", headers=headers)
     try:
         res2 = urllib.request.urlopen(r2)
