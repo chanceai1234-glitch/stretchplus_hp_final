@@ -10,10 +10,10 @@
                 </div>
             </div>
             <!-- 右カラム: SNS -->
-            <div class="footer-right">
-                <div class="footer-sns-wrap">
-                    <span class="sns-label">Follow us</span>
-                    <div class="footer-sns">
+            <div class="footer-right" style="text-align: center; margin-top: 20px;">
+                <div class="footer-sns-wrap" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <span class="sns-label" style="margin-bottom: 10px; font-weight: bold;">Follow us</span>
+                    <div class="footer-sns" style="display: flex; justify-content: center; gap: 15px;">
                         <a href="https://www.instagram.com/stretchplus/" target="_blank">
                             <img src="<?php echo get_template_directory_uri(); ?>/image_final/icon_instagram.svg" alt="Instagram">
                         </a>
@@ -33,6 +33,11 @@
             <p>&copy; 2026 ストレッチplus</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="ページトップへ戻る">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 
     <!-- Floating QR Code (PC Only) -->
     <div id="floating-qr">
@@ -175,10 +180,10 @@
         <a href="https://lin.ee/rboKm7N" class="sticky-nav-line pulse-btn" target="_blank" style="width: 100%; border-radius: 0; padding: 12px 0;">
             <i class="fab fa-line"></i> LINE相談
         </a>
-        <a href="https://beauty.hotpepper.jp/kr/slnH000671756/" class="sticky-nav-hp" target="_blank" style="background-color: #E21B63; color: white; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 100%; font-size: 0.8rem; font-weight: bold; padding: 12px 0;">
+        <a href="https://beauty.hotpepper.jp/kr/slnH000671756/" class="sticky-nav-hp" target="_blank" style="background-color: #fff; color: #E21B63; border-top: 2px solid #E21B63; border-left: 1px solid #E21B63; border-right: 1px solid #E21B63; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 100%; font-size: 0.8rem; font-weight: bold; padding: 12px 0;">
             ホットペッパー予約
         </a>
-        <a href="https://beauty.rakuten.co.jp/s3000052366/" class="sticky-nav-rakuten" target="_blank" style="background-color: #BF0000; color: white; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 100%; font-size: 0.8rem; font-weight: bold; padding: 12px 0;">
+        <a href="https://beauty.rakuten.co.jp/s3000052366/" class="sticky-nav-rakuten" target="_blank" style="background-color: #fff; color: #BF0000; border-top: 2px solid #BF0000; border-left: 1px solid #BF0000; border-right: 1px solid #BF0000; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 100%; font-size: 0.8rem; font-weight: bold; padding: 12px 0;">
             楽天ビューティ予約
         </a>
     </div>

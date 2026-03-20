@@ -31,6 +31,29 @@ html, body {
     z-index: 10;
 }
 
+/* --- BACK TO TOP BUTTON --- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+.back-to-top:hover {
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+}
+
 /* --- FAQ TABS --- */
 .faq-tabs-nav {
     display: flex;
@@ -168,6 +191,35 @@ html, body {
         box-sizing: border-box !important;
     }
     
+    /* Force Shop Info Elements to Wrap */
+    .shop-info-block {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+    .shop-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+    }
+    .shop-table th, .shop-table td {
+        word-break: break-all !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        display: block !important;
+        width: 100% !important;
+        padding: 5px 0 !important;
+    }
+    .shop-info-slideshow, .shop-info-slideshow img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    .shop-address-wrapper {
+        display: block !important;
+    }
+    
     .hero-split {
         overflow: hidden !important;
         padding-top: 110px !important; /* give extra space to header to stop overlap */
@@ -209,9 +261,19 @@ html, body {
     .sp-sticky-nav a {
         padding: 15px 0 !important;
         height: auto !important;
+        box-sizing: border-box !important;
     }
     body {
         padding-bottom: 120px !important; /* clear 2 rows of sticky nav */
+    }
+    
+    /* Make back to top button dodge the sticky footer */
+    .back-to-top {
+        bottom: 120px !important;
+        right: 10px !important;
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1rem !important;
     }
     .review-slider-container {
         padding: 0 !important;
