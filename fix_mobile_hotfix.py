@@ -95,7 +95,18 @@ html, body {
     word-break: break-all;
 }
 
-/* --- MOBILE HOTFIXES --- */
+/* =========================================
+   MOBILE LAYOUT HOTFIXES
+   ========================================= */
+   
+#hero {
+    padding-top: 140px !important; /* increased to prevent header overlap */
+    padding-bottom: 30px !important;
+}
+.hero-split {
+    overflow: hidden !important;
+    width: 100% !important;
+}
 @media (max-width: 991px) {
     #header {
         padding: 15px 5% !important;
@@ -218,11 +229,6 @@ html, body {
     }
     .shop-address-wrapper {
         display: block !important;
-    }
-    
-    .hero-split {
-        overflow: hidden !important;
-        padding-top: 110px !important; /* give extra space to header to stop overlap */
     }
     .hero-image-col {
         height: auto !important;
