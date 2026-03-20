@@ -117,10 +117,6 @@
             <div class="review-progress-bar" id="review-progress"></div>
         </div>
         
-        <div class="review-badge-text">
-            このほかにも、たくさんの口コミをいただいております。
-        </div>
-
         <div class="review-cta cta-group">
             <a href="#" class="btn btn-google" target="_blank">
                 <i class="fab fa-google"></i> Google口コミを見る

@@ -2,9 +2,16 @@
         <h2>よくあるご質問</h2>
         <p class="faq-lead">初めての方からよくいただくご質問をまとめました。<br>準備・予約・施術・プランごとにご覧いただけます。</p>
 
-        <div class="faq-grid">
+        <div class="faq-tabs-nav">
+            <button class="faq-tab active" data-target="faq-jinbi">準備</button>
+            <button class="faq-tab" data-target="faq-yoyaku">予約</button>
+            <button class="faq-tab" data-target="faq-sejutsu">施術</button>
+            <button class="faq-tab" data-target="faq-plan">プラン</button>
+        </div>
+
+        <div class="faq-grid faq-tabs-content">
             <!-- 準備 -->
-            <div class="faq-category">
+            <div class="faq-category faq-tab-pane active" id="faq-jinbi">
                 <h3>準備</h3>
                 <div class="faq-accordion">
                     <details>
@@ -36,7 +43,7 @@
         </div>
 
         <!-- 予約 -->
-        <div class="faq-category">
+        <div class="faq-category faq-tab-pane" id="faq-yoyaku">
             <h3>予約</h3>
             <div class="faq-accordion">
                 <details>
@@ -59,7 +66,7 @@
         </div>
 
         <!-- 施術 -->
-        <div class="faq-category">
+        <div class="faq-category faq-tab-pane" id="faq-sejutsu">
             <h3>施術</h3>
             <div class="faq-accordion">
                 <details>
@@ -79,7 +86,7 @@
         </div>
 
         <!-- プラン -->
-        <div class="faq-category">
+        <div class="faq-category faq-tab-pane" id="faq-plan">
             <h3>プラン</h3>
             <div class="faq-accordion">
                 <details>
@@ -97,4 +104,19 @@
             </div>
         </div>
         </div> <!-- End of .faq-grid -->
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.faq-tab');
+    const panes = document.querySelectorAll('.faq-tab-pane');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            panes.forEach(p => p.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById(tab.dataset.target).classList.add('active');
+        });
+    });
+});
+</script>
 </section>

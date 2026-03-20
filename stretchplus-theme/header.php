@@ -27,7 +27,15 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/image_final/common_logo.png" alt="ストレッチplus ロゴ" width="200">
             </a>
         </div>
-        <nav class="header-nav">
+        
+        <!-- Hamburger Button (Mobile Only) -->
+        <button class="hamburger-btn sp-only" id="hamburger-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="header-nav" id="header-nav">
             <ul>
                 <li><a href="#about">パーソナルストレッチとは</a></li>
                 <li><a href="#worries">よくあるお悩み</a></li>

@@ -1,29 +1,9 @@
-<!-- Pre-Footer CTA -->
-    <div class="bottom-cta-banner">
-        <div class="container">
-            <h3>まずは1回、体感してみてください。</h3>
-            <p style="color: #fff; font-size: 1.1rem; margin-bottom: 25px; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">初回限定価格 60分 3,980円（税込）</p>
-            <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
-                <!-- Group 1: WEB & Hotpepper -->
-                <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; max-width: 350px;">
-                    <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn-web-outline pulse-btn cta-universal-btn" target="_blank"><i class="far fa-file-alt" style="margin-right:8px;"></i> WEBで予約する</a>
-                    <a href="https://beauty.hotpepper.jp/kr/slnH000671756/" class="btn btn-hotpepper cta-universal-btn btn-aux-red" target="_blank">Hot Pepper Beautyで予約</a>
-                </div>
-
-                <!-- Group 2: LINE & Rakuten -->
-                <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; max-width: 350px;">
-                    <a href="https://lin.ee/rboKm7N" class="btn-line-outline pulse-btn cta-universal-btn" target="_blank"><i class="fab fa-line" style="margin-right:8px;"></i> LINEで相談する</a>
-                    <a href="https://beauty.rakuten.co.jp/s3000052366/" class="btn btn-rakuten cta-universal-btn btn-aux-red" target="_blank">楽天ビューティーで予約</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer id="footer">
         <div class="footer-content">
             <!-- 左カラム: ロゴ・住所・電話 -->
-            <div class="footer-left">
-                <img src="<?php echo get_template_directory_uri(); ?>/image_final/common_logo.png" alt="ストレッチplus ロゴ" width="200" class="footer-logo-img">
+            <div class="footer-left" style="text-align: center;">
+                <img src="<?php echo get_template_directory_uri(); ?>/image_final/common_logo.png" alt="ストレッチplus ロゴ" width="200" class="footer-logo-img" style="margin: 0 auto 15px auto; display: block;">
                 <div class="footer-nap">
                     <p>〒103-0025 東京都中央区日本橋茅場町<br>2-13-14 ブイワンビル2F</p>
                     <p class="footer-tel">TEL: 080-7137-9086</p>
@@ -33,10 +13,8 @@
             <!-- 中央カラム: ナビゲーション -->
             <div class="footer-nav">
                 <ul>
-                    <li><a href="#about">パーソナルストレッチとは</a></li>
-                    <li><a href="#worries">こんなお悩みありませんか？</a></li>
                     <li><a href="#reviews">お客様の声</a></li>
-                    <li><a href="#amenities">豊富な設備・アメニティ</a></li>
+                    <li><a href="#amenities">設備・アメニティ</a></li>
                     <li><a href="#flow">ご利用の流れ</a></li>
                     <li><a href="#policy">私たちが大切にしていること</a></li>
                     <li><a href="#trainers">トレーナー紹介</a></li>
@@ -123,7 +101,7 @@
                     if (currentSlide < 0) currentSlide = 0;
                     
                     const cardWidth = cards[0].offsetWidth;
-                    const gap = 30; // 30px gap
+                    const gap = (window.innerWidth <= 600) ? 0 : 30;
                     const offset = currentSlide * (cardWidth + gap);
                     reviewGrid.style.transform = `translateX(-${offset}px)`;
 
@@ -170,6 +148,25 @@
                 // Call initially
                 updateSliderPosition();
             }
+
+            // Hamburger Menu Logic
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const headerNav = document.getElementById('header-nav');
+            if(hamburgerBtn && headerNav) {
+                hamburgerBtn.addEventListener('click', () => {
+                    hamburgerBtn.classList.toggle('active');
+                    headerNav.classList.toggle('active');
+                });
+                
+                // Close menu when a link is clicked
+                const navLinks = headerNav.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburgerBtn.classList.remove('active');
+                        headerNav.classList.remove('active');
+                    });
+                });
+            }
         });
     
     // Store Info Slideshow
@@ -186,12 +183,18 @@
 <?php wp_footer(); ?>
 
     <!-- Mobile Sticky Navigation -->
-    <div class="sp-sticky-nav sp-only">
-        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="sticky-nav-kirei pulse-btn" target="_blank">
+    <div class="sp-sticky-nav sp-only" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px; padding: 0;">
+        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="sticky-nav-kirei pulse-btn" target="_blank" style="width: 100%; border-radius: 0; padding: 12px 0;">
             <i class="far fa-file-alt"></i> WEB予約
         </a>
-        <a href="https://lin.ee/rboKm7N" class="sticky-nav-line pulse-btn" target="_blank">
+        <a href="https://lin.ee/rboKm7N" class="sticky-nav-line pulse-btn" target="_blank" style="width: 100%; border-radius: 0; padding: 12px 0;">
             <i class="fab fa-line"></i> LINE相談
+        </a>
+        <a href="https://beauty.hotpepper.jp/kr/slnH000671756/" class="sticky-nav-hp" target="_blank" style="background-color: #E21B63; color: white; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 100%; font-size: 0.8rem; font-weight: bold; padding: 12px 0;">
+            ホットペッパー予約
+        </a>
+        <a href="https://beauty.rakuten.co.jp/s3000052366/" class="sticky-nav-rakuten" target="_blank" style="background-color: #BF0000; color: white; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 100%; font-size: 0.8rem; font-weight: bold; padding: 12px 0;">
+            楽天ビューティ予約
         </a>
     </div>
 </body>

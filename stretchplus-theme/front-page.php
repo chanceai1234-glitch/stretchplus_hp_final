@@ -10,10 +10,8 @@ get_header();
     <?php get_template_part('template-parts/section', 'about'); ?>
     <?php get_template_part('template-parts/section', 'worries'); ?>
     <?php get_template_part('template-parts/section', 'reviews'); ?>
-    <?php get_template_part('template-parts/section', 'cta-1'); ?>
     <?php get_template_part('template-parts/section', 'amenities'); ?>
     <?php get_template_part('template-parts/section', 'flow'); ?>
-    <?php get_template_part('template-parts/section', 'cta-2'); ?>
     <?php get_template_part('template-parts/section', 'policy'); ?>
     <?php get_template_part('template-parts/section', 'trainers'); ?>
     <?php get_template_part('template-parts/section', 'menu'); ?>
