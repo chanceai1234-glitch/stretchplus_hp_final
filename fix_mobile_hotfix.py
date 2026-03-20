@@ -9,6 +9,12 @@ try:
     appended_css = """
 
 /* --- GLOBAL HOTFIXES --- */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw;
+    position: relative;
+    width: 100%;
+}
 .bg-beige {
     background-color: #FAF4E8 !important; /* Gentle beige/sand color */
 }
@@ -155,13 +161,20 @@ try:
         font-weight: 700 !important;
     }
     
+    /* Standardize horizontal padding for all sections */
+    #hero, #about, #worries, #reviews, #menu, #flow, #trainers, #amenities, #policy, #info, #faq, #access {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+        box-sizing: border-box !important;
+    }
+    
     .hero-split {
         overflow: hidden !important;
-        padding-top: 80px !important; /* give space to header */
+        padding-top: 110px !important; /* give extra space to header to stop overlap */
     }
     .hero-image-col {
         height: auto !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 20px !important;
         order: -1;
     }
     .about-image {
@@ -181,39 +194,48 @@ try:
         padding: 0 !important;
     }
     .review-card {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        flex: 0 0 100vw !important;
-        padding: 5% 8% !important;
+        width: 90vw !important;
+        max-width: 90vw !important;
+        flex: 0 0 90vw !important;
+        padding: 20px 15px !important;
         box-sizing: border-box !important;
     }
     .review-grid {
-        gap: 0 !important;
+        gap: 10px !important;
     }
+    .review-card p, .review-card h4, .review-card span {
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        word-break: break-all !important;
+    }
+    .review-feedback, .review-quote {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Keep Hero Image Square / Natural without circular crops */
     .hero-image-wrapper {
-        width: 85vw !important;
-        height: 85vw !important;
-        max-width: 350px !important;
-        max-height: 350px !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        max-height: none !important;
         margin: 0 auto !important;
         position: relative !important;
         right: auto !important;
+        border-radius: 0 !important;
     }
     .hero-image-bg-circle {
-        width: 100% !important;
-        height: 100% !important;
-        top: 0 !important;
-        left: 0 !important;
-        transform: none !important;
+        display: none !important; /* Remove decorative background circle */
     }
     .hero-masked-image {
         width: 100% !important;
-        height: 100% !important;
+        height: auto !important;
         top: 0 !important;
         left: 0 !important;
         transform: none !important;
-        object-fit: cover !important;
-        object-position: center !important;
+        object-fit: contain !important;
+        border-radius: 8px !important; /* Slight rectangle rounding */
+        position: static !important;
     }
     .main-message {
         font-size: clamp(1.4rem, 6vw, 1.8rem) !important;

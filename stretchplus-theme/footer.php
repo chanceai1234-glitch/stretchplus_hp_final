@@ -9,21 +9,6 @@
                     <p class="footer-tel">TEL: 080-7137-9086</p>
                 </div>
             </div>
-            
-            <!-- 中央カラム: ナビゲーション -->
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="#reviews">お客様の声</a></li>
-                    <li><a href="#amenities">設備・アメニティ</a></li>
-                    <li><a href="#flow">ご利用の流れ</a></li>
-                    <li><a href="#policy">私たちが大切にしていること</a></li>
-                    <li><a href="#trainers">トレーナー紹介</a></li>
-                    <li><a href="#menu">メニュー/料金</a></li>
-                    <li><a href="#info">店舗情報・アクセス</a></li>
-                    <li><a href="#faq">よくあるご質問</a></li>
-                </ul>
-            </div>
-            
             <!-- 右カラム: SNS -->
             <div class="footer-right">
                 <div class="footer-sns-wrap">
