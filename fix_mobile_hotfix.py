@@ -8,6 +8,13 @@ try:
     # Append safe header overrides at the bottom
     appended_css = """
 /* =========================================
+   GLOBAL OVERRIDES (PC & SP)
+   ========================================= */
+.sp-only {
+    display: none !important;
+}
+
+/* =========================================
    MOBILE LAYOUT EXCLUSIVE OVERRIDES
    ========================================= */
 @media (max-width: 991px) {

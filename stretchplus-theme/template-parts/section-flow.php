@@ -47,7 +47,7 @@
             </div>
 
             <!-- STEP 03 -->
-            <div class="flow-step bg-beige">
+            <div class="flow-step bg-blue">
                 <div class="flow-step-inner container">
                     <div class="flow-step-image">
                         <img src="<?php echo get_template_directory_uri(); ?>/image_final/flow_step_3.png" alt="施術室へご案内">
@@ -60,7 +60,7 @@
                         <p class="step-desc">ご来店いただきましたら、ご予約内容を確認させていただいた後、シャワールームなどの設備をご説明させていただいたうえで、施術室へご案内いたします。</p>
                     </div>
                 </div>
-                <div class="flow-triangle-down-beige"></div>
+                <div class="flow-triangle-down-blue"></div>
             </div>
 
             <!-- STEP 04 -->
@@ -115,7 +115,7 @@
             </div>
 
             <!-- STEP 07 -->
-            <div class="flow-step bg-beige">
+            <div class="flow-step bg-blue">
                 <div class="flow-step-inner container">
                     <div class="flow-step-image">
                         <img src="<?php echo get_template_directory_uri(); ?>/image_final/flow_step_7.png" alt="振り返り・アフターケアのご案内">
@@ -128,7 +128,7 @@
                         <p class="step-desc">施術前との動きやすさ・姿勢の変化などを一緒に確認し、現在のお体の状態をわかりやすくお伝えいたします。<br>必要に応じて、ご自宅でも取り入れやすいセルフストレッチや、今後の通い方の目安などもご提案いたします。</p>
                     </div>
                 </div>
-                <div class="flow-triangle-down-beige"></div>
+                <div class="flow-triangle-down-blue"></div>
             </div>
 
             <!-- STEP 08 -->
