@@ -12,28 +12,33 @@ try:
 @media (max-width: 991px) {
     #header {
         padding: 15px 5% !important;
-        align-items: flex-start !important; /* Prevents stretching if flex height is weird */
+        background: rgba(255, 255, 255, 0.95); /* Ensure readability */
     }
     .header-logo {
-        max-width: 50% !important;
+        max-width: 60% !important;
     }
     .header-logo img {
         height: auto !important;
         width: 100% !important;
-        max-width: 140px !important;
+        max-width: 160px !important;
+    }
+    .header-actions {
+        display: none !important;
     }
     .hero-split {
         overflow: hidden !important;
+        padding-top: 80px !important; /* give space to header */
     }
     .hero-image-col {
         height: auto !important;
         margin-bottom: 30px !important;
+        order: -1;
     }
     .hero-image-wrapper {
-        width: 90vw !important;
-        height: 90vw !important;
-        max-width: 380px !important;
-        max-height: 380px !important;
+        width: 85vw !important;
+        height: 85vw !important;
+        max-width: 350px !important;
+        max-height: 350px !important;
         margin: 0 auto !important;
         position: relative !important;
         right: auto !important;
@@ -41,24 +46,31 @@ try:
     .hero-image-bg-circle {
         width: 100% !important;
         height: 100% !important;
+        top: 0 !important;
         left: 0 !important;
         transform: none !important;
     }
     .hero-masked-image {
         width: 100% !important;
         height: 100% !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
         object-fit: cover !important;
+        object-position: center !important;
     }
     .main-message {
-        font-size: clamp(1.2rem, 5vw, 1.8rem) !important;
+        font-size: clamp(1.4rem, 6vw, 1.8rem) !important;
         line-height: 1.4 !important;
+        text-align: center;
     }
-    .hero-actions {
-        flex-direction: column !important;
+    .sub-message {
+        text-align: center;
+        margin-top: 15px;
     }
-    .hero-actions .btn {
-        width: 100% !important;
-        text-align: center !important;
+    .hero-actions-wrapper {
+        text-align: center;
+        margin-top: 30px;
     }
 }
 """
