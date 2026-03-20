@@ -372,15 +372,42 @@ try:
         line-height: 1.5 !important;
     }
 
-    /* Keep Hero Image Square / Natural without circular crops */
+    /* --- Anchor Fix for Hamburger Menu --- */
+    #hero, #about, #worries, #reviews, #menu, #flow, #trainers, #amenities, #policy, #info, #faq, #access {
+        scroll-margin-top: 80px !important;
+    }
+
+    /* Keep Hero Image Full Screen Overlay (Neuler.jp Benchmark) */
+    #hero {
+        padding: 0 !important;
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        min-height: 85vh !important;
+    }
+    .hero-split {
+        flex-direction: column !important;
+    }
+    .hero-inner {
+        position: static !important;
+    }
+    .hero-image-col {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 0 !important;
+        margin: 0 !important;
+        order: unset !important;
+    }
     .hero-image-wrapper {
         width: 100% !important;
-        height: auto !important;
-        max-width: 100% !important;
+        height: 100% !important;
         max-height: none !important;
-        margin: 0 auto !important;
-        position: relative !important;
-        right: auto !important;
+        margin: 0 !important;
+        position: absolute !important;
         border-radius: 0 !important;
     }
     .hero-image-bg-circle {
@@ -388,13 +415,51 @@ try:
     }
     .hero-masked-image {
         width: 100% !important;
-        height: auto !important;
+        height: 100% !important;
         top: 0 !important;
         left: 0 !important;
         transform: none !important;
-        object-fit: contain !important;
-        border-radius: 8px !important; /* Slight rectangle rounding */
-        position: static !important;
+        object-fit: cover !important;
+        border-radius: 0 !important; 
+        position: absolute !important;
+        filter: brightness(0.6) !important; /* Darken wrapper for text pop */
+    }
+    
+    .hero-content {
+        position: relative !important;
+        z-index: 2 !important;
+        color: #fff !important;
+        padding: 40px 5% !important;
+        margin-top: 80px !important;
+        text-align: center !important;
+        background: transparent !important;
+    }
+    .main-message {
+        font-size: clamp(1.5rem, 6.5vw, 1.9rem) !important;
+        line-height: 1.4 !important;
+        text-align: center !important;
+        color: #fff !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.6) !important;
+    }
+    .main-message .highlight-blue {
+        color: #fff !important; /* Override theme blue for contrast */
+    }
+    .sub-message {
+        text-align: center !important;
+        margin-top: 15px !important;
+        color: #fff !important;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+    }
+    .sub-message .hero-highlight {
+        color: #FFD700 !important; /* Make highlight pop against dark bg */
+    }
+    .hero-actions-wrapper {
+        text-align: center !important;
+        margin-top: 30px !important;
+    }
+    .hero-lead-text, .hero-note {
+        color: #fff !important;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
     }
     .main-message {
         font-size: clamp(1.4rem, 6vw, 1.8rem) !important;
@@ -408,6 +473,21 @@ try:
     .hero-actions-wrapper {
         text-align: center;
         margin-top: 30px;
+    }
+    /* Footer Force Center Alignment */
+    .footer-right, .footer-sns-wrap {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    .footer-sns {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 15px !important;
     }
 }
 """

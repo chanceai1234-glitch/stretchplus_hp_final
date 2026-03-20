@@ -30,6 +30,6 @@
         </div>
         <div class="menu-cta">
             <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web"
-                target="_blank" style="width: fit-content; margin: 0 auto; display: block; padding: 15px 40px;">90分以上のコースをご希望の方はコチラ</a>
+                target="_blank" style="width: fit-content; margin: 0 auto; display: block; padding: 15px 40px;">90分以上のコース<br class="sp-only">をご希望の方はこちら</a>
         </div>
     </section>
