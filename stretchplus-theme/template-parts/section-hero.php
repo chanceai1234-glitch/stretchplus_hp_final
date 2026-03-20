@@ -12,11 +12,5 @@
                     <p class="hero-note">初回限定価格 60分：10,680円 <strong>3,980円</strong></p>
                 </div>
             </div>
-            <div class="hero-image-col">
-                <div class="hero-image-wrapper">
-                    <div class="hero-image-bg-circle"></div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/image_final/hero_main.jpg" alt="パーソナルストレッチの様子" class="hero-masked-image">
-                </div>
-            </div>
         </div>
     </section>

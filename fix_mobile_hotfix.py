@@ -288,9 +288,32 @@ html, body {
         flex: 0 0 90vw !important;
         padding: 20px 15px !important;
         box-sizing: border-box !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-self: stretch !important;
+        background: #fff !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
     }
     .review-grid {
-        gap: 10px !important;
+        gap: 15px !important;
+        align-items: stretch !important;
+        display: flex !important;
+    }
+    .review-header {
+        font-weight: bold !important;
+        font-size: 1.1rem !important;
+        border-bottom: 2px solid var(--primary-color) !important;
+        padding-bottom: 10px !important;
+        margin-bottom: 15px !important;
+        text-align: center !important;
+        color: var(--primary-color) !important;
+    }
+    .review-episode {
+        flex: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
     .review-card p, .review-card h4, .review-card span {
         white-space: normal !important;
