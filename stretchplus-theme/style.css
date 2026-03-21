@@ -7280,20 +7280,20 @@ details p::before {
     .hero-content .main-message {
         opacity: 0;
         transform: translateY(20px) !important;
-        animation: spFadeInUp 0.8s ease-out forwards;
-        animation-delay: 0.3s;
+        animation: spFadeInUp 1.5s ease-out forwards;
+        animation-delay: 0.4s;
     }
     .hero-content .sub-message {
         opacity: 0;
         transform: translateY(20px) !important;
-        animation: spFadeInUp 0.8s ease-out forwards;
-        animation-delay: 1.0s;
+        animation: spFadeInUp 1.5s ease-out forwards;
+        animation-delay: 1.3s;
     }
     .hero-content .hero-actions-wrapper {
         opacity: 0;
         transform: translateY(20px) !important;
-        animation: spFadeInUp 0.8s ease-out forwards;
-        animation-delay: 1.7s;
+        animation: spFadeInUp 1.5s ease-out forwards;
+        animation-delay: 2.2s;
     }
 }
 
