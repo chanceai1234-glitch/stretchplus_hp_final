@@ -32,7 +32,7 @@
             <div class="footer-left">
                 <img src="<?php echo get_template_directory_uri(); ?>/image_final/common_logo.png" alt="ストレッチplus ロゴ" width="200" class="footer-logo-img">
                 <div class="footer-nap">
-                    <p style="word-break: break-all;">〒103-0025 東京都中央区日本橋茅場町<br>2-13-14<br class="sp-only"> ブイワンビル2F</p>
+                    <p style="word-break: break-all;">〒103-0025<br>東京都中央区日本橋茅場町2-13-14<br>ブイワンビル2F</p>
                     <p class="footer-tel">TEL: 080-7137-9086</p>
                 </div>
             </div>
@@ -93,7 +93,7 @@
             <div class="footer-left" style="text-align: center;">
                 <img src="<?php echo get_template_directory_uri(); ?>/image_final/common_logo.png" alt="ストレッチplus ロゴ" width="200" class="footer-logo-img" style="margin: 0 auto 15px auto; display: block;">
                 <div class="footer-nap">
-                    <p style="word-break: break-all;">〒103-0025 東京都中央区日本橋茅場町<br>2-13-14<br class="sp-only"> ブイワンビル2F</p>
+                    <p style="word-break: break-all;">〒103-0025<br>東京都中央区日本橋茅場町2-13-14<br>ブイワンビル2F</p>
                     <p class="footer-tel">TEL: 080-7137-9086</p>
                 </div>
             </div>
