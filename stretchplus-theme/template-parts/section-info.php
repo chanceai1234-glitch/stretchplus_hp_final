@@ -22,7 +22,7 @@
                             <td>
                                 <div class="shop-address-wrapper">
                                     <div class="shop-address-line1">
-                                        <span>〒103-0025 東京都中央区日本橋茅場町2-13-14 ブイワンビル2F</span>
+                                        <span style="word-break: break-word; overflow-wrap: break-word; display: inline-block;"><span>〒103-0025 </span>東京都中央区日本橋茅場町<br class="sp-only">2-13-14 <br class="sp-only">ブイワンビル2F</span>
                                         <button class="btn-copy-icon" onclick="navigator.clipboard.writeText('東京都中央区日本橋茅場町2-13-14 ブイワンビル2F')" title="住所をコピー"><i class="far fa-copy"></i></button>
                                     </div>
                                     <div class="shop-address-line2">

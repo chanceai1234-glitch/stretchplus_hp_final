@@ -1,6 +1,6 @@
 <section id="worries" class="reveal">
         <div class="worries-inner">
-            <h2 class="worries-title">こんなお悩み、ありませんか？</h2>
+            <h2 class="worries-title">こんなお悩み<br class="sp-only">ありませんか？</h2>
             
                         <div class="personas-wrapper">
                 <!-- サラリーマン -->
@@ -51,8 +51,10 @@
                 <div class="closing-action">
                     <p class="action-lead">一つでも当てはまった方はこちら</p>
                     <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: nowrap; width: 100%; overflow-x: auto; padding-bottom: 5px;">
-                        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web pulse-btn worries-universal-btn" style="flex: 1; min-width: 140px; white-space: nowrap; font-size: 0.95rem !important;" target="_blank">WEB予約はこちら</a>
-                        <a href="https://lin.ee/rboKm7N" class="btn btn-line pulse-btn worries-universal-btn" style="flex: 1; min-width: 140px; white-space: nowrap; font-size: 0.95rem !important;" style="background-color: var(--line-color); color:#fff; border-radius:50px; font-weight:bold; text-decoration:none;" target="_blank"><i class="fab fa-line" style="margin-right:8px;"></i> LINEで相談する</a>
+                        <a href="https://yui.kanzashi.com/l/stretch-plus/kirei" class="btn btn-web pulse-btn worries-universal-btn" style="flex: 1; min-width: 140px; white-space: nowrap; font-size: 0.95rem !important;" target="_blank"><span class="pc-only">WEB予約はこちら</span><span class="sp-only">Web予約</span></a>
+                        <a href="https://lin.ee/rboKm7N" class="btn btn-line pulse-btn worries-universal-btn" style="flex: 1; min-width: 140px; white-space: nowrap; font-size: 0.95rem !important; background-color: var(--line-color); color:#fff; border-radius:50px; font-weight:bold; text-decoration:none;" target="_blank">
+                            <span class="pc-only"><i class="fab fa-line" style="margin-right:8px;"></i> LINEで相談する</span><span class="sp-only">LINE相談</span>
+                        </a>
                     </div>
                 </div>
             </div>

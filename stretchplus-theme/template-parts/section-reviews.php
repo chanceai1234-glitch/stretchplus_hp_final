@@ -117,7 +117,7 @@
             <div class="review-progress-bar" id="review-progress"></div>
         </div>
         
-        <div class="review-badge-text">
+        <div class="review-badge-text pc-only">
             このほかにも、たくさんの口コミをいただいております。
         </div>
 

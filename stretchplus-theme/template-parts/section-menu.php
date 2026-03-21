@@ -1,6 +1,6 @@
 <section id="menu" class="reveal">
         <h2>メニュー / 料金</h2>
-        <p>多くの方にまずは体験していただきたいため、初回メニューは特別価格でご案内しています。</p>
+        <p class="pc-only">多くの方にまずは体験していただきたいため、初回メニューは特別価格でご案内しています。</p>
         <div class="pricing-cards">
             <!-- コース1 -->
             <div class="pricing-card">
