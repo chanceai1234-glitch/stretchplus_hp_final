@@ -173,6 +173,24 @@
                 }
             });
 
+            // Hamburger Menu Logic (Mobile)
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const headerNav = document.getElementById('header-nav');
+            if (hamburgerBtn && headerNav) {
+                hamburgerBtn.addEventListener('click', () => {
+                    hamburgerBtn.classList.toggle('active');
+                    headerNav.classList.toggle('active');
+                });
+                
+                // Close menu when a navigation link is clicked
+                headerNav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburgerBtn.classList.remove('active');
+                        headerNav.classList.remove('active');
+                    });
+                });
+            }
+
             // Review Slider Logic
             const reviewGrid = document.getElementById('review-grid');
             const prevReviewBtn = document.getElementById('review-prev');

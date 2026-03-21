@@ -19,7 +19,10 @@ desired_cap = {
 }
 
 print("Initialize BrowserStack connection...")
-driver = webdriver.Remote(command_executor=URL, desired_capabilities=desired_cap)
+options = webdriver.ChromeOptions()
+for key, value in desired_cap.items():
+    options.set_capability(key, value)
+driver = webdriver.Remote(command_executor=URL, options=options)
 
 try:
     print("Loading stretch-plus.co.jp/v2/ ...")
