@@ -1,5 +1,5 @@
     <!-- Pre-Footer CTA -->
-    <div class="bottom-cta-banner">
+    <div class="bottom-cta-banner pc-only">
         <div class="container">
             <h3>まずは1回、<br class="sp-only">体感してみてください。</h3>
             <p style="color: #fff; font-size: 1.1rem; margin-bottom: 25px; font-weight: bold; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">初回限定価格 60分 3,980円（税込）</p>

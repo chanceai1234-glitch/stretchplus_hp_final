@@ -1,4 +1,4 @@
-<section id="cta-2" class="bottom-cta-banner reveal">
+<section id="cta-2" class="bottom-cta-banner reveal pc-only">
         <h2>まずは1回、<br class="sp-only">体感してみてください。</h2>
         <p class="final-cta-sub">初回限定価格 60分 3,980円（税込）</p>
         
