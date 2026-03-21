@@ -155,7 +155,7 @@
             <div class="faq-accordion">
                 <details>
                     <summary>どこから予約できますか？</summary>
-                    <p>画面下の各種予約ボタンからご予約が可能です。その他にも、お電話（<a href="tel:08071379086" style="text-decoration: underline;">080-7137-9086</a>）でのご予約も承っております。</p>
+                    <p>画面下の各種予約ボタンからご予約が可能です。<br>その他にも、お電話（<a href="tel:08071379086" style="text-decoration: underline;">080-7137-9086</a>）でのご予約も承っております。</p>
                 </details>
                 <details>
                     <summary>スタッフは指名できますか?</summary>
