@@ -7258,3 +7258,21 @@ details p::before {
         gap: 15px !important;
     }
 }
+
+/* Force SP Hero to be absolute rectangle without any background circles */
+@media (max-width: 900px) {
+    .hero-image-bg-circle {
+        display: none !important;
+    }
+    .hero-section {
+        overflow: hidden !important;
+    }
+    .hero-image-wrapper, .hero-masked-image {
+        border-radius: 0 !important;
+        clip-path: none !important;
+        -webkit-clip-path: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+    }
+}
