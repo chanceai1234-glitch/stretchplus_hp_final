@@ -1905,8 +1905,7 @@ details p {
     color: #555555;
     background-color: transparent;
     position: relative;
-    display: flex;
-    align-items: flex-start;
+    display: block;
     margin-top: -4px; /* サマリーとの間合い調整 */
 }
 
@@ -1915,9 +1914,11 @@ details p::before {
     color: var(--primary-color);
     font-size: 1.3rem;
     font-weight: 900;
-    margin-right: 12px;
+    position: absolute;
+    left: 24px;
+    top: 0;
     line-height: 1.2;
-    flex-shrink: 0;
+
 }
 
 /* ==========================================================================
