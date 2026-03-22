@@ -40,3 +40,37 @@ function cc_mime_types($mimes) {
     return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+// Google Tag Manager Event Tracking for CTAs
+function stretchplus_add_gtm_tracking() {
+    ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var pushDataLayer = function(type) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'click_cta',
+                'button_type': type
+            });
+        };
+        // WEB Reservation
+        document.querySelectorAll('.btn-web, a[href*="kanzashi.com"]').forEach(function(btn) {
+            btn.addEventListener('click', function() { pushDataLayer('web_reservation'); });
+        });
+        // LINE Contact
+        document.querySelectorAll('.btn-line, a[href*="lin.ee"]').forEach(function(btn) {
+            btn.addEventListener('click', function() { pushDataLayer('line_contact'); });
+        });
+        // HotPepper
+        document.querySelectorAll('.btn-hotpepper, a[href*="hotpepper.jp"]').forEach(function(btn) {
+            btn.addEventListener('click', function() { pushDataLayer('hotpepper'); });
+        });
+        // Rakuten
+        document.querySelectorAll('.btn-rakuten, a[href*="beauty.rakuten.co.jp"]').forEach(function(btn) {
+            btn.addEventListener('click', function() { pushDataLayer('rakuten'); });
+        });
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'stretchplus_add_gtm_tracking', 100);
