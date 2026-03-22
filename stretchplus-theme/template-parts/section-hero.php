@@ -11,7 +11,7 @@
                             <a href="https://lin.ee/rboKm7N" class="btn btn-line" target="_blank">LINEで相談する</a>
                         </div>
                     </div>
-                    <p class="hero-note">初回限定価格 60分：10,680円<br><strong class="hero-highlight" style="color: #FFD700 !important; font-size: 1.3em;">3,980円</strong></p>
+                    <p class="hero-note">初回限定価格 60分：10,680円<br class="sp-only"><strong class="hero-highlight sp-yellow-price" style="font-size: 1.3em;">3,980円</strong></p>
                 </div>
             </div>
             <div class="hero-image-col">

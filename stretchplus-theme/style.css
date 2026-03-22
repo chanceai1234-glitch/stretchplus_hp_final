@@ -7296,6 +7296,11 @@ details p::before {
         animation: spFadeInUp 1.5s ease-out forwards;
         animation-delay: 2.2s;
     }
+
+    /* Limit price yellow highlighting exclusively to mobile views */
+    .sp-yellow-price {
+        color: #FFD700 !important;
+    }
 }
 
 @keyframes spFadeInUp {

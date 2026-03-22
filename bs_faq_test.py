@@ -11,31 +11,31 @@ desired_cap = {
     'device': 'iPhone 15 Pro',
     'realMobile': 'true',
     'os_version': '17',
-    'name': 'FAQ Layout Test',
-    'build': 'Phase 45 Hotfix'
+    'name': 'FAQ Layout Test 2',
+    'build': 'Phase 46 Hotfix'
 }
 options = webdriver.ChromeOptions()
 for key, value in desired_cap.items():
     options.set_capability(key, value)
 driver = webdriver.Remote(command_executor=URL, options=options)
 
+from selenium.webdriver.common.by import By
+
 try:
     print("Loading stretch-plus.co.jp/v2/ ...")
     driver.get("https://stretch-plus.co.jp/v2/")
     time.sleep(3)
-    # scroll to FAQ section
     driver.execute_script("document.getElementById('faq').scrollIntoView();")
     time.sleep(2)
     # click the "予約" tab
-    tabs = driver.find_elements_by_css_selector('.faq-tab')
+    tabs = driver.find_elements(By.CSS_SELECTOR, '.faq-tab')
     for tab in tabs:
         if "予約" in tab.text:
             tab.click()
             time.sleep(1)
             break
-    # take screenshot
-    driver.save_screenshot('bs_faq_layout_broken.png')
-    print("Screenshot captured: bs_faq_layout_broken.png")
+    driver.save_screenshot('bs_faq_layout_fixed.png')
+    print("Screenshot captured: bs_faq_layout_fixed.png")
 finally:
     driver.quit()
     print("Done")
