@@ -1,2 +1,5 @@
 
 browserstack_credentials.txt
+.env
+service-account.json
+*.pyc

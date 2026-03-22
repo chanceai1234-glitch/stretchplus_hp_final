@@ -20,7 +20,7 @@ function stretchplus_theme_setup() {
     add_theme_support('automatic-feed-links');
 
     // Let WordPress manage the document title.
-    add_theme_support('title-tag');
+    // add_theme_support('title-tag'); // DISABLED: We use hardcoded SEO title in header.php to strictly enforce Japanese branding
 
     // Enable support for Post Thumbnails on posts and pages.
     add_theme_support('post-thumbnails');

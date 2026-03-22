@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="茅場町駅徒歩1分。完全個室で人目を気にせず施術が受けられる、パーソナルストレッチ専門店のストレッチplusです。体が不調になる前に整えて、元気が続く毎日へ。">
     <title>ストレッチplus | 茅場町駅徒歩1分のパーソナルストレッチ専門店</title>
+    
+    <!-- SEO & OGP Strict Enforcement -->
+    <meta property="og:title" content="ストレッチplus | 茅場町駅徒歩1分のパーソナルストレッチ専門店">
+    <meta property="og:description" content="茅場町駅徒歩1分。完全個室で人目を気にせず施術が受けられる、パーソナルストレッチ専門店のストレッチplusです。体が不調になる前に整えて、元気が続く毎日へ。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stretch-plus.co.jp/">
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/image_final/hero_main.jpg">
+    <meta property="og:site_name" content="ストレッチplus">
+    <meta name="twitter:card" content="summary_large_image">
     <!-- Google Fonts (Dual-font strategy) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +23,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/image_final/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/image_final/favicon.png">
+    
     <?php wp_head(); ?>
 </head>
 
