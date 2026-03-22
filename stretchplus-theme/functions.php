@@ -41,17 +41,17 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
-// Google Tag Manager Event Tracking for CTAs
+// Google Analytics 4 (gtag.js) Event Tracking for CTAs
 function stretchplus_add_gtm_tracking() {
     ?>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var pushDataLayer = function(type) {
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': 'click_cta',
-                'button_type': type
-            });
+            if (typeof window.gtag === 'function') {
+                window.gtag('event', 'click_cta', {
+                    'button_type': type
+                });
+            }
         };
         // WEB Reservation
         document.querySelectorAll('.btn-web, a[href*="kanzashi.com"]').forEach(function(btn) {
